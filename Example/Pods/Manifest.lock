@@ -1,0 +1,39 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - HHSimpleTool (1.0.0):
+    - DZNEmptyDataSet (~> 1.8.1)
+    - MBProgressHUD (~> 1.2.0)
+    - SPAlertController (~> 4.0.0)
+    - Toast (~> 4.0.0)
+    - YBPopupMenu (~> 1.1.9)
+  - MBProgressHUD (1.2.0)
+  - SPAlertController (4.0.0)
+  - Toast (4.0.0)
+  - YBPopupMenu (1.1.9)
+
+DEPENDENCIES:
+  - HHSimpleTool (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - DZNEmptyDataSet
+    - MBProgressHUD
+    - SPAlertController
+    - Toast
+    - YBPopupMenu
+
+EXTERNAL SOURCES:
+  HHSimpleTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  HHSimpleTool: 51827fb41978cca25aa8917136f46a0e99110a9f
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  YBPopupMenu: 3a02e89860bb0568ba477aee609bc3f25e5bd339
+
+PODFILE CHECKSUM: e7358baafd3d62d4ebe668ad66773b1b9670b07e
+
+COCOAPODS: 1.11.2

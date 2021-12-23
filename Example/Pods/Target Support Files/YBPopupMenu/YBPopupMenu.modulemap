@@ -1,0 +1,6 @@
+framework module YBPopupMenu {
+  umbrella header "YBPopupMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

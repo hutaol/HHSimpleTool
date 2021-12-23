@@ -1,0 +1,6 @@
+framework module SPAlertController {
+  umbrella header "SPAlertController-umbrella.h"
+
+  export *
+  module * { export * }
+}

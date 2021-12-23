@@ -1,0 +1,1897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		094A2B6CA24CA4DE0734FD8FA1AD37EC /* HHPopupListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F2157ACC659753777600CE85E43E5 /* HHPopupListView.m */; };
+		0C4D66CB9ACD420898B5D0996606EBD0 /* HHPopupTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C13282DBD7BC5355060B0BAFB8DA5D6 /* HHPopupTool.m */; };
+		0F313CE5B14382A85BBC06490BC0B1D2 /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1A75B1A998A31D909ED4372259701 /* DZNEmptyDataSet-dummy.m */; };
+		10DAD89C5BAE65295B3AC58A1739A278 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EEAF402EA86330CF31A3B3F3C99BBCD /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1255E6BF05DE8F2802D5BAC04D6A42B4 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7AB41CBAF61B8E9E61903B6752F936 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B55866DB94DDE5F929387EEE042C1A /* HHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 10CC90D77472C7DA7590564305F4B5FD /* HHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18C15A3DA91E8B005D5DA39936ECB9CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		18FB2A2EFA877A34DF18F598E4FA1189 /* YBPopupMenuPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 6114B4B3A52A1366654BBBBCFE82E85E /* YBPopupMenuPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CB8781E780A202B7DA7877083391172 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC20DBEC6FED1AB4F9EF29119221D25 /* MBProgressHUD-dummy.m */; };
+		1D51898291077EBFACD14FF045F5C004 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C92021B1AD9AAD01ABC7DF353BC974 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2074D8FFED1B7FA59FFC01A20D9097C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		25338681E3965EC57E745BF23C533F29 /* HHAlertCustomTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 389410C17259BA1DB326615EF060C2BF /* HHAlertCustomTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		271F6206D8F20A5CFC7FB92D2B3ADAFA /* YBPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A93B85A0F25949EB791C830D43264 /* YBPopupMenuPath.m */; };
+		2BC2F460680C5821EC69E80DBE0DE398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		32FB260CA2D0966FBC3E14ECEF9D7A41 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
+		3A1D62B1EE86139B185E5C64119A785C /* MBProgressHUD+HHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 20591962E9630C33E076F1735941F45D /* MBProgressHUD+HHTool.m */; };
+		3AF4801CD8F435F867087EEAABD739D6 /* YBPopupMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B6F695DC187689EE87881FEF41B78D1 /* YBPopupMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BE0E5EAB11950A0758C73468640EEE0 /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD85E5480783A188CC5379CC1A8F6A3 /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C2F9FE584A9DB089B351D3E3BCB7104 /* SPAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB2C544CCAFC51DF6EA7248FB3D34C1 /* SPAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E93E7FEDC54346DBF0F5076181869FC /* Toast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC5B54DD5A351B3BEA0B6060CD7FC72 /* Toast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56C8C3866DBBCE4712DBE6E378A98511 /* NSBundle+HHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9A5DD5E56F25472C2B078083BC722 /* NSBundle+HHTool.m */; };
+		56D72C9AE6BC3D7AA2ED173E4E463542 /* HHTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B6226F0DA0B84EC6AC003FEA8AFACD /* HHTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5917D2F0EAC938394E1CE50206D6073D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
+		5AAF5F2DFBE445CBADB1ACAE5C9EE86B /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 910E15691755AC76644FB6E6237079C7 /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C6938A2187F2E44467DBAED581C72CA /* HHPopupListView.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA207673262587AB993E338204331F5 /* HHPopupListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C7ADD39BB2E58696FE6718D06C2BF93 /* HHUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B85CCDA41AEDC7E430F0431C8BB1F15 /* HHUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF5C60CD9A5600D7C1DA6C02B20BE18 /* YBPopupMenuAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B245334F8BADB344E1D23D79AB8A7 /* YBPopupMenuAnimationManager.m */; };
+		5F0499F0C52EC3B68C0D6A89FCC52CD9 /* HHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2672A596527759F0EC2D45D2A63FA394 /* HHConfiguration.m */; };
+		66F2BB19C0818ACB9C05B8985A8D217D /* UIWindow+HHHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DFDE79D619355C67D865F26D062505 /* UIWindow+HHHelper.m */; };
+		678ADAC33CAB63E3061BDAEF985D6CA8 /* UIScrollView+HHLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE14240260C61EE300356AEED2EB53D /* UIScrollView+HHLoading.m */; };
+		6AC81F74337FA5AAF28102CBC568761B /* HHTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6A1DEB7398233793C543F060F0FF7159 /* HHTool.bundle */; };
+		6BD7596279B27BEE45C57A74E226C194 /* Pods-HHSimpleTool_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8213193DB5F7AAA2933423A60E201E21 /* Pods-HHSimpleTool_Tests-dummy.m */; };
+		6C7417FE43436F9B606AEF02CF8761F0 /* YBRectConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230F146E253168E35AE20F8452AE915 /* YBRectConst.m */; };
+		6C8C38A421AA05A0B13FB54C5AF65F10 /* SPAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1754755E6633B65C38B0E4C732FE9763 /* SPAlertController-dummy.m */; };
+		6D41BE5D2404F74DCD82B29AE9ECAFBD /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981DD476CF62869D0381F0B1EA8E331 /* UIScrollView+EmptyDataSet.m */; };
+		7C51CA6B5A0C934E1EBDF9793A889165 /* NSBundle+HHTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC0835B90D287213AB90C610EE3C84E /* NSBundle+HHTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85D211AACBE2D2712B38C0F53AF312CD /* YBRectConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA18454C29054EFAE89B9B6F58D0471 /* YBRectConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D37F46FC6E3AB5CD24C22D563B9A130 /* HHSimpleTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A68FA68759E7771BCF97356A6B6AEA2 /* HHSimpleTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90C3F474385D98F707C73AA01E98E09C /* HHAlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E6F8AC718233CE4CAAFA98486B4C6 /* HHAlertTool.m */; };
+		94414CF1DD549CEB78350E5D9EDE5FEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		94C1156B2EFD7B0A40CE69F5218413EA /* Pods-HHSimpleTool_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C87E3D318ACAA1092DCD8B1D197FCF0D /* Pods-HHSimpleTool_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		958645D2BCFED2DAB08C5EFC3AF501D3 /* HHToastTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5631BED4051954ECB276E095E172D2 /* HHToastTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B73A1BAD58E5D78C57CC118B26B061C /* HHDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270D5290F29D03470082E0704CE5B38 /* HHDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B8EC80D92F99178FF841AD2024D3347 /* YBPopupMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 45371EBE5397B49A01F1AD439B55BAF7 /* YBPopupMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A51760BEA432D3EFDA3746559FB13358 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		A651C8D22005C3E9C428081142DD0194 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D33DEA1A31075608D90A278FEC4AADFC /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A7C5280B31BB0D383DC9B5EC65204CD6 /* Toast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A47D0134EB4D5F7BA49C8C85B8D0847 /* Toast-dummy.m */; };
+		A9F700483C346EF8E59A80AA75A1D548 /* MBProgressHUD+HHTool.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A730C02390438256A14087DAE00F60 /* MBProgressHUD+HHTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA062F27B47BEA86BC94404990FD8B2A /* HHAlertCustomTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E20C19585A85F0DB5C2B2AB00DD5E3 /* HHAlertCustomTool.m */; };
+		B2844334AA80849DE09EE57A8C201395 /* Pods-HHSimpleTool_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45213A7070CAF29DD6D449001CD41A41 /* Pods-HHSimpleTool_Example-dummy.m */; };
+		B4829893CC1C32D8A1D940245C76630E /* YBPopupMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B708F13348B60FE0EA944B3488510A8 /* YBPopupMenu-dummy.m */; };
+		B863B1B70508F24ACB5DF4A5C07FF005 /* YBPopupMenuDeviceOrientationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 60102F3F588B5A9F3E835C1C0B257258 /* YBPopupMenuDeviceOrientationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2E7864ED7F6E8BDB72989E37818A88 /* HHUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B114FF1714EDBD6B6F856FABED9FF /* HHUtilities.m */; };
+		BD9A48E4289AC2A4C7D131EEFC49EBED /* UIWindow+HHHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 437EEFFF4BB24AB56256178873057463 /* UIWindow+HHHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE0C938ED40A26F21D0D51FADB7909B1 /* HHPopupTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A93D498E9509F373EF878BE36D5C6B /* HHPopupTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1827B2666AF7656B39BDEDC63A17522 /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 1688D0748B04E18681BCB4BD3D00B794 /* UIView+Toast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C96521B687337E7AFAD4670DE90421F0 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD09E405982AEE004786CCC8F71DC1B8 /* SPAlertController.m */; };
+		CBCEEDA7506C37448CB9644AE279DC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		CE036CBB861463AD49F35A705F38EE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		D295C576F34F80487A0FA37A1DDA22E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
+		D4D6BEC1D8E2EC12633EADF7EC596BAA /* Pods-HHSimpleTool_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD5775B799B5D0EE2A51797BDADB1F2 /* Pods-HHSimpleTool_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6DDB4305B2ED27DBA39A59D67A98307 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F22655F882ECF957AA29B7C794520C4 /* MBProgressHUD.m */; };
+		E0C7735096C90708E8121FF995BFBAB9 /* Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 29320AE49D4B331DAFED5FA473A7ACA6 /* Toast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3C3DE409DEF41D902C84ED288916022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
+		E613F6BA779B367C81731E27394456AC /* UIScrollView+HHLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E024829FE729E36A9B2AA544E5A2C7 /* UIScrollView+HHLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6D6200EFE656B080E6FD22BFBE02A10 /* YBPopupMenuAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A78CCEDD0B317C36315675028DB427 /* YBPopupMenuAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7646B87FFFD30F955254F29C7E7C34B /* UIView+HHFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1DBEBBB10668D5613BD404ED96D082 /* UIView+HHFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7767E564CA59EB9DFCE148BC0869536 /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ABD23F458BE4D9EE067108F4C707D /* YBPopupMenu.m */; };
+		EBE3AABE9A86F942BDA63EC377CAB57B /* HHAlertTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 61625F5B7FF151FB628DB604BB258843 /* HHAlertTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F265B2CB32D4CDD06A5420B14B1D56CC /* YBPopupMenuDeviceOrientationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 903F924ED62C289A9D3E5D35E05ADB75 /* YBPopupMenuDeviceOrientationManager.m */; };
+		F7C6646427A343E289175BE74353291D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
+		FDD87F09D7571414ED059A2DF36BF575 /* HHToastTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FF88FB9C03BD242C7B022A53961957EF /* HHToastTool.m */; };
+		FE0525ACD6250C930D3F3A32EE38156E /* UIView+HHFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EC415B53C534C886276B92A2AD3861 /* UIView+HHFrame.m */; };
+		FEC3B4AFA924064F2A6AC5B8F1BAB8BE /* HHSimpleTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B38EDDCC9BB7C29DA262514358ACB8C8 /* HHSimpleTool-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20E67E163CDC05708DFCBE7D8623164E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A80A4D6B185BA43BC06122FED0C15F94;
+			remoteInfo = Toast;
+		};
+		23909CD7265ECC7D1AE084CB134916B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1BCD9702276377FB5B3BDB6EAF709D7;
+			remoteInfo = DZNEmptyDataSet;
+		};
+		3DC09C0598F971617C646FFDBCBA6AA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9FD3DC67114E77A9D7C31D60926CF33;
+			remoteInfo = SPAlertController;
+		};
+		4A684235CF49936DC0B0D4B161565603 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23289CBFB58BD83C45E1DBB9295E1C35;
+			remoteInfo = YBPopupMenu;
+		};
+		87361BDA4796F4325A7AEE14474BB775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80564EEA450CD9D1BAC72963C804C0D;
+			remoteInfo = "Pods-HHSimpleTool_Example";
+		};
+		8D27F62061F3D6789DAABC6412D5CEFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1BCD9702276377FB5B3BDB6EAF709D7;
+			remoteInfo = DZNEmptyDataSet;
+		};
+		A8237F02035AA2DA196C0D2366CF99F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
+		AADC2DAC4CA757CFAD931335462DCA36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23289CBFB58BD83C45E1DBB9295E1C35;
+			remoteInfo = YBPopupMenu;
+		};
+		B7B1CA3D2212DABE972A5499031AD435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6903E3FBDFCD3F7E5FF5FBC025FFE5DF;
+			remoteInfo = HHSimpleTool;
+		};
+		D7813FE7FE8B5A9C9F87DE4DCDA81DDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
+		E84C9429F7FC1760C70D9C32AD762944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9FD3DC67114E77A9D7C31D60926CF33;
+			remoteInfo = SPAlertController;
+		};
+		EA29508E81377673C9DDA4DD7C7B6743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A80A4D6B185BA43BC06122FED0C15F94;
+			remoteInfo = Toast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B9BC54C5BA8BDA9D0FA97F8891FD89 /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
+		024B28C993E83A1547D10F69D81FDFD5 /* SPAlertController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPAlertController; path = SPAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		083C53235F75702A01CECDBE9B28CFC5 /* Toast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toast-Info.plist"; sourceTree = "<group>"; };
+		0DEBD75B78B3043FD6E6A51B573AF08A /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		0F0F2157ACC659753777600CE85E43E5 /* HHPopupListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHPopupListView.m; path = HHSimpleTool/Classes/HHPopupListView.m; sourceTree = "<group>"; };
+		10CC90D77472C7DA7590564305F4B5FD /* HHConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHConfiguration.h; path = HHSimpleTool/Classes/HHConfiguration.h; sourceTree = "<group>"; };
+		116DB4ACB3290ABEBDBD6D999DA0FA1A /* HHSimpleTool */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HHSimpleTool; path = HHSimpleTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1688D0748B04E18681BCB4BD3D00B794 /* UIView+Toast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "Toast/UIView+Toast.h"; sourceTree = "<group>"; };
+		1754755E6633B65C38B0E4C732FE9763 /* SPAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPAlertController-dummy.m"; sourceTree = "<group>"; };
+		18B6226F0DA0B84EC6AC003FEA8AFACD /* HHTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHTool.h; path = HHSimpleTool/Classes/HHTool.h; sourceTree = "<group>"; };
+		1AE00CE41142405BDF7CE0FE1E48D928 /* SPAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPAlertController.release.xcconfig; sourceTree = "<group>"; };
+		1B5E3F4931B3C6753B8E3F883CA01B32 /* HHSimpleTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHSimpleTool.release.xcconfig; sourceTree = "<group>"; };
+		1B85CCDA41AEDC7E430F0431C8BB1F15 /* HHUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHUtilities.h; path = HHSimpleTool/Classes/HHUtilities.h; sourceTree = "<group>"; };
+		1D535F2248A3DA2024EC2E29AF781B70 /* Pods-HHSimpleTool_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHSimpleTool_Tests-Info.plist"; sourceTree = "<group>"; };
+		202D65FF562296B66CBD157FFF25E5F8 /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
+		205318D8205862EBA0F4855A68E7AF2C /* Pods-HHSimpleTool_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HHSimpleTool_Example-frameworks.sh"; sourceTree = "<group>"; };
+		20591962E9630C33E076F1735941F45D /* MBProgressHUD+HHTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+HHTool.m"; path = "HHSimpleTool/Classes/MBProgressHUD+HHTool.m"; sourceTree = "<group>"; };
+		2672A596527759F0EC2D45D2A63FA394 /* HHConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHConfiguration.m; path = HHSimpleTool/Classes/HHConfiguration.m; sourceTree = "<group>"; };
+		26E20C19585A85F0DB5C2B2AB00DD5E3 /* HHAlertCustomTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHAlertCustomTool.m; path = HHSimpleTool/Classes/HHAlertCustomTool.m; sourceTree = "<group>"; };
+		29320AE49D4B331DAFED5FA473A7ACA6 /* Toast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "Toast-Framework/Toast.h"; sourceTree = "<group>"; };
+		29A4201D34D047D9E0B05CC9E51D91C4 /* SPAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPAlertController-prefix.pch"; sourceTree = "<group>"; };
+		2A49FF17381F0416418A394287FC012C /* SPAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPAlertController-Info.plist"; sourceTree = "<group>"; };
+		2B6F695DC187689EE87881FEF41B78D1 /* YBPopupMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YBPopupMenu-umbrella.h"; sourceTree = "<group>"; };
+		2DA18454C29054EFAE89B9B6F58D0471 /* YBRectConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YBRectConst.h; path = Sources/YBPopupMenu/YBRectConst.h; sourceTree = "<group>"; };
+		2EEAF402EA86330CF31A3B3F3C99BBCD /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3009B8FC7CE5D04BFF7A4247C8526163 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		30A78CCEDD0B317C36315675028DB427 /* YBPopupMenuAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YBPopupMenuAnimationManager.h; path = Sources/YBPopupMenu/YBPopupMenuAnimationManager.h; sourceTree = "<group>"; };
+		30E5018D875B3ABE919D34A7B2615861 /* Pods-HHSimpleTool_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHSimpleTool_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		314A93B85A0F25949EB791C830D43264 /* YBPopupMenuPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YBPopupMenuPath.m; path = Sources/YBPopupMenu/YBPopupMenuPath.m; sourceTree = "<group>"; };
+		389410C17259BA1DB326615EF060C2BF /* HHAlertCustomTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHAlertCustomTool.h; path = HHSimpleTool/Classes/HHAlertCustomTool.h; sourceTree = "<group>"; };
+		39B13DF3776D9B42846D3844FEE69B87 /* SPAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPAlertController.debug.xcconfig; sourceTree = "<group>"; };
+		3C13282DBD7BC5355060B0BAFB8DA5D6 /* HHPopupTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHPopupTool.m; path = HHSimpleTool/Classes/HHPopupTool.m; sourceTree = "<group>"; };
+		3D91FF15636ED2796F77C5C5E3FBD5CF /* Toast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toast.debug.xcconfig; sourceTree = "<group>"; };
+		437EEFFF4BB24AB56256178873057463 /* UIWindow+HHHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+HHHelper.h"; path = "HHSimpleTool/Classes/UIWindow+HHHelper.h"; sourceTree = "<group>"; };
+		45213A7070CAF29DD6D449001CD41A41 /* Pods-HHSimpleTool_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHSimpleTool_Example-dummy.m"; sourceTree = "<group>"; };
+		45371EBE5397B49A01F1AD439B55BAF7 /* YBPopupMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YBPopupMenu.h; path = Sources/YBPopupMenu/YBPopupMenu.h; sourceTree = "<group>"; };
+		4908CB88A63371583DFCFF12B363127A /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		4B0E6F8AC718233CE4CAAFA98486B4C6 /* HHAlertTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHAlertTool.m; path = HHSimpleTool/Classes/HHAlertTool.m; sourceTree = "<group>"; };
+		4B3EF643D7FC9BA93324BC94FAF7845E /* Pods-HHSimpleTool_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHSimpleTool_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4B5631BED4051954ECB276E095E172D2 /* HHToastTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHToastTool.h; path = HHSimpleTool/Classes/HHToastTool.h; sourceTree = "<group>"; };
+		4EE1A75B1A998A31D909ED4372259701 /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
+		5270D5290F29D03470082E0704CE5B38 /* HHDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHDefine.h; path = HHSimpleTool/Classes/HHDefine.h; sourceTree = "<group>"; };
+		55E0AFD333353D71ACC2207149E879D6 /* Toast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast; path = Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5733B9AEE92B6CBB75BF89A8BFF131F8 /* HHSimpleTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HHSimpleTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5BC0835B90D287213AB90C610EE3C84E /* NSBundle+HHTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+HHTool.h"; path = "HHSimpleTool/Classes/NSBundle+HHTool.h"; sourceTree = "<group>"; };
+		5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DZNEmptyDataSet; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60102F3F588B5A9F3E835C1C0B257258 /* YBPopupMenuDeviceOrientationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YBPopupMenuDeviceOrientationManager.h; path = Sources/YBPopupMenu/YBPopupMenuDeviceOrientationManager.h; sourceTree = "<group>"; };
+		6114B4B3A52A1366654BBBBCFE82E85E /* YBPopupMenuPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YBPopupMenuPath.h; path = Sources/YBPopupMenu/YBPopupMenuPath.h; sourceTree = "<group>"; };
+		61625F5B7FF151FB628DB604BB258843 /* HHAlertTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHAlertTool.h; path = HHSimpleTool/Classes/HHAlertTool.h; sourceTree = "<group>"; };
+		68B74C6A7EC231F039B56C680EEB7148 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6A1DEB7398233793C543F060F0FF7159 /* HHTool.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = HHTool.bundle; path = HHSimpleTool/Assets/HHTool.bundle; sourceTree = "<group>"; };
+		6B0ABD23F458BE4D9EE067108F4C707D /* YBPopupMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YBPopupMenu.m; path = Sources/YBPopupMenu/YBPopupMenu.m; sourceTree = "<group>"; };
+		71DA7A5504FC4F032D14DE19B661FE4F /* Pods-HHSimpleTool_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HHSimpleTool_Example"; path = Pods_HHSimpleTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7230F146E253168E35AE20F8452AE915 /* YBRectConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YBRectConst.m; path = Sources/YBPopupMenu/YBRectConst.m; sourceTree = "<group>"; };
+		7570C6A58AB9C0B5F9BDD346E39D1ED8 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A9B40757747126B6C27E4C8412BD3E5 /* HHSimpleTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HHSimpleTool.modulemap; sourceTree = "<group>"; };
+		815F07DE3CC1A1B2E56EE2ECAE648DC6 /* Pods-HHSimpleTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHSimpleTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8213193DB5F7AAA2933423A60E201E21 /* Pods-HHSimpleTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHSimpleTool_Tests-dummy.m"; sourceTree = "<group>"; };
+		835E9643661034598AB073A84A97E0AC /* HHSimpleTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HHSimpleTool-Info.plist"; sourceTree = "<group>"; };
+		83690B81D2D307833F59A15F99E48FF6 /* YBPopupMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YBPopupMenu-Info.plist"; sourceTree = "<group>"; };
+		840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		88820D4E0E956639D5A793D9C7C956A9 /* YBPopupMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YBPopupMenu.debug.xcconfig; sourceTree = "<group>"; };
+		8981DD476CF62869D0381F0B1EA8E331 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		8A68FA68759E7771BCF97356A6B6AEA2 /* HHSimpleTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHSimpleTool-umbrella.h"; sourceTree = "<group>"; };
+		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECC1CA136629B958CAFC7D0B81B18C0 /* HHSimpleTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HHSimpleTool-prefix.pch"; sourceTree = "<group>"; };
+		903F924ED62C289A9D3E5D35E05ADB75 /* YBPopupMenuDeviceOrientationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YBPopupMenuDeviceOrientationManager.m; path = Sources/YBPopupMenu/YBPopupMenuDeviceOrientationManager.m; sourceTree = "<group>"; };
+		910E15691755AC76644FB6E6237079C7 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		91A93D498E9509F373EF878BE36D5C6B /* HHPopupTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHPopupTool.h; path = HHSimpleTool/Classes/HHPopupTool.h; sourceTree = "<group>"; };
+		96F32E66E1397A568DF5262739BA8B58 /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		98BB93654454F77AB83F77F5C8346B2D /* Toast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toast.release.xcconfig; sourceTree = "<group>"; };
+		9A47D0134EB4D5F7BA49C8C85B8D0847 /* Toast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-dummy.m"; sourceTree = "<group>"; };
+		9A7AB41CBAF61B8E9E61903B6752F936 /* SPAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPAlertController.h; path = SPAlertController/SPAlertController.h; sourceTree = "<group>"; };
+		9B1DBEBBB10668D5613BD404ED96D082 /* UIView+HHFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+HHFrame.h"; path = "HHSimpleTool/Classes/UIView+HHFrame.h"; sourceTree = "<group>"; };
+		9B708F13348B60FE0EA944B3488510A8 /* YBPopupMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YBPopupMenu-dummy.m"; sourceTree = "<group>"; };
+		9D741A23C6866DBCA6BC84A679906D32 /* Pods-HHSimpleTool_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HHSimpleTool_Tests"; path = Pods_HHSimpleTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F22655F882ECF957AA29B7C794520C4 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A157FF527FD21518F3B2127DBE12CA66 /* YBPopupMenu */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YBPopupMenu; path = YBPopupMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27D4B00EEB5B7F9917E1F728DC988A2 /* Toast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-prefix.pch"; sourceTree = "<group>"; };
+		A3C92021B1AD9AAD01ABC7DF353BC974 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AB145E18C71C2BDF62E7ED777531D206 /* DZNEmptyDataSet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.release.xcconfig; sourceTree = "<group>"; };
+		AD09E405982AEE004786CCC8F71DC1B8 /* SPAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPAlertController.m; path = SPAlertController/SPAlertController.m; sourceTree = "<group>"; };
+		AD0B114FF1714EDBD6B6F856FABED9FF /* HHUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHUtilities.m; path = HHSimpleTool/Classes/HHUtilities.m; sourceTree = "<group>"; };
+		AD64B8026CC37CB4BAE8C8ACE220CDD6 /* Pods-HHSimpleTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHSimpleTool_Example.release.xcconfig"; sourceTree = "<group>"; };
+		ADB2C544CCAFC51DF6EA7248FB3D34C1 /* SPAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPAlertController-umbrella.h"; sourceTree = "<group>"; };
+		AE005912A8B491EEE1691553117315FD /* Pods-HHSimpleTool_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHSimpleTool_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B0A9FBF70DC118F9873FBAEF1A0B1550 /* Pods-HHSimpleTool_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHSimpleTool_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B38EDDCC9BB7C29DA262514358ACB8C8 /* HHSimpleTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HHSimpleTool-dummy.m"; sourceTree = "<group>"; };
+		B8EC415B53C534C886276B92A2AD3861 /* UIView+HHFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+HHFrame.m"; path = "HHSimpleTool/Classes/UIView+HHFrame.m"; sourceTree = "<group>"; };
+		BA1BEE696244A129AC20232807097FA2 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		BD3E79DD06CA003623572AE8429CF8BC /* YBPopupMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YBPopupMenu-prefix.pch"; sourceTree = "<group>"; };
+		C1DFDE79D619355C67D865F26D062505 /* UIWindow+HHHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+HHHelper.m"; path = "HHSimpleTool/Classes/UIWindow+HHHelper.m"; sourceTree = "<group>"; };
+		C4AB4AFABC66C9C59D20561E8FC1A4EB /* YBPopupMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YBPopupMenu.modulemap; sourceTree = "<group>"; };
+		C4E024829FE729E36A9B2AA544E5A2C7 /* UIScrollView+HHLoading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+HHLoading.h"; path = "HHSimpleTool/Classes/UIScrollView+HHLoading.h"; sourceTree = "<group>"; };
+		C5C79EA593FA29EF46AFE867836C9A54 /* Pods-HHSimpleTool_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHSimpleTool_Tests.modulemap"; sourceTree = "<group>"; };
+		C7AC3F8009D24A76A5B5DAE2D2EA5658 /* Pods-HHSimpleTool_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HHSimpleTool_Example.modulemap"; sourceTree = "<group>"; };
+		C87E3D318ACAA1092DCD8B1D197FCF0D /* Pods-HHSimpleTool_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHSimpleTool_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CAC20DBEC6FED1AB4F9EF29119221D25 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		CD67FF6D951C046E162762BB393C3656 /* DZNEmptyDataSet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DZNEmptyDataSet-Info.plist"; sourceTree = "<group>"; };
+		D1CB12B2A51669AB03351A12174C542E /* DZNEmptyDataSet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.debug.xcconfig; sourceTree = "<group>"; };
+		D2EF7475B8E3C3278292DE1C71DEBE07 /* YBPopupMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YBPopupMenu.release.xcconfig; sourceTree = "<group>"; };
+		D33DEA1A31075608D90A278FEC4AADFC /* UIView+Toast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "Toast/UIView+Toast.m"; sourceTree = "<group>"; };
+		D604DE0CA3A61D8CCACFC263CFA971B1 /* Pods-HHSimpleTool_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHSimpleTool_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCC5B54DD5A351B3BEA0B6060CD7FC72 /* Toast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-umbrella.h"; sourceTree = "<group>"; };
+		DDE14240260C61EE300356AEED2EB53D /* UIScrollView+HHLoading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+HHLoading.m"; path = "HHSimpleTool/Classes/UIScrollView+HHLoading.m"; sourceTree = "<group>"; };
+		DF3F9535B90083BC512B565CA0285093 /* Toast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Toast.modulemap; sourceTree = "<group>"; };
+		E36B245334F8BADB344E1D23D79AB8A7 /* YBPopupMenuAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YBPopupMenuAnimationManager.m; path = Sources/YBPopupMenu/YBPopupMenuAnimationManager.m; sourceTree = "<group>"; };
+		E5F0608AE255429E9CE1A78FE79233E1 /* Pods-HHSimpleTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHSimpleTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E9E7B1C312E006BE58B22E029AA8C2D9 /* Pods-HHSimpleTool_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HHSimpleTool_Example-Info.plist"; sourceTree = "<group>"; };
+		EEC9A5DD5E56F25472C2B078083BC722 /* NSBundle+HHTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+HHTool.m"; path = "HHSimpleTool/Classes/NSBundle+HHTool.m"; sourceTree = "<group>"; };
+		F4A730C02390438256A14087DAE00F60 /* MBProgressHUD+HHTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+HHTool.h"; path = "HHSimpleTool/Classes/MBProgressHUD+HHTool.h"; sourceTree = "<group>"; };
+		F5CE48FA12078B4473494BB361AB8632 /* SPAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPAlertController.modulemap; sourceTree = "<group>"; };
+		FAD85E5480783A188CC5379CC1A8F6A3 /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
+		FC77C89DB56E984BB97F2B6456068948 /* HHSimpleTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HHSimpleTool.debug.xcconfig; sourceTree = "<group>"; };
+		FCD5775B799B5D0EE2A51797BDADB1F2 /* Pods-HHSimpleTool_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HHSimpleTool_Example-umbrella.h"; sourceTree = "<group>"; };
+		FEA207673262587AB993E338204331F5 /* HHPopupListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHPopupListView.h; path = HHSimpleTool/Classes/HHPopupListView.h; sourceTree = "<group>"; };
+		FF88FB9C03BD242C7B022A53961957EF /* HHToastTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHToastTool.m; path = HHSimpleTool/Classes/HHToastTool.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		336DFD3A80C4D8938BFC8C3AA1A33C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51760BEA432D3EFDA3746559FB13358 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA98020D55306E01DAD73CD524BA1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE036CBB861463AD49F35A705F38EE0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60160DC193905389D6C037F520322C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5917D2F0EAC938394E1CE50206D6073D /* CoreGraphics.framework in Frameworks */,
+				E3C3DE409DEF41D902C84ED288916022 /* Foundation.framework in Frameworks */,
+				F7C6646427A343E289175BE74353291D /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC8323F0DA81249CBB285A4724C1963 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBCEEDA7506C37448CB9644AE279DC23 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADC613EB65919EC2A824D24DF5E45EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2074D8FFED1B7FA59FFC01A20D9097C0 /* Foundation.framework in Frameworks */,
+				D295C576F34F80487A0FA37A1DDA22E4 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B593672A0ADE2E264B6BA4B96360925C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94414CF1DD549CEB78350E5D9EDE5FEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDDECBC085CF725DEF7587931A3F9C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C15A3DA91E8B005D5DA39936ECB9CF /* Foundation.framework in Frameworks */,
+				32FB260CA2D0966FBC3E14ECEF9D7A41 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D612C3639EC587BDDA53763465D26685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC2F460680C5821EC69E80DBE0DE398 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03ABA39618A928CE088380CD1A331227 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA1BEE696244A129AC20232807097FA2 /* MBProgressHUD.modulemap */,
+				CAC20DBEC6FED1AB4F9EF29119221D25 /* MBProgressHUD-dummy.m */,
+				4908CB88A63371583DFCFF12B363127A /* MBProgressHUD-Info.plist */,
+				7570C6A58AB9C0B5F9BDD346E39D1ED8 /* MBProgressHUD-prefix.pch */,
+				A3C92021B1AD9AAD01ABC7DF353BC974 /* MBProgressHUD-umbrella.h */,
+				96F32E66E1397A568DF5262739BA8B58 /* MBProgressHUD.debug.xcconfig */,
+				0DEBD75B78B3043FD6E6A51B573AF08A /* MBProgressHUD.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		12E61D3F7A45931E0E0B0729FE36A111 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				202D65FF562296B66CBD157FFF25E5F8 /* DZNEmptyDataSet.modulemap */,
+				4EE1A75B1A998A31D909ED4372259701 /* DZNEmptyDataSet-dummy.m */,
+				CD67FF6D951C046E162762BB393C3656 /* DZNEmptyDataSet-Info.plist */,
+				00B9BC54C5BA8BDA9D0FA97F8891FD89 /* DZNEmptyDataSet-prefix.pch */,
+				FAD85E5480783A188CC5379CC1A8F6A3 /* DZNEmptyDataSet-umbrella.h */,
+				D1CB12B2A51669AB03351A12174C542E /* DZNEmptyDataSet.debug.xcconfig */,
+				AB145E18C71C2BDF62E7ED777531D206 /* DZNEmptyDataSet.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DZNEmptyDataSet";
+			sourceTree = "<group>";
+		};
+		2A4A8202321465F7506559EF3A627F79 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D1ACE9AD552ADF52ED2F1EB0814C721 /* HHSimpleTool */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2CEBE7D50E5E554F506F9E222628C8D7 /* Pods-HHSimpleTool_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C5C79EA593FA29EF46AFE867836C9A54 /* Pods-HHSimpleTool_Tests.modulemap */,
+				30E5018D875B3ABE919D34A7B2615861 /* Pods-HHSimpleTool_Tests-acknowledgements.markdown */,
+				B0A9FBF70DC118F9873FBAEF1A0B1550 /* Pods-HHSimpleTool_Tests-acknowledgements.plist */,
+				8213193DB5F7AAA2933423A60E201E21 /* Pods-HHSimpleTool_Tests-dummy.m */,
+				1D535F2248A3DA2024EC2E29AF781B70 /* Pods-HHSimpleTool_Tests-Info.plist */,
+				C87E3D318ACAA1092DCD8B1D197FCF0D /* Pods-HHSimpleTool_Tests-umbrella.h */,
+				D604DE0CA3A61D8CCACFC263CFA971B1 /* Pods-HHSimpleTool_Tests.debug.xcconfig */,
+				E5F0608AE255429E9CE1A78FE79233E1 /* Pods-HHSimpleTool_Tests.release.xcconfig */,
+			);
+			name = "Pods-HHSimpleTool_Tests";
+			path = "Target Support Files/Pods-HHSimpleTool_Tests";
+			sourceTree = "<group>";
+		};
+		2D1ACE9AD552ADF52ED2F1EB0814C721 /* HHSimpleTool */ = {
+			isa = PBXGroup;
+			children = (
+				389410C17259BA1DB326615EF060C2BF /* HHAlertCustomTool.h */,
+				26E20C19585A85F0DB5C2B2AB00DD5E3 /* HHAlertCustomTool.m */,
+				61625F5B7FF151FB628DB604BB258843 /* HHAlertTool.h */,
+				4B0E6F8AC718233CE4CAAFA98486B4C6 /* HHAlertTool.m */,
+				10CC90D77472C7DA7590564305F4B5FD /* HHConfiguration.h */,
+				2672A596527759F0EC2D45D2A63FA394 /* HHConfiguration.m */,
+				5270D5290F29D03470082E0704CE5B38 /* HHDefine.h */,
+				FEA207673262587AB993E338204331F5 /* HHPopupListView.h */,
+				0F0F2157ACC659753777600CE85E43E5 /* HHPopupListView.m */,
+				91A93D498E9509F373EF878BE36D5C6B /* HHPopupTool.h */,
+				3C13282DBD7BC5355060B0BAFB8DA5D6 /* HHPopupTool.m */,
+				4B5631BED4051954ECB276E095E172D2 /* HHToastTool.h */,
+				FF88FB9C03BD242C7B022A53961957EF /* HHToastTool.m */,
+				6A1DEB7398233793C543F060F0FF7159 /* HHTool.bundle */,
+				18B6226F0DA0B84EC6AC003FEA8AFACD /* HHTool.h */,
+				1B85CCDA41AEDC7E430F0431C8BB1F15 /* HHUtilities.h */,
+				AD0B114FF1714EDBD6B6F856FABED9FF /* HHUtilities.m */,
+				F4A730C02390438256A14087DAE00F60 /* MBProgressHUD+HHTool.h */,
+				20591962E9630C33E076F1735941F45D /* MBProgressHUD+HHTool.m */,
+				5BC0835B90D287213AB90C610EE3C84E /* NSBundle+HHTool.h */,
+				EEC9A5DD5E56F25472C2B078083BC722 /* NSBundle+HHTool.m */,
+				C4E024829FE729E36A9B2AA544E5A2C7 /* UIScrollView+HHLoading.h */,
+				DDE14240260C61EE300356AEED2EB53D /* UIScrollView+HHLoading.m */,
+				9B1DBEBBB10668D5613BD404ED96D082 /* UIView+HHFrame.h */,
+				B8EC415B53C534C886276B92A2AD3861 /* UIView+HHFrame.m */,
+				437EEFFF4BB24AB56256178873057463 /* UIWindow+HHHelper.h */,
+				C1DFDE79D619355C67D865F26D062505 /* UIWindow+HHHelper.m */,
+				7CD7B685F43F20C382CAA5A8A298A9C4 /* Pod */,
+				54DBCA571AAE17F032E8BDB38B1A5BBE /* Support Files */,
+			);
+			name = HHSimpleTool;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2E84AE6CD02F0E94CB08281823F8CF50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4AB4AFABC66C9C59D20561E8FC1A4EB /* YBPopupMenu.modulemap */,
+				9B708F13348B60FE0EA944B3488510A8 /* YBPopupMenu-dummy.m */,
+				83690B81D2D307833F59A15F99E48FF6 /* YBPopupMenu-Info.plist */,
+				BD3E79DD06CA003623572AE8429CF8BC /* YBPopupMenu-prefix.pch */,
+				2B6F695DC187689EE87881FEF41B78D1 /* YBPopupMenu-umbrella.h */,
+				88820D4E0E956639D5A793D9C7C956A9 /* YBPopupMenu.debug.xcconfig */,
+				D2EF7475B8E3C3278292DE1C71DEBE07 /* YBPopupMenu.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YBPopupMenu";
+			sourceTree = "<group>";
+		};
+		37FF73350DF38D20646D6EF552DA5E44 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				693B0EF1E62E89B798A1C7ACE46E1E86 /* Pods-HHSimpleTool_Example */,
+				2CEBE7D50E5E554F506F9E222628C8D7 /* Pods-HHSimpleTool_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4CD4ABADD6DEB5AB49799DE9DA36C379 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				29320AE49D4B331DAFED5FA473A7ACA6 /* Toast.h */,
+				1688D0748B04E18681BCB4BD3D00B794 /* UIView+Toast.h */,
+				D33DEA1A31075608D90A278FEC4AADFC /* UIView+Toast.m */,
+				630D092B77E63B0FB87895A757C8BC43 /* Support Files */,
+			);
+			name = Toast;
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		54DBCA571AAE17F032E8BDB38B1A5BBE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B40757747126B6C27E4C8412BD3E5 /* HHSimpleTool.modulemap */,
+				B38EDDCC9BB7C29DA262514358ACB8C8 /* HHSimpleTool-dummy.m */,
+				835E9643661034598AB073A84A97E0AC /* HHSimpleTool-Info.plist */,
+				8ECC1CA136629B958CAFC7D0B81B18C0 /* HHSimpleTool-prefix.pch */,
+				8A68FA68759E7771BCF97356A6B6AEA2 /* HHSimpleTool-umbrella.h */,
+				FC77C89DB56E984BB97F2B6456068948 /* HHSimpleTool.debug.xcconfig */,
+				1B5E3F4931B3C6753B8E3F883CA01B32 /* HHSimpleTool.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HHSimpleTool";
+			sourceTree = "<group>";
+		};
+		5A476314D0206AEE44593053D8090EF0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2EEAF402EA86330CF31A3B3F3C99BBCD /* MBProgressHUD.h */,
+				9F22655F882ECF957AA29B7C794520C4 /* MBProgressHUD.m */,
+				03ABA39618A928CE088380CD1A331227 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		600FA8C61616E34F39D7D937CB5EA60F /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				910E15691755AC76644FB6E6237079C7 /* UIScrollView+EmptyDataSet.h */,
+				8981DD476CF62869D0381F0B1EA8E331 /* UIScrollView+EmptyDataSet.m */,
+				12E61D3F7A45931E0E0B0729FE36A111 /* Support Files */,
+			);
+			name = DZNEmptyDataSet;
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		630D092B77E63B0FB87895A757C8BC43 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF3F9535B90083BC512B565CA0285093 /* Toast.modulemap */,
+				9A47D0134EB4D5F7BA49C8C85B8D0847 /* Toast-dummy.m */,
+				083C53235F75702A01CECDBE9B28CFC5 /* Toast-Info.plist */,
+				A27D4B00EEB5B7F9917E1F728DC988A2 /* Toast-prefix.pch */,
+				DCC5B54DD5A351B3BEA0B6060CD7FC72 /* Toast-umbrella.h */,
+				3D91FF15636ED2796F77C5C5E3FBD5CF /* Toast.debug.xcconfig */,
+				98BB93654454F77AB83F77F5C8346B2D /* Toast.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toast";
+			sourceTree = "<group>";
+		};
+		693B0EF1E62E89B798A1C7ACE46E1E86 /* Pods-HHSimpleTool_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C7AC3F8009D24A76A5B5DAE2D2EA5658 /* Pods-HHSimpleTool_Example.modulemap */,
+				4B3EF643D7FC9BA93324BC94FAF7845E /* Pods-HHSimpleTool_Example-acknowledgements.markdown */,
+				AE005912A8B491EEE1691553117315FD /* Pods-HHSimpleTool_Example-acknowledgements.plist */,
+				45213A7070CAF29DD6D449001CD41A41 /* Pods-HHSimpleTool_Example-dummy.m */,
+				205318D8205862EBA0F4855A68E7AF2C /* Pods-HHSimpleTool_Example-frameworks.sh */,
+				E9E7B1C312E006BE58B22E029AA8C2D9 /* Pods-HHSimpleTool_Example-Info.plist */,
+				FCD5775B799B5D0EE2A51797BDADB1F2 /* Pods-HHSimpleTool_Example-umbrella.h */,
+				815F07DE3CC1A1B2E56EE2ECAE648DC6 /* Pods-HHSimpleTool_Example.debug.xcconfig */,
+				AD64B8026CC37CB4BAE8C8ACE220CDD6 /* Pods-HHSimpleTool_Example.release.xcconfig */,
+			);
+			name = "Pods-HHSimpleTool_Example";
+			path = "Target Support Files/Pods-HHSimpleTool_Example";
+			sourceTree = "<group>";
+		};
+		6F1D35068AD181DC9E862A210C68C076 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				600FA8C61616E34F39D7D937CB5EA60F /* DZNEmptyDataSet */,
+				5A476314D0206AEE44593053D8090EF0 /* MBProgressHUD */,
+				D05526930EB14B5B5E9A0B0CD88E07A6 /* SPAlertController */,
+				4CD4ABADD6DEB5AB49799DE9DA36C379 /* Toast */,
+				C39F58B1ABB97D8B35ACCD00877C6852 /* YBPopupMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7CD7B685F43F20C382CAA5A8A298A9C4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5733B9AEE92B6CBB75BF89A8BFF131F8 /* HHSimpleTool.podspec */,
+				3009B8FC7CE5D04BFF7A4247C8526163 /* LICENSE */,
+				68B74C6A7EC231F039B56C680EEB7148 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		98129E5FAADB5563D54E918F6356811C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5CE48FA12078B4473494BB361AB8632 /* SPAlertController.modulemap */,
+				1754755E6633B65C38B0E4C732FE9763 /* SPAlertController-dummy.m */,
+				2A49FF17381F0416418A394287FC012C /* SPAlertController-Info.plist */,
+				29A4201D34D047D9E0B05CC9E51D91C4 /* SPAlertController-prefix.pch */,
+				ADB2C544CCAFC51DF6EA7248FB3D34C1 /* SPAlertController-umbrella.h */,
+				39B13DF3776D9B42846D3844FEE69B87 /* SPAlertController.debug.xcconfig */,
+				1AE00CE41142405BDF7CE0FE1E48D928 /* SPAlertController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SPAlertController";
+			sourceTree = "<group>";
+		};
+		B9F3C04A9A49A9615B25A171113B65AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet */,
+				116DB4ACB3290ABEBDBD6D999DA0FA1A /* HHSimpleTool */,
+				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
+				71DA7A5504FC4F032D14DE19B661FE4F /* Pods-HHSimpleTool_Example */,
+				9D741A23C6866DBCA6BC84A679906D32 /* Pods-HHSimpleTool_Tests */,
+				024B28C993E83A1547D10F69D81FDFD5 /* SPAlertController */,
+				55E0AFD333353D71ACC2207149E879D6 /* Toast */,
+				A157FF527FD21518F3B2127DBE12CA66 /* YBPopupMenu */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39F58B1ABB97D8B35ACCD00877C6852 /* YBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				45371EBE5397B49A01F1AD439B55BAF7 /* YBPopupMenu.h */,
+				6B0ABD23F458BE4D9EE067108F4C707D /* YBPopupMenu.m */,
+				30A78CCEDD0B317C36315675028DB427 /* YBPopupMenuAnimationManager.h */,
+				E36B245334F8BADB344E1D23D79AB8A7 /* YBPopupMenuAnimationManager.m */,
+				60102F3F588B5A9F3E835C1C0B257258 /* YBPopupMenuDeviceOrientationManager.h */,
+				903F924ED62C289A9D3E5D35E05ADB75 /* YBPopupMenuDeviceOrientationManager.m */,
+				6114B4B3A52A1366654BBBBCFE82E85E /* YBPopupMenuPath.h */,
+				314A93B85A0F25949EB791C830D43264 /* YBPopupMenuPath.m */,
+				2DA18454C29054EFAE89B9B6F58D0471 /* YBRectConst.h */,
+				7230F146E253168E35AE20F8452AE915 /* YBRectConst.m */,
+				2E84AE6CD02F0E94CB08281823F8CF50 /* Support Files */,
+			);
+			name = YBPopupMenu;
+			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2A4A8202321465F7506559EF3A627F79 /* Development Pods */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				6F1D35068AD181DC9E862A210C68C076 /* Pods */,
+				B9F3C04A9A49A9615B25A171113B65AD /* Products */,
+				37FF73350DF38D20646D6EF552DA5E44 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D05526930EB14B5B5E9A0B0CD88E07A6 /* SPAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				9A7AB41CBAF61B8E9E61903B6752F936 /* SPAlertController.h */,
+				AD09E405982AEE004786CCC8F71DC1B8 /* SPAlertController.m */,
+				98129E5FAADB5563D54E918F6356811C /* Support Files */,
+			);
+			name = SPAlertController;
+			path = SPAlertController;
+			sourceTree = "<group>";
+		};
+		F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */,
+				79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */,
+				A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */,
+				04D60AC13D33197690A05C641925DDDA /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04DF3B42ACABC3459E72C7184FB7F99F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8EC80D92F99178FF841AD2024D3347 /* YBPopupMenu.h in Headers */,
+				3AF4801CD8F435F867087EEAABD739D6 /* YBPopupMenu-umbrella.h in Headers */,
+				E6D6200EFE656B080E6FD22BFBE02A10 /* YBPopupMenuAnimationManager.h in Headers */,
+				B863B1B70508F24ACB5DF4A5C07FF005 /* YBPopupMenuDeviceOrientationManager.h in Headers */,
+				18FB2A2EFA877A34DF18F598E4FA1189 /* YBPopupMenuPath.h in Headers */,
+				85D211AACBE2D2712B38C0F53AF312CD /* YBRectConst.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18839B9A6B8961ACC8C4332D2CB7D3F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0C7735096C90708E8121FF995BFBAB9 /* Toast.h in Headers */,
+				4E93E7FEDC54346DBF0F5076181869FC /* Toast-umbrella.h in Headers */,
+				C1827B2666AF7656B39BDEDC63A17522 /* UIView+Toast.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2666F02A2758AB1A7DDCD1B7A0B51160 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C1156B2EFD7B0A40CE69F5218413EA /* Pods-HHSimpleTool_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		908522878E64C4EFFAD4AB77F04D1EEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DAD89C5BAE65295B3AC58A1739A278 /* MBProgressHUD.h in Headers */,
+				1D51898291077EBFACD14FF045F5C004 /* MBProgressHUD-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B69BDC055EBF2FC0A595913B88C5A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D6BEC1D8E2EC12633EADF7EC596BAA /* Pods-HHSimpleTool_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85626F1E5CFB1EAA977DE172C46003F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1255E6BF05DE8F2802D5BAC04D6A42B4 /* SPAlertController.h in Headers */,
+				4C2F9FE584A9DB089B351D3E3BCB7104 /* SPAlertController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA3EB57F1FBADB9BF2CD09B40FC7388 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25338681E3965EC57E745BF23C533F29 /* HHAlertCustomTool.h in Headers */,
+				EBE3AABE9A86F942BDA63EC377CAB57B /* HHAlertTool.h in Headers */,
+				12B55866DB94DDE5F929387EEE042C1A /* HHConfiguration.h in Headers */,
+				9B73A1BAD58E5D78C57CC118B26B061C /* HHDefine.h in Headers */,
+				5C6938A2187F2E44467DBAED581C72CA /* HHPopupListView.h in Headers */,
+				BE0C938ED40A26F21D0D51FADB7909B1 /* HHPopupTool.h in Headers */,
+				8D37F46FC6E3AB5CD24C22D563B9A130 /* HHSimpleTool-umbrella.h in Headers */,
+				958645D2BCFED2DAB08C5EFC3AF501D3 /* HHToastTool.h in Headers */,
+				56D72C9AE6BC3D7AA2ED173E4E463542 /* HHTool.h in Headers */,
+				5C7ADD39BB2E58696FE6718D06C2BF93 /* HHUtilities.h in Headers */,
+				A9F700483C346EF8E59A80AA75A1D548 /* MBProgressHUD+HHTool.h in Headers */,
+				7C51CA6B5A0C934E1EBDF9793A889165 /* NSBundle+HHTool.h in Headers */,
+				E613F6BA779B367C81731E27394456AC /* UIScrollView+HHLoading.h in Headers */,
+				E7646B87FFFD30F955254F29C7E7C34B /* UIView+HHFrame.h in Headers */,
+				BD9A48E4289AC2A4C7D131EEFC49EBED /* UIWindow+HHHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06BA6C9F749FE4DEE5BE5FE450E10A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE0E5EAB11950A0758C73468640EEE0 /* DZNEmptyDataSet-umbrella.h in Headers */,
+				5AAF5F2DFBE445CBADB1ACAE5C9EE86B /* UIScrollView+EmptyDataSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23289CBFB58BD83C45E1DBB9295E1C35 /* YBPopupMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 341C63ABE696B45D8F1C1137BFD24252 /* Build configuration list for PBXNativeTarget "YBPopupMenu" */;
+			buildPhases = (
+				04DF3B42ACABC3459E72C7184FB7F99F /* Headers */,
+				7B86E77600E0CA31E34AC76BA572D25C /* Sources */,
+				3DA98020D55306E01DAD73CD524BA1E1 /* Frameworks */,
+				900BFCCC30E2B23D31B56798FF5C1266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YBPopupMenu;
+			productName = YBPopupMenu;
+			productReference = A157FF527FD21518F3B2127DBE12CA66 /* YBPopupMenu */;
+			productType = "com.apple.product-type.framework";
+		};
+		28C2FF2540FA55BD992CAD398A7EA7FF /* Pods-HHSimpleTool_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B084C0ED5EE5777EC86B2C80DF2CC161 /* Build configuration list for PBXNativeTarget "Pods-HHSimpleTool_Tests" */;
+			buildPhases = (
+				2666F02A2758AB1A7DDCD1B7A0B51160 /* Headers */,
+				A249A024447609374974A0FB8602503E /* Sources */,
+				8AC8323F0DA81249CBB285A4724C1963 /* Frameworks */,
+				F6F6CF5D9DD8F9652681D56882CAE300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D17E538534CA274DC92AFDCE5BB9E56 /* PBXTargetDependency */,
+			);
+			name = "Pods-HHSimpleTool_Tests";
+			productName = Pods_HHSimpleTool_Tests;
+			productReference = 9D741A23C6866DBCA6BC84A679906D32 /* Pods-HHSimpleTool_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		6903E3FBDFCD3F7E5FF5FBC025FFE5DF /* HHSimpleTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 996893C01F1A6A11A624C491F7B62628 /* Build configuration list for PBXNativeTarget "HHSimpleTool" */;
+			buildPhases = (
+				CDA3EB57F1FBADB9BF2CD09B40FC7388 /* Headers */,
+				91F471F8FE3E46B5151701E52516CAF6 /* Sources */,
+				336DFD3A80C4D8938BFC8C3AA1A33C6A /* Frameworks */,
+				5D6B3712C93FB25E84330D4BB73049CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4C7DF737C5F6E3FA026AC55503D7C42 /* PBXTargetDependency */,
+				4CF43A9D93F0B0526D71A1570B3171B3 /* PBXTargetDependency */,
+				2F27D3D2DF40B6218B391B7B0CEA7FEC /* PBXTargetDependency */,
+				493291AD20877A1A32A2D4D1A4A1FE58 /* PBXTargetDependency */,
+				E3D7A63BC20FF8246A1D85525E736211 /* PBXTargetDependency */,
+			);
+			name = HHSimpleTool;
+			productName = HHSimpleTool;
+			productReference = 116DB4ACB3290ABEBDBD6D999DA0FA1A /* HHSimpleTool */;
+			productType = "com.apple.product-type.framework";
+		};
+		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C07484BA4A1EFDFFF792D47B4F5C56 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				908522878E64C4EFFAD4AB77F04D1EEC /* Headers */,
+				AE3B3331062EA0A857515B969F9DD8C1 /* Sources */,
+				60160DC193905389D6C037F520322C30 /* Frameworks */,
+				7E942A644BB10AF6B5C46DDB1C89BCDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */;
+			productType = "com.apple.product-type.framework";
+		};
+		A80A4D6B185BA43BC06122FED0C15F94 /* Toast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD72F2D93EDD42B510D9EEF65F085494 /* Build configuration list for PBXNativeTarget "Toast" */;
+			buildPhases = (
+				18839B9A6B8961ACC8C4332D2CB7D3F4 /* Headers */,
+				1653107BBBC44A631078C32F4F459502 /* Sources */,
+				BDDECBC085CF725DEF7587931A3F9C2D /* Frameworks */,
+				F1242CD096EA0AD40DDC681A0DFF38F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toast;
+			productName = Toast;
+			productReference = 55E0AFD333353D71ACC2207149E879D6 /* Toast */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9FD3DC67114E77A9D7C31D60926CF33 /* SPAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC059F9BDD3FEA7D1CBAD9E1035A2C49 /* Build configuration list for PBXNativeTarget "SPAlertController" */;
+			buildPhases = (
+				C85626F1E5CFB1EAA977DE172C46003F /* Headers */,
+				D6588BAD92B42D372793B3FE1CF6FE16 /* Sources */,
+				D612C3639EC587BDDA53763465D26685 /* Frameworks */,
+				B76BFE4C6AF1009860815088DE918CBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPAlertController;
+			productName = SPAlertController;
+			productReference = 024B28C993E83A1547D10F69D81FDFD5 /* SPAlertController */;
+			productType = "com.apple.product-type.framework";
+		};
+		F1BCD9702276377FB5B3BDB6EAF709D7 /* DZNEmptyDataSet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C0B0B9350AD3B45C31553A10607F26 /* Build configuration list for PBXNativeTarget "DZNEmptyDataSet" */;
+			buildPhases = (
+				D06BA6C9F749FE4DEE5BE5FE450E10A5 /* Headers */,
+				56243939AE36D20168FC6B2F2BFDB725 /* Sources */,
+				ADC613EB65919EC2A824D24DF5E45EE1 /* Frameworks */,
+				0CF2858256F214275644663A167B964F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DZNEmptyDataSet;
+			productName = DZNEmptyDataSet;
+			productReference = 5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet */;
+			productType = "com.apple.product-type.framework";
+		};
+		F80564EEA450CD9D1BAC72963C804C0D /* Pods-HHSimpleTool_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C43BB499C93BBC21B0E4780CE85CCC /* Build configuration list for PBXNativeTarget "Pods-HHSimpleTool_Example" */;
+			buildPhases = (
+				B9B69BDC055EBF2FC0A595913B88C5A3 /* Headers */,
+				BE51340A2720D49C18957B4299958434 /* Sources */,
+				B593672A0ADE2E264B6BA4B96360925C /* Frameworks */,
+				7E1035300C79248C20CC899ADDD5FAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1387C695A0FA23E2963F09FA2BC574DA /* PBXTargetDependency */,
+				F00D950E41D03108FF1B078C19C345E8 /* PBXTargetDependency */,
+				2FC8666D4F7D429D34153BE947FE2A4A /* PBXTargetDependency */,
+				F0DA46138DB8C84779FCE2623C102B1F /* PBXTargetDependency */,
+				BD99F9A1941C1E86DE9E589F8F5A38CB /* PBXTargetDependency */,
+				AD58E45A657293B33D855224DAC8BF82 /* PBXTargetDependency */,
+			);
+			name = "Pods-HHSimpleTool_Example";
+			productName = Pods_HHSimpleTool_Example;
+			productReference = 71DA7A5504FC4F032D14DE19B661FE4F /* Pods-HHSimpleTool_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B9F3C04A9A49A9615B25A171113B65AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1BCD9702276377FB5B3BDB6EAF709D7 /* DZNEmptyDataSet */,
+				6903E3FBDFCD3F7E5FF5FBC025FFE5DF /* HHSimpleTool */,
+				82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */,
+				F80564EEA450CD9D1BAC72963C804C0D /* Pods-HHSimpleTool_Example */,
+				28C2FF2540FA55BD992CAD398A7EA7FF /* Pods-HHSimpleTool_Tests */,
+				B9FD3DC67114E77A9D7C31D60926CF33 /* SPAlertController */,
+				A80A4D6B185BA43BC06122FED0C15F94 /* Toast */,
+				23289CBFB58BD83C45E1DBB9295E1C35 /* YBPopupMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CF2858256F214275644663A167B964F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6B3712C93FB25E84330D4BB73049CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC81F74337FA5AAF28102CBC568761B /* HHTool.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1035300C79248C20CC899ADDD5FAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E942A644BB10AF6B5C46DDB1C89BCDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		900BFCCC30E2B23D31B56798FF5C1266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76BFE4C6AF1009860815088DE918CBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1242CD096EA0AD40DDC681A0DFF38F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6F6CF5D9DD8F9652681D56882CAE300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1653107BBBC44A631078C32F4F459502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7C5280B31BB0D383DC9B5EC65204CD6 /* Toast-dummy.m in Sources */,
+				A651C8D22005C3E9C428081142DD0194 /* UIView+Toast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56243939AE36D20168FC6B2F2BFDB725 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F313CE5B14382A85BBC06490BC0B1D2 /* DZNEmptyDataSet-dummy.m in Sources */,
+				6D41BE5D2404F74DCD82B29AE9ECAFBD /* UIScrollView+EmptyDataSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B86E77600E0CA31E34AC76BA572D25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7767E564CA59EB9DFCE148BC0869536 /* YBPopupMenu.m in Sources */,
+				B4829893CC1C32D8A1D940245C76630E /* YBPopupMenu-dummy.m in Sources */,
+				5EF5C60CD9A5600D7C1DA6C02B20BE18 /* YBPopupMenuAnimationManager.m in Sources */,
+				F265B2CB32D4CDD06A5420B14B1D56CC /* YBPopupMenuDeviceOrientationManager.m in Sources */,
+				271F6206D8F20A5CFC7FB92D2B3ADAFA /* YBPopupMenuPath.m in Sources */,
+				6C7417FE43436F9B606AEF02CF8761F0 /* YBRectConst.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F471F8FE3E46B5151701E52516CAF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA062F27B47BEA86BC94404990FD8B2A /* HHAlertCustomTool.m in Sources */,
+				90C3F474385D98F707C73AA01E98E09C /* HHAlertTool.m in Sources */,
+				5F0499F0C52EC3B68C0D6A89FCC52CD9 /* HHConfiguration.m in Sources */,
+				094A2B6CA24CA4DE0734FD8FA1AD37EC /* HHPopupListView.m in Sources */,
+				0C4D66CB9ACD420898B5D0996606EBD0 /* HHPopupTool.m in Sources */,
+				FEC3B4AFA924064F2A6AC5B8F1BAB8BE /* HHSimpleTool-dummy.m in Sources */,
+				FDD87F09D7571414ED059A2DF36BF575 /* HHToastTool.m in Sources */,
+				BB2E7864ED7F6E8BDB72989E37818A88 /* HHUtilities.m in Sources */,
+				3A1D62B1EE86139B185E5C64119A785C /* MBProgressHUD+HHTool.m in Sources */,
+				56C8C3866DBBCE4712DBE6E378A98511 /* NSBundle+HHTool.m in Sources */,
+				678ADAC33CAB63E3061BDAEF985D6CA8 /* UIScrollView+HHLoading.m in Sources */,
+				FE0525ACD6250C930D3F3A32EE38156E /* UIView+HHFrame.m in Sources */,
+				66F2BB19C0818ACB9C05B8985A8D217D /* UIWindow+HHHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A249A024447609374974A0FB8602503E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD7596279B27BEE45C57A74E226C194 /* Pods-HHSimpleTool_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3B3331062EA0A857515B969F9DD8C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DDB4305B2ED27DBA39A59D67A98307 /* MBProgressHUD.m in Sources */,
+				1CB8781E780A202B7DA7877083391172 /* MBProgressHUD-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE51340A2720D49C18957B4299958434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2844334AA80849DE09EE57A8C201395 /* Pods-HHSimpleTool_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6588BAD92B42D372793B3FE1CF6FE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96521B687337E7AFAD4670DE90421F0 /* SPAlertController.m in Sources */,
+				6C8C38A421AA05A0B13FB54C5AF65F10 /* SPAlertController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D17E538534CA274DC92AFDCE5BB9E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HHSimpleTool_Example";
+			target = F80564EEA450CD9D1BAC72963C804C0D /* Pods-HHSimpleTool_Example */;
+			targetProxy = 87361BDA4796F4325A7AEE14474BB775 /* PBXContainerItemProxy */;
+		};
+		1387C695A0FA23E2963F09FA2BC574DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DZNEmptyDataSet;
+			target = F1BCD9702276377FB5B3BDB6EAF709D7 /* DZNEmptyDataSet */;
+			targetProxy = 8D27F62061F3D6789DAABC6412D5CEFD /* PBXContainerItemProxy */;
+		};
+		2F27D3D2DF40B6218B391B7B0CEA7FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPAlertController;
+			target = B9FD3DC67114E77A9D7C31D60926CF33 /* SPAlertController */;
+			targetProxy = E84C9429F7FC1760C70D9C32AD762944 /* PBXContainerItemProxy */;
+		};
+		2FC8666D4F7D429D34153BE947FE2A4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = D7813FE7FE8B5A9C9F87DE4DCDA81DDD /* PBXContainerItemProxy */;
+		};
+		493291AD20877A1A32A2D4D1A4A1FE58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toast;
+			target = A80A4D6B185BA43BC06122FED0C15F94 /* Toast */;
+			targetProxy = 20E67E163CDC05708DFCBE7D8623164E /* PBXContainerItemProxy */;
+		};
+		4CF43A9D93F0B0526D71A1570B3171B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = A8237F02035AA2DA196C0D2366CF99F1 /* PBXContainerItemProxy */;
+		};
+		AD58E45A657293B33D855224DAC8BF82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YBPopupMenu;
+			target = 23289CBFB58BD83C45E1DBB9295E1C35 /* YBPopupMenu */;
+			targetProxy = 4A684235CF49936DC0B0D4B161565603 /* PBXContainerItemProxy */;
+		};
+		B4C7DF737C5F6E3FA026AC55503D7C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DZNEmptyDataSet;
+			target = F1BCD9702276377FB5B3BDB6EAF709D7 /* DZNEmptyDataSet */;
+			targetProxy = 23909CD7265ECC7D1AE084CB134916B0 /* PBXContainerItemProxy */;
+		};
+		BD99F9A1941C1E86DE9E589F8F5A38CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toast;
+			target = A80A4D6B185BA43BC06122FED0C15F94 /* Toast */;
+			targetProxy = EA29508E81377673C9DDA4DD7C7B6743 /* PBXContainerItemProxy */;
+		};
+		E3D7A63BC20FF8246A1D85525E736211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YBPopupMenu;
+			target = 23289CBFB58BD83C45E1DBB9295E1C35 /* YBPopupMenu */;
+			targetProxy = AADC2DAC4CA757CFAD931335462DCA36 /* PBXContainerItemProxy */;
+		};
+		F00D950E41D03108FF1B078C19C345E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HHSimpleTool;
+			target = 6903E3FBDFCD3F7E5FF5FBC025FFE5DF /* HHSimpleTool */;
+			targetProxy = B7B1CA3D2212DABE972A5499031AD435 /* PBXContainerItemProxy */;
+		};
+		F0DA46138DB8C84779FCE2623C102B1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPAlertController;
+			target = B9FD3DC67114E77A9D7C31D60926CF33 /* SPAlertController */;
+			targetProxy = 3DC09C0598F971617C646FFDBCBA6AA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B7A7C00FD01DDAE6C12521A2E788BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 815F07DE3CC1A1B2E56EE2ECAE648DC6 /* Pods-HHSimpleTool_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HHSimpleTool_Example/Pods-HHSimpleTool_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HHSimpleTool_Example/Pods-HHSimpleTool_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		16462BCC0C718B692347BE7C0CEBC372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88820D4E0E956639D5A793D9C7C956A9 /* YBPopupMenu.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YBPopupMenu/YBPopupMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YBPopupMenu/YBPopupMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YBPopupMenu/YBPopupMenu.modulemap";
+				PRODUCT_MODULE_NAME = YBPopupMenu;
+				PRODUCT_NAME = YBPopupMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1BFF72203C52020D20045653DD470BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE00CE41142405BDF7CE0FE1E48D928 /* SPAlertController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPAlertController/SPAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPAlertController/SPAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SPAlertController/SPAlertController.modulemap";
+				PRODUCT_MODULE_NAME = SPAlertController;
+				PRODUCT_NAME = SPAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		29F320A9F698864D46A1E3325C64829B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEBD75B78B3043FD6E6A51B573AF08A /* MBProgressHUD.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39E765E0D6EA76303CEDB265D50924BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B5E3F4931B3C6753B8E3F883CA01B32 /* HHSimpleTool.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HHSimpleTool/HHSimpleTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HHSimpleTool/HHSimpleTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HHSimpleTool/HHSimpleTool.modulemap";
+				PRODUCT_MODULE_NAME = HHSimpleTool;
+				PRODUCT_NAME = HHSimpleTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41C1E00021EE06041FEB8079D11ACEE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F0608AE255429E9CE1A78FE79233E1 /* Pods-HHSimpleTool_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HHSimpleTool_Tests/Pods-HHSimpleTool_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HHSimpleTool_Tests/Pods-HHSimpleTool_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D7A9731105611FE48069C11341A596E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD64B8026CC37CB4BAE8C8ACE220CDD6 /* Pods-HHSimpleTool_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HHSimpleTool_Example/Pods-HHSimpleTool_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HHSimpleTool_Example/Pods-HHSimpleTool_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D883C096E5D081484E022E786878C4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98BB93654454F77AB83F77F5C8346B2D /* Toast.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast/Toast-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast/Toast.modulemap";
+				PRODUCT_MODULE_NAME = Toast;
+				PRODUCT_NAME = Toast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F877D080AE07CD96BB6F61D0B891F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D604DE0CA3A61D8CCACFC263CFA971B1 /* Pods-HHSimpleTool_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HHSimpleTool_Tests/Pods-HHSimpleTool_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HHSimpleTool_Tests/Pods-HHSimpleTool_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98F98B4A0772BE1616AD8B6F8987A1E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D91FF15636ED2796F77C5C5E3FBD5CF /* Toast.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast/Toast-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast/Toast.modulemap";
+				PRODUCT_MODULE_NAME = Toast;
+				PRODUCT_NAME = Toast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E29EE8929544FBF8DDEEA4B833FF98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB145E18C71C2BDF62E7ED777531D206 /* DZNEmptyDataSet.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet.modulemap";
+				PRODUCT_MODULE_NAME = DZNEmptyDataSet;
+				PRODUCT_NAME = DZNEmptyDataSet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E33A296C464BE18DC79386A56AEBB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC77C89DB56E984BB97F2B6456068948 /* HHSimpleTool.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HHSimpleTool/HHSimpleTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HHSimpleTool/HHSimpleTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HHSimpleTool/HHSimpleTool.modulemap";
+				PRODUCT_MODULE_NAME = HHSimpleTool;
+				PRODUCT_NAME = HHSimpleTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A34F3A074132686E42D5E14FDCD27914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B13DF3776D9B42846D3844FEE69B87 /* SPAlertController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPAlertController/SPAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPAlertController/SPAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SPAlertController/SPAlertController.modulemap";
+				PRODUCT_MODULE_NAME = SPAlertController;
+				PRODUCT_NAME = SPAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BABB7952D785D1C37B2C90208AC74F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CB12B2A51669AB03351A12174C542E /* DZNEmptyDataSet.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet.modulemap";
+				PRODUCT_MODULE_NAME = DZNEmptyDataSet;
+				PRODUCT_NAME = DZNEmptyDataSet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E4E70656439EBBC7A3933CC5A4E09E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F32E66E1397A568DF5262739BA8B58 /* MBProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F238F432EA2038F63BA35B70F9B08541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2EF7475B8E3C3278292DE1C71DEBE07 /* YBPopupMenu.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YBPopupMenu/YBPopupMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YBPopupMenu/YBPopupMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YBPopupMenu/YBPopupMenu.modulemap";
+				PRODUCT_MODULE_NAME = YBPopupMenu;
+				PRODUCT_NAME = YBPopupMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C07484BA4A1EFDFFF792D47B4F5C56 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4E70656439EBBC7A3933CC5A4E09E30 /* Debug */,
+				29F320A9F698864D46A1E3325C64829B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27C43BB499C93BBC21B0E4780CE85CCC /* Build configuration list for PBXNativeTarget "Pods-HHSimpleTool_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7A7C00FD01DDAE6C12521A2E788BA9 /* Debug */,
+				7D7A9731105611FE48069C11341A596E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		341C63ABE696B45D8F1C1137BFD24252 /* Build configuration list for PBXNativeTarget "YBPopupMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16462BCC0C718B692347BE7C0CEBC372 /* Debug */,
+				F238F432EA2038F63BA35B70F9B08541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		996893C01F1A6A11A624C491F7B62628 /* Build configuration list for PBXNativeTarget "HHSimpleTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E33A296C464BE18DC79386A56AEBB55 /* Debug */,
+				39E765E0D6EA76303CEDB265D50924BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C0B0B9350AD3B45C31553A10607F26 /* Build configuration list for PBXNativeTarget "DZNEmptyDataSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BABB7952D785D1C37B2C90208AC74F2E /* Debug */,
+				9E29EE8929544FBF8DDEEA4B833FF98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B084C0ED5EE5777EC86B2C80DF2CC161 /* Build configuration list for PBXNativeTarget "Pods-HHSimpleTool_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F877D080AE07CD96BB6F61D0B891F97 /* Debug */,
+				41C1E00021EE06041FEB8079D11ACEE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC059F9BDD3FEA7D1CBAD9E1035A2C49 /* Build configuration list for PBXNativeTarget "SPAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34F3A074132686E42D5E14FDCD27914 /* Debug */,
+				1BFF72203C52020D20045653DD470BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD72F2D93EDD42B510D9EEF65F085494 /* Build configuration list for PBXNativeTarget "Toast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98F98B4A0772BE1616AD8B6F8987A1E6 /* Debug */,
+				7D883C096E5D081484E022E786878C4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
