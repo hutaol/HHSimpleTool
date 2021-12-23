@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'HHSimpleTool_Example' do
+  pod 'HHSimpleTool', :path => '../'
+
+  target 'HHSimpleTool_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
