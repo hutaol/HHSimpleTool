@@ -21,5 +21,6 @@
 #import "UIScrollView+HHLoading.h"
 #import "UIView+HHFrame.h"
 #import "UIWindow+HHHelper.h"
+#import "UIImageView+HHCornerRadius.h"
 
 #endif /* HHTool_h */

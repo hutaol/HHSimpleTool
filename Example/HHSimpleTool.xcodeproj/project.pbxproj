@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		359E6A5A2797B75800C7DFB7 /* HHCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359E6A582797B75700C7DFB7 /* HHCornerRadiusViewController.m */; };
 		35CE930527742616003BD21C /* HHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930327742616003BD21C /* HHMainViewController.m */; };
 		35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930727742670003BD21C /* HHAlertTableViewController.m */; };
 		35CE930C27742684003BD21C /* HHEmptyDataSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930B27742683003BD21C /* HHEmptyDataSetTableViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		359E6A582797B75700C7DFB7 /* HHCornerRadiusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCornerRadiusViewController.m; sourceTree = "<group>"; };
+		359E6A592797B75800C7DFB7 /* HHCornerRadiusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCornerRadiusViewController.h; sourceTree = "<group>"; };
 		35CE930327742616003BD21C /* HHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMainViewController.m; sourceTree = "<group>"; };
 		35CE930427742616003BD21C /* HHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMainViewController.h; sourceTree = "<group>"; };
 		35CE930727742670003BD21C /* HHAlertTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertTableViewController.m; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		35CE930627742657003BD21C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				359E6A592797B75800C7DFB7 /* HHCornerRadiusViewController.h */,
+				359E6A582797B75700C7DFB7 /* HHCornerRadiusViewController.m */,
 				35CE9311277431C9003BD21C /* HHPopupTableViewController.h */,
 				35CE9312277431C9003BD21C /* HHPopupTableViewController.m */,
 				35CE930E2774268F003BD21C /* HHProgressHUDViewController.h */,
@@ -410,6 +415,7 @@
 				35CE930F2774268F003BD21C /* HHProgressHUDViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HHAppDelegate.m in Sources */,
 				35CE9313277431C9003BD21C /* HHPopupTableViewController.m in Sources */,
+				359E6A5A2797B75800C7DFB7 /* HHCornerRadiusViewController.m in Sources */,
 				35CE930527742616003BD21C /* HHMainViewController.m in Sources */,
 				35CE930C27742684003BD21C /* HHEmptyDataSetTableViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* HHViewController.m in Sources */,

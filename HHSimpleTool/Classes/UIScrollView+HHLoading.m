@@ -200,7 +200,7 @@ id (^block)(void);
     }
     
     if (self.buttonText == nil) {
-        self.buttonText = @" ";
+        return nil;
     }
         
     UIColor *textColor = nil;
