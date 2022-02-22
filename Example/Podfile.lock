@@ -1,6 +1,6 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - HHSimpleTool (1.0.0):
+  - HHSimpleTool (1.0.1):
     - DZNEmptyDataSet (~> 1.8.1)
     - MBProgressHUD (~> 1.2.0)
     - SPAlertController (~> 4.0.0)
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  HHSimpleTool: 51827fb41978cca25aa8917136f46a0e99110a9f
+  HHSimpleTool: 888d03e958261351147c090c6a1f642c9338a986
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196

@@ -15,8 +15,6 @@
     return [UIWindow topViewController];
 }
 
-
-
 // 确定 警示框
 + (void)alertWithMessage:(NSString *)message {
     [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:nil buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:nil];
@@ -143,7 +141,6 @@
     if (placeholders.count > 0) {
         [placeholders enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-                textField.keyboardType = UIKeyboardTypePhonePad;
                 textField.placeholder = obj;
                 [textArr addObject:textField];
             }];

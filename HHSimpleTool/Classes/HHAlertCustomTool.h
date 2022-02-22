@@ -64,6 +64,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param confirmBlock 确定回调
 + (void)inputWithTitle:(NSString *)title message:(NSString *)message placeholder:(NSString *)placeholder cancel:(NSString *)cancel confirm:(NSString *)confirm confirmBlock:(nullable void(^)(NSString *inputText))confirmBlock;
 
++ (UITextField *)inputWithTitle:(NSString *)title message:(NSString *)message placeholder:(NSString *)placeholder inputText:(NSString *)inputText cancel:(NSString *)cancel confirm:(NSString *)confirm vc:(nullable UIViewController *)vc confirmBlock:(nullable void(^)(NSString *inputText))confirmBlock;
+
++ (NSMutableArray <UITextField *> *)inputWithTitle:(NSString *)title message:(NSString *)message placeholders:(NSArray<NSString *> *)placeholders inputTexts:(NSArray<NSString *> *)inputTexts cancelTitle:(NSString *)cancelTitle buttonTitles:(NSArray<NSString *> *)buttonTitles vc:(nullable UIViewController *)vc actionsBlock:(void (^)(NSInteger buttonIndex, NSString * buttonTitle, NSArray<UITextField *> *textFields))actionsBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

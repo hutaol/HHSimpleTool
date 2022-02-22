@@ -14,6 +14,7 @@
 #import "HHAlertTool.h"
 #import "HHConfiguration.h"
 #import "HHDefine.h"
+#import "HHGCDTimer.h"
 #import "HHPopupListView.h"
 #import "HHPopupTool.h"
 #import "HHToastTool.h"
