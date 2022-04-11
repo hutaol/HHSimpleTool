@@ -9,14 +9,21 @@
 #import <objc/runtime.h>
 
 static const BOOL loadingKey;
+static const BOOL loadingImagesKey;
 static const char loadedImageKey;
 static const char loadedImageNameKey;
-static const char descriptionTextKey;
 static const char descriptionTitleKey;
+static const char descriptionTitleFontKey;
+static const char descriptionTitleColorKey;
+static const char descriptionTextKey;
+static const char descriptionTextFontKey;
+static const char descriptionTextColorKey;
 static const char buttonTextKey;
+static const char buttonTextFontKey;
 static const char buttonNormalColorKey;
 static const char buttonHighlightColorKey;
 static const CGFloat dataVerticalOffsetKey;
+static const CGFloat dataSpaceHeightKey;
 
 id (^block)(void);
 
@@ -37,6 +44,10 @@ id (^block)(void);
 
 }
 
+- (void)setLoadingImages:(NSArray<UIImage *> *)loadingImages {
+    objc_setAssociatedObject(self, &loadingImagesKey, loadingImages, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)setLoadedImage:(UIImage *)loadedImage {
     objc_setAssociatedObject(self, &loadedImageKey, loadedImage, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
@@ -49,12 +60,32 @@ id (^block)(void);
     objc_setAssociatedObject(self, &descriptionTitleKey, descriptionTitle, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+- (void)setDescriptionTitleFont:(UIFont *)descriptionTitleFont {
+    objc_setAssociatedObject(self, &descriptionTitleFontKey, descriptionTitleFont, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)setDescriptionTitleColor:(UIColor *)descriptionTitleColor {
+    objc_setAssociatedObject(self, &descriptionTitleColorKey, descriptionTitleColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)setDescriptionText:(NSString *)descriptionText {
     objc_setAssociatedObject(self, &descriptionTextKey, descriptionText, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+- (void)setDescriptionTextFont:(UIFont *)descriptionTextFont {
+    objc_setAssociatedObject(self, &descriptionTextFontKey, descriptionTextFont, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)setDescriptionTextColor:(UIColor *)descriptionTextColor {
+    objc_setAssociatedObject(self, &descriptionTextColorKey, descriptionTextColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)setButtonText:(NSString *)buttonText {
     objc_setAssociatedObject(self, &buttonTextKey, buttonText, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)setButtonTextFont:(UIFont *)buttonTextFont {
+    objc_setAssociatedObject(self, &buttonTextFontKey, buttonTextFont, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (void)setButtonNormalColor:(UIColor *)buttonNormalColor {
@@ -69,6 +100,10 @@ id (^block)(void);
     objc_setAssociatedObject(self, &dataVerticalOffsetKey, @(dataVerticalOffset), OBJC_ASSOCIATION_RETAIN);
 }
 
+- (void)setDataSpaceHeight:(CGFloat)dataSpaceHeight {
+    objc_setAssociatedObject(self, &dataSpaceHeightKey, @(dataSpaceHeight), OBJC_ASSOCIATION_RETAIN);
+}
+
 - (void)setLoadingClick:(LoadingBlock)loadingClick {
     objc_setAssociatedObject(self, &block, loadingClick, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
@@ -79,6 +114,10 @@ id (^block)(void);
     id tmp = objc_getAssociatedObject(self, &loadingKey);
     NSNumber *number = tmp;
     return number.unsignedIntegerValue;
+}
+
+- (NSArray<UIImage *> *)loadingImages {
+    return objc_getAssociatedObject(self, &loadingImagesKey);
 }
 
 - (UIImage *)loadedImage {
@@ -93,12 +132,32 @@ id (^block)(void);
     return objc_getAssociatedObject(self, &descriptionTitleKey);
 }
 
+- (UIFont *)descriptionTitleFont {
+    return objc_getAssociatedObject(self, &descriptionTitleFontKey);
+}
+
+- (UIColor *)descriptionTitleColor {
+    return objc_getAssociatedObject(self, &descriptionTitleColorKey);
+}
+
 - (NSString *)descriptionText {
     return objc_getAssociatedObject(self, &descriptionTextKey);
 }
 
+- (UIFont *)descriptionTextFont {
+    return objc_getAssociatedObject(self, &descriptionTextFontKey);
+}
+
+- (UIColor *)descriptionTextColor {
+    return objc_getAssociatedObject(self, &descriptionTextColorKey);
+}
+
 - (NSString *)buttonText {
     return objc_getAssociatedObject(self, &buttonTextKey);
+}
+
+- (UIFont *)buttonTextFont {
+    return objc_getAssociatedObject(self, &buttonTextFontKey);
 }
 
 - (UIColor *)buttonNormalColor {
@@ -111,6 +170,12 @@ id (^block)(void);
 
 - (CGFloat)dataVerticalOffset {
     id temp = objc_getAssociatedObject(self, &dataVerticalOffsetKey);
+    NSNumber *number = temp;
+    return number.floatValue;
+}
+
+- (CGFloat)dataSpaceHeight {
+    id temp = objc_getAssociatedObject(self, &dataSpaceHeightKey);
     NSNumber *number = temp;
     return number.floatValue;
 }
@@ -130,14 +195,25 @@ id (^block)(void);
 
 - (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView {
     if (self.loading) {
-        UIActivityIndicatorView *activityView = nil;
-        if (@available(iOS 13.0, *)) {
-            activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+        // 自定义的 view 用 autolayout 布局, frame 无效
+        if (self.loadingImages && self.loadingImages.count > 0) {
+            UIImageView *imageView = [[UIImageView alloc] init];
+            imageView.contentMode = UIViewContentModeCenter;
+            imageView.animationImages = self.loadingImages;
+            imageView.animationDuration = self.loadingImages.count * 0.1;
+            imageView.animationRepeatCount = 0;
+            [imageView startAnimating];
+            return imageView;
         } else {
-            activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            UIActivityIndicatorView *activityView = nil;
+            if (@available(iOS 13.0, *)) {
+                activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+            } else {
+                activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            }
+            [activityView startAnimating];
+            return activityView;
         }
-        [activityView startAnimating];
-        return activityView;
     }
     return nil;
 }
@@ -168,9 +244,11 @@ id (^block)(void);
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
     paragraph.alignment = NSTextAlignmentCenter;
 
-    NSDictionary *attributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:17.0f],
-                                  NSForegroundColorAttributeName: [UIColor grayColor],
-                                  NSParagraphStyleAttributeName: paragraph };
+    NSDictionary *attributes = @{
+        NSFontAttributeName: self.descriptionTitleFont ?: [UIFont systemFontOfSize:17.0f],
+        NSForegroundColorAttributeName: self.descriptionTitleColor ?: [UIColor grayColor],
+        NSParagraphStyleAttributeName: paragraph
+    };
 
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
@@ -186,9 +264,11 @@ id (^block)(void);
     paragraph.lineBreakMode = NSLineBreakByWordWrapping;
     paragraph.alignment = NSTextAlignmentCenter;
     
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0f],
-                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
-                                 NSParagraphStyleAttributeName: paragraph};
+    NSDictionary *attributes = @{
+        NSFontAttributeName: self.descriptionTextFont ?: [UIFont systemFontOfSize:15.0f],
+        NSForegroundColorAttributeName: self.descriptionTextColor ?: [UIColor lightGrayColor],
+        NSParagraphStyleAttributeName: paragraph
+    };
     
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 
@@ -203,25 +283,21 @@ id (^block)(void);
         return nil;
     }
         
-    UIColor *textColor = nil;
-    // 某种状态下的颜色
-    UIColor *colorOne = [UIColor colorWithRed:253/255.0f green:120/255.0f blue:76/255.0f alpha:1];
-    UIColor *colorTow = [UIColor colorWithRed:247/255.0f green:188/255.0f blue:169/255.0f alpha:1];
-    // 判断外部是否有设置
-    colorOne = self.buttonNormalColor ? self.buttonNormalColor : colorOne;
-    colorTow = self.buttonHighlightColor ? self.buttonHighlightColor : colorTow;
-    textColor = state == UIControlStateNormal ? colorOne : colorTow;
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:16.0f],
-                                 NSForegroundColorAttributeName: textColor};
+    UIColor *textColor = state == UIControlStateNormal ? (self.buttonNormalColor ?: [UIColor colorWithRed:253/255.0f green:120/255.0f blue:76/255.0f alpha:1]) : (self.buttonHighlightColor ?: [UIColor colorWithRed:247/255.0f green:188/255.0f blue:169/255.0f alpha:1]);
+    NSDictionary *attributes = @{
+        NSFontAttributeName: self.buttonTextFont ?: [UIFont boldSystemFontOfSize:16.0f],
+        NSForegroundColorAttributeName: textColor,
+    };
     
      return [[NSAttributedString alloc] initWithString:self.buttonText  attributes:attributes];
 }
 
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView {
-    if (self.dataVerticalOffset != 0) {
-        return self.dataVerticalOffset;
-    }
-    return 0.f;
+    return self.dataVerticalOffset;
+}
+
+- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.dataSpaceHeight;
 }
 
 #pragma mark - DZNEmptyDataSetDelegate

@@ -23,4 +23,6 @@
 #import "UIWindow+HHHelper.h"
 #import "UIImageView+HHCornerRadius.h"
 
+#import "HHGCDTimer.h"
+
 #endif /* HHTool_h */

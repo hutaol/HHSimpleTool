@@ -143,7 +143,7 @@ dispatch_semaphore_t _hgt_semaphore;
     dispatch_semaphore_signal(_hgt_semaphore);
 }
 
-+ (void)cancelTimer {
++ (void)cancelAllTimer {
     dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
     for (NSString *timerName in _hgt_timers) {
         dispatch_source_t timer = _hgt_timers[timerName];

@@ -23,8 +23,20 @@
     self.tableView.loading = YES;
     self.tableView.descriptionTitle = @"无数据";
     self.tableView.buttonText = @"点击刷新";
-//    self.tableView.loadedImageName = @"ic_pop_chat_blue";
+    self.tableView.loadedImageName = @"icon_no_data";
+    self.tableView.descriptionTitleFont = [UIFont systemFontOfSize:30];
+    self.tableView.descriptionTitleColor = [UIColor blueColor];
+    self.tableView.descriptionTextFont = [UIFont systemFontOfSize:20];
+    self.tableView.descriptionTextColor = [UIColor orangeColor];
+    self.tableView.buttonTextFont = [UIFont systemFontOfSize:30];
+    self.tableView.dataVerticalOffset = -100;
+    self.tableView.dataSpaceHeight = 20;
     
+    NSMutableArray *arr = [NSMutableArray array];
+    for (int i = 1; i <= 6; i ++) {
+        [arr addObject:[UIImage imageNamed:[NSString stringWithFormat:@"refresh%d", i]]];
+    }
+    self.tableView.loadingImages = arr;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
@@ -40,9 +52,11 @@
 - (void)setupData {
     self.tableView.loading = YES;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.data = @[@"1", @"2", @"3"].mutableCopy;
+//        self.data = @[@"1", @"2", @"3"].mutableCopy;
+        self.data = @[].mutableCopy;
+
+        self.tableView.loading = NO;
         [self.tableView reloadData];
-//        self.tableView.loading = NO;
     });
 }
 
