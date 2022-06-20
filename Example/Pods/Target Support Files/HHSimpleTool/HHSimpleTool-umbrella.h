@@ -11,7 +11,10 @@
 #endif
 
 #import "HHAlertCustomTool.h"
+#import "HHAlertPop.h"
 #import "HHAlertTool.h"
+#import "HHAlertView.h"
+#import "HHCircleLayer.h"
 #import "HHConfiguration.h"
 #import "HHDefine.h"
 #import "HHGCDTimer.h"

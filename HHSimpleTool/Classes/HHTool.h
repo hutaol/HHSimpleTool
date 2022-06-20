@@ -14,6 +14,7 @@
 #import "HHAlertTool.h"
 #import "HHToastTool.h"
 #import "HHPopupTool.h"
+#import "HHAlertPop.h"
 
 #import "HHUtilities.h"
 
@@ -24,5 +25,6 @@
 #import "UIImageView+HHCornerRadius.h"
 
 #import "HHGCDTimer.h"
+#import "HHCircleLayer.h"
 
 #endif /* HHTool_h */

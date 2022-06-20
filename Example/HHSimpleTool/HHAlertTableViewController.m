@@ -7,9 +7,7 @@
 //
 
 #import "HHAlertTableViewController.h"
-#import <HHSimpleTool/HHAlertTool.h>
-#import <HHSimpleTool/HHAlertCustomTool.h>
-#import <HHSimpleTool/HHToastTool.h>
+#import <HHSimpleTool/HHTool.h>
 
 @interface HHAlertTableViewController ()
 
@@ -25,7 +23,7 @@
     self.title = @"提示框";
     
     self.dataArray = @[@"系统 无按钮", @"系统 取消和确定按钮", @"系统 多按钮",  @"系统 简易Sheet", @"系统 Sheet",
-                       @"自定义 无按钮", @"自定义 取消和确定按钮", @"自定义 多按钮",  @"系统 简易Sheet", @"自定义 Sheet", @"系统 单个Input", @"系统 多个Input", @"自定义 单个Input", @"自定义 多个Input"];
+                       @"自定义 无按钮", @"自定义 取消和确定按钮", @"自定义 多按钮",  @"系统 简易Sheet", @"自定义 Sheet", @"系统 单个Input", @"系统 多个Input", @"自定义 单个Input", @"自定义 多个Input", @"PopView Alert", @"PopView Sheet", @"PopView Input"];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HHAlertTableViewControllerCell"];
 
@@ -146,6 +144,40 @@
             [HHAlertCustomTool inputWithTitle:title message:@"消息" placeholders:@[@"请输入1", @"请输入2"] cancelTitle:@"取消" buttonTitles:@[@"确定"] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle, NSArray<UITextField *> * _Nonnull textFields) {
                 NSString *title = [NSString stringWithFormat:@"%@ %@ - %@", buttonTitle, textFields[0].text, textFields[1].text];
                 [HHToastTool show:title];
+            }];
+        }
+            break;
+        case 14:
+        {
+            [HHAlertPop alertWithTitle:title message:@"内容" configBlock:^(HHAlertView * _Nonnull alertView, LSTPopView * _Nonnull popView) {
+
+                HHAlertAction *action = [HHAlertAction actionWithTitle:@"取消" handler:^(HHAlertAction * _Nonnull action) {
+                    [HHToastTool show:action.title];
+                }];
+                action.titleColor = [UIColor blueColor];
+                [alertView addAction:action];
+                
+                HHAlertAction *action2 = [HHAlertAction actionWithTitle:@"确定" handler:^(HHAlertAction * _Nonnull action) {
+                    [HHToastTool show:action.title];
+                }];
+                action2.titleColor = [UIColor redColor];
+                [alertView addAction:action2];
+                
+            }];
+
+        }
+            break;
+        case 15:
+        {
+            [HHAlertPop sheetWithMessage:@"" buttonTitles:@[@"选项1", @"选项2"] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
+                [HHToastTool show:buttonTitle];
+            }];
+        }
+            break;
+        case 16:
+        {
+            [HHAlertPop inputWithTitle:@"" message:@"输入框" placeholder:@"请输入" confirmBlock:^(NSString * _Nonnull inputText) {
+                [HHToastTool show:inputText];
             }];
         }
             break;

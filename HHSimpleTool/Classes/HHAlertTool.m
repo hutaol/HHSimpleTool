@@ -15,41 +15,52 @@
     return [UIWindow topViewController];
 }
 
-// 确定 警示框
-+ (void)alertWithMessage:(NSString *)message {
-    [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:nil buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:nil];
-}
-
-/// 一个按钮
-+ (void)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSString *)button confirmBlock:(void (^)(NSInteger, NSString * _Nonnull))confirmBlock {
-    [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:nil buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:confirmBlock];
-}
-
-// 取消，确定 警示框
-+ (void)alert2WithMessage:(NSString *)message confirmBlock:(void (^)(NSInteger, NSString * _Nonnull))confirmBlock {
-
-    [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:HHGetLocalLanguageTextValue(@"Cancel") buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
-        if (buttonIndex == 0) {
-            if (confirmBlock) {
-                confirmBlock(0, buttonTitle);
-            }
-        }
-    }];
-}
-
-+ (void)alert2WithMessage:(NSString *)message cancel:(NSString *)cancel confirm:(NSString *)confirm confirmBlock:(void (^)(NSInteger, NSString * _Nonnull))confirmBlock {
-
-    [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:cancel buttonTitles:@[confirm] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
-        if (buttonIndex == 0) {
-            if (confirmBlock) {
-                confirmBlock(0, buttonTitle);
-            }
-        }
-    }];
-}
-
 #pragma mark - Alert
-+ (void)alertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
+
++ (UIAlertController *)alertWithMessage:(NSString *)message {
+    return [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:nil buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:nil];
+}
+
++ (UIAlertController *)alertWithTitle:(NSString *)title message:(NSString *)message {
+    return [self alertWithTitle:title message:message confirmBlock:nil];
+}
+
++ (UIAlertController *)alertWithTitle:(NSString *)title message:(NSString *)message confirmBlock:(void (^)(void))confirmBlock {
+    return [self alertWithTitle:title message:message button:HHGetLocalLanguageTextValue(@"Done") confirmBlock:confirmBlock];
+}
+
++ (UIAlertController *)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSString *)button confirmBlock:(void (^)(void))confirmBlock {
+    if (button.length == 0) {
+        button = HHGetLocalLanguageTextValue(@"Done");
+    }
+    return [self alertWithTitle:title message:message cancelTitle:nil buttonTitles:@[button] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
+        if (confirmBlock) {
+            confirmBlock();
+        }
+    }];
+}
+
++ (UIAlertController *)alert2WithMessage:(NSString *)message confirmBlock:(void (^)(NSInteger, NSString * _Nonnull))confirmBlock {
+    return [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:HHGetLocalLanguageTextValue(@"Cancel") buttonTitles:@[HHGetLocalLanguageTextValue(@"Done")] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
+        if (buttonIndex == 0) {
+            if (confirmBlock) {
+                confirmBlock(0, buttonTitle);
+            }
+        }
+    }];
+}
+
++ (UIAlertController *)alert2WithMessage:(NSString *)message cancel:(NSString *)cancel confirm:(NSString *)confirm confirmBlock:(void (^)(NSInteger, NSString * _Nonnull))confirmBlock {
+    return [self alertWithTitle:HHGetLocalLanguageTextValue(@"Tips") message:message cancelTitle:cancel buttonTitles:@[confirm] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
+        if (buttonIndex == 0) {
+            if (confirmBlock) {
+                confirmBlock(0, buttonTitle);
+            }
+        }
+    }];
+}
+
++ (UIAlertController *)alertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
 
@@ -73,10 +84,12 @@
 
     [[self topViewController] presentViewController:alertController animated:YES completion:nil];
 
+    return alertController;
 }
 
 #pragma mark - Sheet
-+ (void)sheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
+
++ (UIAlertController *)sheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
         
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
     
@@ -119,10 +132,12 @@
         [curVC presentViewController:alertController animated:YES completion:nil];
         
     }
+    
+    return alertController;
 }
 
-+ (void)sheetWithMessage:(NSString *)message buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
-    [self sheetWithTitle:nil message:message cancelTitle:HHGetLocalLanguageTextValue(@"Cancel") destructiveTitle:nil buttonTitles:buttonTitles actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
++ (UIAlertController *)sheetWithMessage:(NSString *)message buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull))actionsBlock {
+    return [self sheetWithTitle:nil message:message cancelTitle:HHGetLocalLanguageTextValue(@"Cancel") destructiveTitle:nil buttonTitles:buttonTitles actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
         if (buttonIndex >= 0) {
             if (actionsBlock) {
                 actionsBlock(buttonIndex, buttonTitle);
@@ -131,9 +146,9 @@
     }];
 }
 
+#pragma mark - Input
 
-/// 带输入框
-+ (void)inputWithTitle:(NSString *)title message:(NSString *)message placeholders:(NSArray<NSString *> *)placeholders cancelTitle:(NSString *)cancelTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull, NSArray<UITextField *> * _Nonnull))actionsBlock {
++ (UIAlertController *)inputWithTitle:(NSString *)title message:(NSString *)message placeholders:(NSArray<NSString *> *)placeholders cancelTitle:(NSString *)cancelTitle buttonTitles:(NSArray<NSString *> *)buttonTitles actionsBlock:(void (^)(NSInteger, NSString * _Nonnull, NSArray<UITextField *> * _Nonnull))actionsBlock {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
 
@@ -142,11 +157,11 @@
         [placeholders enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
                 textField.placeholder = obj;
+                textField.clearButtonMode = UITextFieldViewModeWhileEditing;
                 [textArr addObject:textField];
             }];
         }];
     }
-    
     
     if (cancelTitle) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
@@ -167,11 +182,29 @@
     }
 
     [[self topViewController] presentViewController:alertController animated:YES completion:nil];
+    
+    return alertController;
 }
 
-+ (void)inputWithTitle:(NSString *)title message:(NSString *)message placeholder:(NSString *)placeholder cancel:(NSString *)cancel confirm:(NSString *)confirm confirmBlock:(void (^)(NSString * _Nonnull))confirmBlock {
++ (UIAlertController *)inputWithTitle:(NSString *)title message:(NSString *)message placeholder:(NSString *)placeholder cancel:(NSString *)cancel confirm:(NSString *)confirm confirmBlock:(void (^)(NSString * _Nonnull))confirmBlock {
+    if (!placeholder) placeholder = @"";
+    if (!confirm) confirm = HHGetLocalLanguageTextValue(@"Done");
     
-    [self inputWithTitle:title message:message placeholders:@[placeholder] cancelTitle:cancel buttonTitles:@[confirm] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle, NSArray<UITextField *> * _Nonnull textFields) {
+    return [self inputWithTitle:title message:message placeholders:@[placeholder] cancelTitle:cancel buttonTitles:@[confirm] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle, NSArray<UITextField *> * _Nonnull textFields) {
+        if (buttonIndex == 0) {
+            if (confirmBlock && textFields.count > 0) {
+                confirmBlock(textFields.firstObject.text);
+            }
+        }
+    }];
+}
+
++ (UIAlertController *)inputWithTitle:(NSString *)title message:(NSString *)message placeholder:(nullable NSString *)placeholder confirmBlock:(nullable void(^)(NSString *inputText))confirmBlock {
+    if (!placeholder) placeholder = @"";
+    
+    NSString *cancel = HHGetLocalLanguageTextValue(@"Cancel");
+    NSString *confirm = HHGetLocalLanguageTextValue(@"Done");
+    return [self inputWithTitle:title message:message placeholders:@[placeholder] cancelTitle:cancel buttonTitles:@[confirm] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle, NSArray<UITextField *> * _Nonnull textFields) {
         if (buttonIndex == 0) {
             if (confirmBlock && textFields.count > 0) {
                 confirmBlock(textFields.firstObject.text);
