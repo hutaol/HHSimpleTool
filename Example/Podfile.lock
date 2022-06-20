@@ -1,6 +1,6 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - HHSimpleTool (1.0.3):
+  - HHSimpleTool (1.1.0):
     - DZNEmptyDataSet (~> 1.8.1)
     - LSTPopView (~> 0.3.10)
     - MBProgressHUD (~> 1.2.0)
@@ -37,7 +37,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  HHSimpleTool: 010bf11cfbc0f1b90bc5d30d4a16e4e01cf60183
+  HHSimpleTool: 9f8e2381a94ff29d54a10c04cc34ab5b1410247b
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406

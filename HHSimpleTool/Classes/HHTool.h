@@ -23,6 +23,7 @@
 #import "UIView+HHFrame.h"
 #import "UIWindow+HHHelper.h"
 #import "UIImageView+HHCornerRadius.h"
+#import "UIView+Rotate360.h"
 
 #import "HHGCDTimer.h"
 #import "HHCircleLayer.h"

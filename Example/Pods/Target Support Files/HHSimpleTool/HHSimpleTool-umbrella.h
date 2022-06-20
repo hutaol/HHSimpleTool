@@ -28,6 +28,7 @@
 #import "UIImageView+HHCornerRadius.h"
 #import "UIScrollView+HHLoading.h"
 #import "UIView+HHFrame.h"
+#import "UIView+Rotate360.h"
 #import "UIWindow+HHHelper.h"
 
 FOUNDATION_EXPORT double HHSimpleToolVersionNumber;
