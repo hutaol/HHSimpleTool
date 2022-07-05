@@ -85,6 +85,7 @@ static NSString * const reuseIdentifier = @"Cell";
     CGFloat value = [self.dataArray[indexPath.row] floatValue];
     
     if (indexPath.row < 3) {
+        [cell.imageView hh_backgroundColor:[UIColor redColor]];
         [cell.imageView hh_cornerRadius:value];
     } else if (indexPath.row == 3) {
         [cell.imageView hh_cornerRadius:value rectCorner:UIRectCornerTopLeft];
@@ -110,7 +111,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     /// 后设置才有效
-    cell.imageView.image = [UIImage imageNamed:@"image1"];
+    cell.imageView.image = [UIImage imageNamed:@"image2"];
 
     return cell;
 }

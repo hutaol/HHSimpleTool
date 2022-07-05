@@ -12,9 +12,107 @@
 #define HH_LINE_WIDTH 1.0 / [UIScreen mainScreen].scale
 #define HH_ACTION_V 24
 #define HH_ACTION_SHEET_V 30
-#define HH_BG_ACTION_COLOR [UIColor colorWithRed:220.0 / 255.0 green:220.0 / 255.0 blue:220.0 / 255.0 alpha:1.0]
-#define HH_BG_INPUT_COLOR [UIColor colorWithRed:240.0 / 255.0 green:240.0 / 255.0 blue:240.0 / 255.0 alpha:1.0]
 #define HH_ACTION_TITLE_FONTSIZE 18
+
+@interface HHColorStyle : NSObject
+
++ (UIColor *)backgroundColor;
++ (UIColor *)normalColor;
++ (UIColor *)selectedColor;
++ (UIColor *)lineColor;
++ (UIColor *)line2Color;
++ (UIColor *)lightLineColor;
++ (UIColor *)darkLineColor;
++ (UIColor *)lightWhite_DarkBlackColor;
++ (UIColor *)lightBlack_DarkWhiteColor;
++ (UIColor *)textViewBackgroundColor;
++ (UIColor *)alertRedColor;
++ (UIColor *)grayColor;
+
++ (UIColor *)colorPairsWithDynamicLightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor;
++ (UIColor *)colorPairsWithStaticLightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor;
+@end
+
+@implementation HHColorStyle
+
++ (UIColor *)backgroundColor {
+    return [self colorPairsWithDynamicLightColor:[UIColor whiteColor] darkColor:[UIColor colorWithRed:44.0 / 255.0 green:44.0 / 255.0 blue:44.0 / 255.0 alpha:1.0]];
+}
+
++ (UIColor *)normalColor {
+    return [self colorPairsWithDynamicLightColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] darkColor:[UIColor colorWithRed:44.0 / 255.0 green:44.0 / 255.0 blue:44.0 / 255.0 alpha:1.0]];
+}
+
++ (UIColor *)selectedColor {
+    return [self colorPairsWithDynamicLightColor:[[UIColor grayColor] colorWithAlphaComponent:0.1] darkColor:[UIColor colorWithRed:55.0 / 255.0 green:55.0 / 255.0 blue:55.0 / 255.0 alpha:1.0]];
+}
+
++ (UIColor *)lineColor {
+    return [self colorPairsWithDynamicLightColor:[self lightLineColor] darkColor:[self darkLineColor]];
+}
+
++ (UIColor *)line2Color {
+    return [self colorPairsWithDynamicLightColor:[[UIColor grayColor] colorWithAlphaComponent:0.15] darkColor:[UIColor colorWithRed:29.0 / 255.0 green:29.0 / 255.0 blue:29.0 / 255.0 alpha:1.0]];
+}
+
++ (UIColor *)lightWhite_DarkBlackColor {
+    return [self colorPairsWithDynamicLightColor:[UIColor whiteColor] darkColor:[UIColor blackColor]];
+}
+
++ (UIColor *)lightBlack_DarkWhiteColor {
+    return [self colorPairsWithDynamicLightColor:[UIColor blackColor] darkColor:[UIColor whiteColor]];
+}
+
++ (UIColor *)lightLineColor {
+    return [[UIColor grayColor] colorWithAlphaComponent:0.3];
+}
+
++ (UIColor *)darkLineColor {
+    return [UIColor colorWithRed:60.0 / 255.0 green:60.0 / 255.0 blue:60.0 / 255.0 alpha:1.0];
+}
+
++ (UIColor *)textViewBackgroundColor {
+    return [self colorPairsWithDynamicLightColor:[UIColor colorWithRed:247.0 / 255.0 green:247.0 / 255.0 blue:247.0 / 255.0 alpha:1.0]
+                                       darkColor:[UIColor colorWithRed:54.0 / 255.0 green:54.0 / 255.0 blue:54.0 / 255.0 alpha:1.0]];
+}
+
++ (UIColor *)alertRedColor {
+    return [UIColor systemRedColor];
+}
+
++ (UIColor *)grayColor {
+    return [UIColor grayColor];
+}
+
++ (UIColor *)colorPairsWithDynamicLightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor {
+    if (@available(iOS 13.0, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if(traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return darkColor;
+            } else {
+                return lightColor;
+            }
+        }];
+    } else {
+        return lightColor;
+    }
+}
+
++ (UIColor *)colorPairsWithStaticLightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor {
+    if (@available(iOS 13.0, *)) {
+        UIUserInterfaceStyle mode = UITraitCollection.currentTraitCollection.userInterfaceStyle;
+        if (mode == UIUserInterfaceStyleDark) {
+            return darkColor;
+        } else if (mode == UIUserInterfaceStyleLight) {
+            return lightColor;
+        } else {
+            return lightColor;
+        }
+    }
+    return lightColor;
+}
+
+@end
 
 @interface HHAlertAction()
 
@@ -33,7 +131,7 @@
     self = [self init];
     self.title = title;
     self.handler = handler;
-    self.titleColor = [UIColor blackColor];
+    self.titleColor = [HHColorStyle lightBlack_DarkWhiteColor];
     self.titleFont = [UIFont systemFontOfSize:17];
     return self;
 }
@@ -48,7 +146,7 @@
 - (void)initialize {
     _enabled = YES; // 默认能点击
     _isClickDismiss = YES; // 默认移除
-    _titleColor = [UIColor blackColor];
+    _titleColor = [HHColorStyle lightBlack_DarkWhiteColor];
     _titleFont = [UIFont systemFontOfSize:17];
     _titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 15);
 }
@@ -70,7 +168,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-
+        self.backgroundColor = [HHColorStyle lightWhite_DarkBlackColor];
     }
     return self;
 }
@@ -88,7 +186,7 @@
     self.actionButton.tintColor = action.tintColor;
     
     if (action.attributedTitle) {
-        [self.actionButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.actionButton setTitleColor:[HHColorStyle normalColor] forState:UIControlStateNormal];
         if ([action.attributedTitle.string containsString:@"\n"] || [action.attributedTitle.string containsString:@"\r"]) {
             self.actionButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         }
@@ -117,7 +215,7 @@
     IMP imp = [_target methodForSelector:selector];
     void (*func)(id, SEL, HHAlertActionView *) = (void *)imp;
     func(_target, selector, self);
-    sender.backgroundColor = [UIColor whiteColor];
+    sender.backgroundColor = [HHColorStyle normalColor];
     
     // TODO: 移除popView
     if (self.action.isClickDismiss) {
@@ -133,11 +231,11 @@
 }
 
 - (void)touchDown:(UIButton *)sender {
-    sender.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    sender.backgroundColor = [HHColorStyle selectedColor];
 }
 
 - (void)touchDragExit:(UIButton *)sender {
-    sender.backgroundColor = [UIColor whiteColor];
+    sender.backgroundColor = [HHColorStyle normalColor];
 }
 
 - (void)layoutSubviews {
@@ -148,7 +246,7 @@
 - (UIButton *)actionButton {
     if (!_actionButton) {
         UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        actionButton.backgroundColor = [UIColor whiteColor];
+        actionButton.backgroundColor = [HHColorStyle normalColor];
         actionButton.titleLabel.textAlignment = NSTextAlignmentCenter;
         actionButton.titleLabel.adjustsFontSizeToFitWidth = YES;
         actionButton.titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
@@ -166,6 +264,7 @@
 
 @interface HHAlertView ()
 
+@property (nonatomic, weak) UIView *headerView;
 @property (nonatomic, weak) UILabel *titleLabel;
 @property (nonatomic, weak) UILabel *messageLabel;
 
@@ -191,7 +290,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [HHColorStyle backgroundColor];
     }
     return self;
 }
@@ -225,7 +324,11 @@
 }
 
 - (void)initialize {
-    
+    _edgeInsets = UIEdgeInsetsMake(30, 20, 30, 20);
+    _titleFont = [UIFont boldSystemFontOfSize:18];
+    _titleColor = [HHColorStyle lightBlack_DarkWhiteColor];
+    _messageFont = [UIFont systemFontOfSize:17];
+    _messageColor = [HHColorStyle grayColor];
 }
 
 - (void)addCancelAction:(HHAlertAction *)action {
@@ -245,9 +348,32 @@
 
     if (self.preferredStyle == HHAlertStyleAlert) {
         currentActionView.bounds = CGRectMake(0, 0, self.frame.size.width/self.actions.count, action.titleFont.lineHeight + HH_ACTION_V);
+        
+        // 添加分割线
+        if (self.actionView.arrangedSubviews.count > 1) {
+            UIView *lineView = [self addLineForStackView:self.actionView];
+            CGFloat left = currentActionView.frame.size.width*(self.actions.count-1);
+            lineView.frame = CGRectMake(left, 0, HH_LINE_WIDTH, currentActionView.frame.size.height);
+        }
+        
     } else {
         currentActionView.bounds = CGRectMake(0, 0, self.frame.size.width, action.titleFont.lineHeight + HH_ACTION_SHEET_V);
+        
+        // 添加分割线
+        if (self.actionView.arrangedSubviews.count > 1) {
+            UIView *lineView = [self addLineForStackView:self.actionView];
+            CGFloat top = currentActionView.frame.size.height*(self.actions.count-1);
+            lineView.frame = CGRectMake(0, top, currentActionView.frame.size.width, HH_LINE_WIDTH);
+        }
     }
+}
+
+// 为stackView添加分割线
+- (UIView *)addLineForStackView:(UIStackView *)stackView {
+    UIView *actionLine = [[UIView alloc] init];
+    actionLine.backgroundColor = [HHColorStyle lineColor];
+    [stackView addSubview:actionLine];
+    return actionLine;
 }
 
 - (void)buttonClickedInActionView:(HHAlertActionView *)actionView {
@@ -256,7 +382,6 @@
     }
 }
 
-    
 - (void)addTextField:(UITextField *)textField {
     [self.textFieldView addArrangedSubview:textField];
     textField.bounds = CGRectMake(0, 0, self.frame.size.width-40, 30);
@@ -265,10 +390,10 @@
 - (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField * _Nonnull))configurationHandler {
     UITextField *textField = [[UITextField alloc] init];
     textField.layer.borderWidth = HH_LINE_WIDTH;
-    textField.layer.borderColor = HH_BG_ACTION_COLOR.CGColor;
     textField.layer.cornerRadius = 5;
-    textField.backgroundColor = HH_BG_INPUT_COLOR;
-    
+    textField.backgroundColor = [HHColorStyle textViewBackgroundColor];
+    textField.layer.borderColor = [HHColorStyle colorPairsWithStaticLightColor:[HHColorStyle lineColor] darkColor:[HHColorStyle darkLineColor]].CGColor;
+
     textField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 0)];
     textField.leftView.userInteractionEnabled = NO;
     textField.leftViewMode = UITextFieldViewModeAlways;
@@ -291,23 +416,26 @@
     
     CGRect frame = self.frame;
     
-    CGFloat margin = 20.0;
-    CGFloat top = margin;
+    CGFloat top = self.edgeInsets.top;
+    CGFloat left = self.edgeInsets.left;
+    
     if (self.title.length > 0) {
-        self.titleLabel.frame = CGRectMake(margin, top, self.frame.size.width-margin-margin, self.titleLabel.frame.size.height);
+        self.titleLabel.frame = CGRectMake(left, top, self.frame.size.width-left-left, self.titleLabel.frame.size.height);
         top += (self.titleLabel.frame.size.height + 5);
     }
     if (self.message.length > 0) {
-        self.messageLabel.frame = CGRectMake(margin, top, self.frame.size.width-margin-margin, self.messageLabel.frame.size.height);
-        top += (self.messageLabel.frame.size.height + 20);
+        self.messageLabel.frame = CGRectMake(left, top, self.frame.size.width-left-left, self.messageLabel.frame.size.height+1);
+        top += (self.messageLabel.frame.size.height + self.edgeInsets.top);
     } else {
-        top += 20;
+        top += self.edgeInsets.top;
     }
     if (self.textFields.count > 0) {
         CGFloat height = 30*self.textFields.count;
-        self.textFieldView.frame = CGRectMake(margin, top, self.frame.size.width-margin-margin, height);
-        top += (height + 20);
+        self.textFieldView.frame = CGRectMake(left, top, self.frame.size.width-left-left, height);
+        top += (height + self.edgeInsets.top);
     }
+    
+    self.headerView.frame = CGRectMake(0, 0, self.frame.size.width, top);
     
     self.separatorView.frame = CGRectMake(0, top, self.frame.size.width, HH_LINE_WIDTH);
     top += HH_LINE_WIDTH;
@@ -357,6 +485,28 @@
     [self.messageLabel sizeToFit];
 }
 
+- (void)setTitleFont:(UIFont *)titleFont {
+    _titleFont = titleFont;
+    self.titleLabel.font = titleFont;
+    [self.messageLabel sizeToFit];
+}
+
+- (void)setTitleColor:(UIColor *)titleColor {
+    _titleColor = titleColor;
+    self.titleLabel.textColor = titleColor;
+}
+
+- (void)setMessageFont:(UIFont *)messageFont {
+    _messageFont = messageFont;
+    self.messageLabel.font = messageFont;
+    [self.messageLabel sizeToFit];
+}
+
+- (void)setMessageColor:(UIColor *)messageColor {
+    _messageColor = messageColor;
+    self.messageLabel.textColor = messageColor;
+}
+
 - (NSMutableArray *)textFields {
     if (!_textFields) {
         _textFields = [[NSMutableArray alloc] init];
@@ -371,13 +521,26 @@
     return _actions;
 }
 
+#pragma mark - Getters
+
+- (UIView *)headerView {
+    if (!_headerView) {
+        UIView *headerView = [[UIView alloc] init];
+        headerView.backgroundColor = [HHColorStyle normalColor];
+        [self addSubview:headerView];
+        _headerView = headerView;
+    }
+    return _headerView;
+}
+
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 275-40, 0)];
-        titleLabel.font = [UIFont boldSystemFontOfSize:18];
+        titleLabel.font = self.titleFont;
+        titleLabel.textColor = self.titleColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.numberOfLines = 0;
-        [self addSubview:titleLabel];
+        [self.headerView addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
     return _titleLabel;
@@ -386,10 +549,11 @@
 - (UILabel *)messageLabel {
     if (!_messageLabel) {
         UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 275-40, 0)];
-        messageLabel.font = [UIFont systemFontOfSize:17];
+        messageLabel.font = self.messageFont;
+        messageLabel.textColor = self.messageColor;
         messageLabel.textAlignment = NSTextAlignmentCenter;
         messageLabel.numberOfLines = 0;
-        [self addSubview:messageLabel];
+        [self.headerView addSubview:messageLabel];
         _messageLabel = messageLabel;
     }
     return _messageLabel;
@@ -401,7 +565,7 @@
         textFieldView.distribution = UIStackViewDistributionFillEqually;
         textFieldView.axis = UILayoutConstraintAxisVertical;
         if (self.textFields.count) {
-            [self addSubview:textFieldView];
+            [self.headerView addSubview:textFieldView];
         }
         _textFieldView = textFieldView;
     }
@@ -413,7 +577,7 @@
         UIStackView *stackView = [[UIStackView alloc] init];
         stackView.distribution = UIStackViewDistributionFillEqually;
         stackView.spacing = HH_LINE_WIDTH; // 该间距腾出来的空间显示分割线
-        stackView.backgroundColor = HH_BG_ACTION_COLOR;
+        stackView.backgroundColor = [HHColorStyle backgroundColor];
         if (self.actions.count) {
             
             if (self.preferredStyle == HHAlertStyleActionSheet) {
@@ -432,7 +596,7 @@
 - (HHAlertActionView *)cancelActionView {
     if (!_cancelActionView) {
         HHAlertActionView *view = [[HHAlertActionView alloc] init];
-        view.backgroundColor = HH_BG_ACTION_COLOR;
+        view.backgroundColor = [HHColorStyle lightWhite_DarkBlackColor];
         [self.cancelView addSubview:view];
         _cancelActionView = view;
     }
@@ -442,7 +606,7 @@
 - (UIView *)cancelView {
     if (!_cancelView) {
         UIView *view = [[UIView alloc] init];
-        view.backgroundColor = HH_BG_INPUT_COLOR;
+        view.backgroundColor = [HHColorStyle line2Color];
         [self addSubview:view];
         _cancelView = view;
     }
@@ -452,7 +616,7 @@
 - (UIView *)separatorView {
     if (!_separatorView) {
         UIView *view = [[UIView alloc] init];
-        view.backgroundColor = HH_BG_ACTION_COLOR;
+        view.backgroundColor = [HHColorStyle lineColor];
         [self addSubview:view];
         _separatorView = view;
     }

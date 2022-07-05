@@ -26,12 +26,12 @@
     circleLayer2.frame = CGRectMake(120, 100, 30, 30);
     circleLayer2.clockwise = YES;
     circleLayer2.increase = NO;
-    
+
     HHCircleLayer *circleLayer3 = [self addCircleLayer];
     circleLayer3.frame = CGRectMake(180, 100, 30, 30);
     circleLayer3.clockwise = NO;
     circleLayer3.increase = YES;
-    
+
     HHCircleLayer *circleLayer4 = [self addCircleLayer];
     circleLayer4.frame = CGRectMake(240, 100, 30, 30);
     circleLayer4.clockwise = NO;
@@ -41,8 +41,8 @@
 
 - (HHCircleLayer *)addCircleLayer {
     HHCircleLayer *circleLayer = [HHCircleLayer layerWithStrokeColor:[UIColor redColor] lineWidth:3 radius:15];
-    circleLayer.clockwise = YES;
-    circleLayer.increase = YES;
+    circleLayer.clockwise = NO;
+    circleLayer.increase = NO;
     circleLayer.totalCountdown = 10;
     circleLayer.frame = CGRectMake(150, 100, 30, 30);
     [self.view.layer addSublayer:circleLayer];

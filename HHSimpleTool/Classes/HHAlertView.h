@@ -58,19 +58,21 @@ typedef NS_ENUM(NSInteger, HHAlertStyle) {
 @property (nullable, nonatomic, copy) NSAttributedString *attributedMessage;
 
 /// 主标题颜色
-@property(nonatomic, strong) UIColor *titleColor;
+@property (nonatomic, strong) UIColor *titleColor;
 /// 主标题字体,默认18,加粗
-@property(nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) UIFont *titleFont;
 /// 副标题颜色
-@property(nonatomic, strong) UIColor *messageColor;
+@property (nonatomic, strong) UIColor *messageColor;
 /// 副标题字体,默认16,未加粗
-@property(nonatomic, strong) UIFont *messageFont;
+@property (nonatomic, strong) UIFont *messageFont;
 /// 对齐方式(包括主标题和副标题)
-@property(nonatomic, assign) NSTextAlignment textAlignment;
+@property (nonatomic, assign) NSTextAlignment textAlignment;
 
 @property (nonatomic) UILayoutConstraintAxis actionAxis;
 
 @property (nonatomic, assign) CGFloat cornerRadius;
+/// UIEdgeInsetsMake(30, 20, 30, 20)
+@property (nonatomic, assign) UIEdgeInsets edgeInsets;
 
 - (void)addAction:(HHAlertAction *)action;
 @property (nonatomic, readonly) NSMutableArray<HHAlertAction *> *actions;
@@ -78,7 +80,7 @@ typedef NS_ENUM(NSInteger, HHAlertStyle) {
 - (void)addTextFieldWithConfigurationHandler:(void (^ __nullable)(UITextField *textField))configurationHandler;
 @property (nullable, nonatomic, readonly) NSMutableArray<UITextField *> *textFields;
 
-// sheet 
+// sheet
 - (void)addCancelAction:(HHAlertAction *)action;
 
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(HHAlertStyle)preferredStyle;

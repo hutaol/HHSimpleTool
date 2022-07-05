@@ -18,6 +18,7 @@ const char hh_kProcessedImage;
 @property (strong, nonatomic) UIColor *hhBorderColor;
 @property (assign, nonatomic) BOOL hhHadAddObserver;
 @property (assign, nonatomic) BOOL hhIsRounding;
+@property (strong, nonatomic) UIColor *hhBackgroundColor;
 
 @end
 
@@ -85,6 +86,10 @@ const char hh_kProcessedImage;
     self.hhBorderColor = color;
 }
 
+- (void)hh_backgroundColor:(UIColor *)backgroundColor {
+    self.hhBackgroundColor = backgroundColor;
+}
+
 #pragma mark - Kernel
 
 - (void)hh_cornerRadiusWithImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius rectCorner:(UIRectCorner)rectCorner {
@@ -114,13 +119,13 @@ const char hh_kProcessedImage;
     CGFloat scale = [UIScreen mainScreen].scale;
     CGSize cornerRadii = CGSizeMake(cornerRadius, cornerRadius);
     
-    UIGraphicsBeginImageContextWithOptions(size, YES, scale);
+    UIGraphicsBeginImageContextWithOptions(size, NO, scale);
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     if (nil == currentContext) {
         return;
     }
     UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:rectCorner cornerRadii:cornerRadii];
-    UIBezierPath *backgroundRect = [UIBezierPath bezierPathWithRect:self.bounds];
+    UIBezierPath *backgroundRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:rectCorner cornerRadii:cornerRadii];
     [backgroundColor setFill];
     [backgroundRect fill];
     [cornerPath addClip];
@@ -180,9 +185,17 @@ const char hh_kProcessedImage;
 - (void)hh_LayoutSubviews {
     [self hh_LayoutSubviews];
     if (self.hhIsRounding) {
-        [self hh_cornerRadiusWithImage:self.image cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners];
+        if (self.hhBackgroundColor) {
+            [self hh_cornerRadiusWithImage:self.image cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners backgroundColor:self.hhBackgroundColor];
+        } else {
+            [self hh_cornerRadiusWithImage:self.image cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners];
+        }
     } else if (0 != self.hhRadius && 0 != self.hhRoundCorner && nil != self.image) {
-        [self hh_cornerRadiusWithImage:self.image cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner];
+        if (self.hhBackgroundColor) {
+            [self hh_cornerRadiusWithImage:self.image cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner backgroundColor:self.hhBackgroundColor];
+        } else {
+            [self hh_cornerRadiusWithImage:self.image cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner];
+        }
     }
 }
 
@@ -198,9 +211,17 @@ const char hh_kProcessedImage;
         }
         [self validateFrame];
         if (self.hhIsRounding) {
-            [self hh_cornerRadiusWithImage:newImage cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners];
+            if (self.hhBackgroundColor) {
+                [self hh_cornerRadiusWithImage:newImage cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners backgroundColor:self.hhBackgroundColor];
+            } else {
+                [self hh_cornerRadiusWithImage:newImage cornerRadius:self.frame.size.width/2 rectCorner:UIRectCornerAllCorners];
+            }
         } else if (0 != self.hhRadius && 0 != self.hhRoundCorner && nil != self.image) {
-            [self hh_cornerRadiusWithImage:newImage cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner];
+            if (self.hhBackgroundColor) {
+                [self hh_cornerRadiusWithImage:newImage cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner backgroundColor:self.hhBackgroundColor];
+            } else {
+                [self hh_cornerRadiusWithImage:newImage cornerRadius:self.hhRadius rectCorner:self.hhRoundCorner];
+            }
         }
     }
 }
@@ -221,6 +242,14 @@ const char hh_kProcessedImage;
 
 - (void)setHhBorderColor:(UIColor *)hhBorderColor {
     objc_setAssociatedObject(self, @selector(hhBorderColor), hhBorderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)hhBackgroundColor {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setHhBackgroundColor:(UIColor *)hhBackgroundColor {
+    objc_setAssociatedObject(self, @selector(hhBackgroundColor), hhBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)hhHadAddObserver {

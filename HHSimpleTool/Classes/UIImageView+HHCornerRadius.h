@@ -42,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param color 颜色
 - (void)hh_borderWidth:(CGFloat)width color:(UIColor *)color;
 
+/// 背景色
+- (void)hh_backgroundColor:(UIColor *)backgroundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

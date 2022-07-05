@@ -149,7 +149,8 @@
             break;
         case 14:
         {
-            [HHAlertPop alertWithTitle:title message:@"内容" configBlock:^(HHAlertView * _Nonnull alertView, LSTPopView * _Nonnull popView) {
+            NSString *dd = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
+            [HHAlertPop alertWithTitle:title message:dd configBlock:^(HHAlertView * _Nonnull alertView, LSTPopView * _Nonnull popView) {
 
                 HHAlertAction *action = [HHAlertAction actionWithTitle:@"取消" handler:^(HHAlertAction * _Nonnull action) {
                     [HHToastTool show:action.title];
@@ -169,7 +170,7 @@
             break;
         case 15:
         {
-            [HHAlertPop sheetWithMessage:@"" buttonTitles:@[@"选项1", @"选项2"] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
+            [HHAlertPop sheetWithMessage:@"" buttonTitles:@[@"选项1", @"选项2", @"选项3"] actionsBlock:^(NSInteger buttonIndex, NSString * _Nonnull buttonTitle) {
                 [HHToastTool show:buttonTitle];
             }];
         }
