@@ -22,7 +22,6 @@
 #import "UIScrollView+HHLoading.h"
 #import "UIView+HHFrame.h"
 #import "UIWindow+HHHelper.h"
-#import "UIImageView+HHCornerRadius.h"
 #import "UIView+Rotate360.h"
 
 #import "HHGCDTimer.h"

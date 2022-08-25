@@ -1,6 +1,6 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - HHSimpleTool (1.1.1):
+  - HHSimpleTool (1.1.2):
     - DZNEmptyDataSet (~> 1.8.1)
     - LSTPopView (~> 0.3.10)
     - MBProgressHUD (~> 1.2.0)
@@ -14,12 +14,16 @@ PODS:
     - LSTTimer
   - LSTTimer (0.2.10)
   - MBProgressHUD (1.2.0)
+  - SDWebImage (5.13.0):
+    - SDWebImage/Core (= 5.13.0)
+  - SDWebImage/Core (5.13.0)
   - SPAlertController (4.0.0)
   - Toast (4.0.0)
   - YBPopupMenu (1.1.9)
 
 DEPENDENCIES:
   - HHSimpleTool (from `../`)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,6 +31,7 @@ SPEC REPOS:
     - LSTPopView
     - LSTTimer
     - MBProgressHUD
+    - SDWebImage
     - SPAlertController
     - Toast
     - YBPopupMenu
@@ -37,14 +42,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  HHSimpleTool: 5fdbc88a31730cd8592a80ace7723f05f08a28ec
+  HHSimpleTool: 1cee7b4c2c541847fe9dc84329537272a5af6f07
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SDWebImage: 0327043dbb9533e75f2eff8445b3df0f2ceca6ac
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YBPopupMenu: 3a02e89860bb0568ba477aee609bc3f25e5bd339
 
-PODFILE CHECKSUM: 618f08ea80dc68594452ae8b8f72ae286a3485f8
+PODFILE CHECKSUM: 189bb9894b2fe301e16617ca4add41582b124c35
 
 COCOAPODS: 1.11.3

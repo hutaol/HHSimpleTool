@@ -30,7 +30,6 @@
         @{@"title":@"Alert", @"vc":@"HHAlertTableViewController"},
         @{@"title":@"加载提示框", @"vc":@"HHProgressHUDViewController"},
         @{@"title":@"Popup", @"vc":@"HHPopupTableViewController"},
-        @{@"title":@"图片圆角", @"vc":@"HHCornerRadiusViewController"},
         @{@"title":@"Layer动画", @"vc":@"HHLayerViewController"},
     ];
     
