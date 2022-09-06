@@ -25,6 +25,7 @@
 #import "HHUtilities.h"
 #import "MBProgressHUD+HHTool.h"
 #import "NSBundle+HHTool.h"
+#import "UIColor+HHTool.h"
 #import "UIScrollView+HHLoading.h"
 #import "UIView+HHFrame.h"
 #import "UIView+Rotate360.h"

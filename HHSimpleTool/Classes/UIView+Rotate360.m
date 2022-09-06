@@ -14,16 +14,16 @@
     CAKeyframeAnimation *theAnimation = [CAKeyframeAnimation animation];
     if (aDirection == i7Rotate360RotateDirectionClockwise) {
         theAnimation.values = [NSArray arrayWithObjects:
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0, 0, 0, 1)],
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(3.13, 0, 0, 1)],
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(6.26, 0, 0, 1)],
-                                               nil];
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0, 0, 0, 1)],
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(3.13, 0, 0, 1)],
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(6.26, 0, 0, 1)],
+                               nil];
     } else {
         theAnimation.values = [NSArray arrayWithObjects:
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0, 0, 0, 1)],
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-3.13, 0, 0, 1)],
-                                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-6.26, 0, 0, 1)],
-                                               nil];
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0, 0, 0, 1)],
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-3.13, 0, 0, 1)],
+                               [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-6.26, 0, 0, 1)],
+                               nil];
     }
 
     theAnimation.cumulative = YES;
@@ -31,11 +31,11 @@
     theAnimation.repeatCount = aRepeatCount;
     theAnimation.removedOnCompletion = YES;
     
-    if(aMode == i7Rotate360TimingModeEaseInEaseOut) {
-        theAnimation.timingFunctions = [NSArray arrayWithObjects:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+    if (aMode == i7Rotate360TimingModeEaseInEaseOut) {
+        theAnimation.timingFunctions = [NSArray arrayWithObjects:
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
                                         [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-                                        nil
-                                        ];
+                                        nil];
     }
     [self.layer addAnimation:theAnimation forKey:@"transform"];
 }

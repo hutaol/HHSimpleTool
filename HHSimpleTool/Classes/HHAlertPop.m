@@ -78,7 +78,8 @@
     LSTPopView *popView = [LSTPopView initWithCustomView:alertView popStyle:LSTPopStyleFade dismissStyle:LSTDismissStyleFade];
     popView.cornerRadius = 6;
     popView.isClickBgDismiss = NO;
-    
+    popView.isStack = YES;
+
     if (configBlock) {
         configBlock(alertView, popView);
     }
@@ -109,6 +110,7 @@
     popView.rectCorners = UIRectCornerTopLeft | UIRectCornerTopRight;
     popView.cornerRadius = 12;
     popView.isClickBgDismiss = YES;
+    popView.isStack = YES;
     
     if (configBlock) {
         configBlock(alertView, popView);

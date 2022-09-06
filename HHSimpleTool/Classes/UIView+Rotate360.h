@@ -19,6 +19,7 @@ enum i7Rotate360RotateDirection {
     i7Rotate360RotateDirectionAntiClockwise
 };
 
+/// 360度旋转
 @interface UIView (Rotate360)
 
 - (void)rotate360WithDuration:(CGFloat)aDuration repeatCount:(CGFloat)aRepeatCount timingMode:(enum i7Rotate360TimingMode)aMode rotateDirection:(enum i7Rotate360RotateDirection)aDirection;

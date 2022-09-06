@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// gcd timer
 @interface HHGCDTimer : NSObject
 
 + (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async task:(void(^)(NSString *timerName))task;

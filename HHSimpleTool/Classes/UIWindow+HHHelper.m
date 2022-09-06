@@ -35,10 +35,8 @@
 
 - (UIViewController *)topRootController {
     UIViewController *topController = [self rootViewController];
-    
     while ([topController presentedViewController])
         topController = [topController presentedViewController];
-    
     return topController;
 }
 
