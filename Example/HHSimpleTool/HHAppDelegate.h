@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/// 界面方向
+@property (nonatomic, assign) UIInterfaceOrientationMask orientationMask;
+
 @end

@@ -11,6 +11,10 @@
 #import "HHAlertTableViewController.h"
 #import "HHProgressHUDViewController.h"
 #import "HHPopupTableViewController.h"
+#import <UIWindow+HHHelper.h>
+#import "HHAppDelegate.h"
+
+#define kAPPDelegate ((HHAppDelegate*)[[UIApplication sharedApplication] delegate])
 
 @interface HHMainViewController ()
 
@@ -35,6 +39,24 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
+}
+
+- (void)switchOrientation {
+    if ([UIWindow isLandscape]) {
+        // 切换竖屏
+        kAPPDelegate.orientationMask = UIInterfaceOrientationMaskPortrait;
+        [UIWindow forcedOrientationPortrait];
+
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
+
+    } else {
+        kAPPDelegate.orientationMask = UIInterfaceOrientationMaskLandscape;
+        [UIWindow forcedOrientationLandscape];
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换竖屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
+
+    }
 }
 
 #pragma mark - Table view data source
