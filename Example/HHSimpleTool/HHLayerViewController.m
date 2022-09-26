@@ -50,7 +50,7 @@
     __block NSInteger count = 0;
     [HHGCDTimer timerStart:0 interval:1 repeats:YES async:NO task:^(NSString * _Nonnull timerName) {
         ++ count;
-        
+        NSLog(@"%@ %ld", timerName, count);
         [circleLayer showAnimationWithCountdown:count];
         
         if (count == circleLayer.totalCountdown) {

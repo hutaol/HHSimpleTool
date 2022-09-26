@@ -12,12 +12,31 @@ NS_ASSUME_NONNULL_BEGIN
 /// gcd timer
 @interface HHGCDTimer : NSObject
 
-+ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async task:(void(^)(NSString *timerName))task;
+/// 倒计时
+/// - Parameters:
+///   - start: 开始
+///   - interval: 间隔
+///   - repeats: 重复
+///   - async: 异步
+///   - group: 组 默认：default
+///   - task: 回调
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async group:(nullable NSString *)group task:(void(^)(NSString *timerName))task;
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async group:(nullable NSString *)group target:(id)aTarget selector:(SEL)aSelector;
 
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async task:(void(^)(NSString *timerName))task;
 + (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async target:(id)aTarget selector:(SEL)aSelector;
 
 + (void)cancelTimer:(NSString *)timerName;
++ (void)cancelTimerGroup:(NSString *)group;
 + (void)cancelAllTimer;
+
++ (void)pauseTimer:(NSString *)timerName;
++ (void)pauseTimerGroup:(NSString *)group;
++ (void)pauseAllTimer;
+
++ (void)resumeTimer:(NSString *)timerName;
++ (void)resumeTimerGroup:(NSString *)group;
++ (void)resumeAllTimer;
 
 @end
 

@@ -30,7 +30,14 @@ dispatch_semaphore_t _hgt_semaphore;
 }
 
 + (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async task:(void (^)(NSString * _Nonnull))task {
-    
+    return [self timerStart:start interval:interval repeats:repeats async:async group:nil task:task];
+}
+
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async target:(id)aTarget selector:(SEL)aSelector {
+    return [self timerStart:start interval:interval repeats:repeats async:async group:nil target:aTarget selector:aSelector];
+}
+
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async group:(NSString *)group task:(void(^)(NSString *timerName))task {
     /**
      对参数做一些限制
      1.如果task不存在，那就没有执行的必要
@@ -51,7 +58,7 @@ dispatch_semaphore_t _hgt_semaphore;
     
     dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
 
-    NSString *timerName = [NSString stringWithFormat:@"%zd", _hgt_timers.count];
+    NSString *timerName = [NSString stringWithFormat:@"%@_%zd", group?:@"default", _hgt_timers.count];
     
     _hgt_timers[timerName] = timer;
 
@@ -74,8 +81,7 @@ dispatch_semaphore_t _hgt_semaphore;
     return timerName;
 }
 
-+ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async target:(id)aTarget selector:(SEL)aSelector {
-    
++ (NSString *)timerStart:(NSTimeInterval)start interval:(NSTimeInterval)interval repeats:(BOOL)repeats async:(BOOL)async group:(NSString *)group target:(id)aTarget selector:(SEL)aSelector {
     /**
      对参数做一些限制
      1.如果target不存在，那就没有执行的必要
@@ -96,8 +102,8 @@ dispatch_semaphore_t _hgt_semaphore;
     
     dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
 
-    NSString *timerName = [NSString stringWithFormat:@"%zd", _hgt_timers.count];
-    
+    NSString *timerName = [NSString stringWithFormat:@"%@_%zd", group?:@"default", _hgt_timers.count];
+
     _hgt_timers[timerName] = timer;
 
     dispatch_semaphore_signal(_hgt_semaphore);
@@ -143,12 +149,109 @@ dispatch_semaphore_t _hgt_semaphore;
     dispatch_semaphore_signal(_hgt_semaphore);
 }
 
++ (void)cancelTimerGroup:(NSString *)group {
+    if (group.length == 0) {
+        return;
+    }
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    for (NSString *timerName in _hgt_timers) {
+        if ([timerName containsString:group]) {
+            dispatch_source_t timer = _hgt_timers[timerName];
+            if (timer) {
+                dispatch_source_cancel(timer);
+                [_hgt_timers removeObjectForKey:timerName];
+            }
+        }
+    }
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
 + (void)cancelAllTimer {
     dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
     for (NSString *timerName in _hgt_timers) {
         dispatch_source_t timer = _hgt_timers[timerName];
         if (timer) {
             dispatch_source_cancel(timer);
+        }
+    }
+    [_hgt_timers removeAllObjects];
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)pauseTimer:(NSString *)timerName {
+    if (timerName.length == 0) {
+        return;
+    }
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    dispatch_source_t timer = _hgt_timers[timerName];
+    if (timer) {
+        dispatch_suspend(timer);
+    }
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)pauseTimerGroup:(NSString *)group {
+    if (group.length == 0) {
+        return;
+    }
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    for (NSString *timerName in _hgt_timers) {
+        if ([timerName containsString:group]) {
+            dispatch_source_t timer = _hgt_timers[timerName];
+            if (timer) {
+                dispatch_suspend(timer);
+            }
+        }
+    }
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)pauseAllTimer {
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    for (NSString *timerName in _hgt_timers) {
+        dispatch_source_t timer = _hgt_timers[timerName];
+        if (timer) {
+            dispatch_suspend(timer);
+        }
+    }
+    [_hgt_timers removeAllObjects];
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)resumeTimer:(NSString *)timerName {
+    if (timerName.length == 0) {
+        return;
+    }
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    dispatch_source_t timer = _hgt_timers[timerName];
+    if (timer) {
+        dispatch_resume(timer);
+    }
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)resumeTimerGroup:(NSString *)group {
+    if (group.length == 0) {
+        return;
+    }
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    for (NSString *timerName in _hgt_timers) {
+        if ([timerName containsString:group]) {
+            dispatch_source_t timer = _hgt_timers[timerName];
+            if (timer) {
+                dispatch_resume(timer);
+            }
+        }
+    }
+    dispatch_semaphore_signal(_hgt_semaphore);
+}
+
++ (void)resumeAllTimer {
+    dispatch_semaphore_wait(_hgt_semaphore, DISPATCH_TIME_FOREVER);
+    for (NSString *timerName in _hgt_timers) {
+        dispatch_source_t timer = _hgt_timers[timerName];
+        if (timer) {
+            dispatch_resume(timer);
         }
     }
     [_hgt_timers removeAllObjects];

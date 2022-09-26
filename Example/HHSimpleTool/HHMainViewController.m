@@ -46,13 +46,13 @@
     if ([UIWindow isLandscape]) {
         // 切换竖屏
         kAPPDelegate.orientationMask = UIInterfaceOrientationMaskPortrait;
-        [UIWindow forcedOrientationPortrait];
+        [UIWindow switchOrientationPortrait];
 
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
 
     } else {
         kAPPDelegate.orientationMask = UIInterfaceOrientationMaskLandscape;
-        [UIWindow forcedOrientationLandscape];
+        [UIWindow switchOrientationLandscape];
         
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换竖屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
 
