@@ -67,11 +67,11 @@ typedef NS_ENUM(NSInteger, HHAlertStyle) {
 @property (nonatomic, strong) UIFont *messageFont;
 /// 对齐方式(包括主标题和副标题)
 @property (nonatomic, assign) NSTextAlignment textAlignment;
-
+///
 @property (nonatomic) UILayoutConstraintAxis actionAxis;
-
+/// 圆角
 @property (nonatomic, assign) CGFloat cornerRadius;
-/// UIEdgeInsetsMake(30, 20, 30, 20)
+/// UIEdgeInsetsMake(16, 20, 16, 20)
 @property (nonatomic, assign) UIEdgeInsets edgeInsets;
 
 - (void)addAction:(HHAlertAction *)action;

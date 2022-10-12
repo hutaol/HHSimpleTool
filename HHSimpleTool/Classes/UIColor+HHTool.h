@@ -24,9 +24,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)hh_colorWithLightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor;
 
+/// 渐变颜色
++ (UIColor*)hh_gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height;
+
 /// 常用颜色
 + (UIColor *)hh_whiteColor;
 + (UIColor *)hh_blockColor;
+/// 随机颜色
++ (UIColor *)hh_randomColor;
+
+/// #FFFFFF
+- (NSString *)hh_HEXString;
 
 @end
 

@@ -148,7 +148,7 @@
     _isClickDismiss = YES; // 默认移除
     _titleColor = [HHColorStyle lightBlack_DarkWhiteColor];
     _titleFont = [UIFont systemFontOfSize:17];
-    _titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 15);
+    _titleEdgeInsets = UIEdgeInsetsMake(0, 16, 0, 16);
 }
 
 @end
@@ -324,7 +324,7 @@
 }
 
 - (void)initialize {
-    _edgeInsets = UIEdgeInsetsMake(30, 20, 30, 20);
+    _edgeInsets = UIEdgeInsetsMake(15, 20, 15, 20);
     _titleFont = [UIFont boldSystemFontOfSize:18];
     _titleColor = [HHColorStyle lightBlack_DarkWhiteColor];
     _messageFont = [UIFont systemFontOfSize:17];
@@ -418,6 +418,7 @@
     
     CGFloat top = self.edgeInsets.top;
     CGFloat left = self.edgeInsets.left;
+    CGFloat right = self.edgeInsets.right;
     
     if (self.title.length > 0) {
         self.titleLabel.frame = CGRectMake(left, top, self.frame.size.width-left-left, self.titleLabel.frame.size.height);
@@ -430,8 +431,11 @@
         top += self.edgeInsets.top;
     }
     if (self.textFields.count > 0) {
-        CGFloat height = 30*self.textFields.count;
-        self.textFieldView.frame = CGRectMake(left, top, self.frame.size.width-left-left, height);
+        CGFloat height = 0;
+        for (UITextField *textField in self.textFields) {
+            height += textField.frame.size.height;
+        }
+        self.textFieldView.frame = CGRectMake(left, top, self.frame.size.width-left-right, height);
         top += (height + self.edgeInsets.top);
     }
     

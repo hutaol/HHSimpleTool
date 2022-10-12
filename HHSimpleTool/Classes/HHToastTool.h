@@ -15,6 +15,10 @@ typedef NS_ENUM(NSInteger, HHToastToolPosition) {
     HHToastToolPositionTop,
 };
 
+/**
+ 简单的封装Toast
+ 更多请参考：https://github.com/scalessec/Toast
+ */
 @interface HHToastTool : NSObject
 
 /// 显示提示视图, 默认显示在屏幕中间，2s后自动消失
@@ -54,8 +58,11 @@ typedef NS_ENUM(NSInteger, HHToastToolPosition) {
 /// 显示提示视图，point 中心点
 + (void)show:(NSString *)message point:(CGPoint)point showTime:(float)showTime view:(nullable UIView *)view;
 
-/// 加载view
-+ (void)showActivity:(UIView *)view;
+/// 加载视图
++ (void)showActivity;
++ (void)showActivity:(nullable UIView *)view;
++ (void)hideActivity;
++ (void)hideActivity:(nullable UIView *)view;
 
 @end
 

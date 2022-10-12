@@ -21,7 +21,9 @@ typedef void (^HHPopupToolDidSelected)(NSInteger index, YBPopupMenu *popupMenu);
 typedef void (^HHPopupToolListDidSelected)(NSInteger index, NSString *text);
 
 /**
- 简单使用，具体查看YBPopupMenu
+ 简单封装 Popup
+ 请参考：https://github.com/lyb5834/YBPopupMenu
+        https://github.com/SPStore/SPAlertController
  */
 @interface HHPopupTool : NSObject
 

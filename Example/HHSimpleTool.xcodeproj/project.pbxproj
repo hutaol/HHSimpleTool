@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3509D45B284DE30100F3B908 /* HHLayerViewController.m */; };
+		35695B2228E2A90600892610 /* HHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2128E2A90600892610 /* HHTestViewController.m */; };
+		35695B2528E2C98000892610 /* HHLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2428E2C98000892610 /* HHLandscapeViewController.m */; };
+		3598EC0728F5186200FDB67A /* HHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3598EC0628F5186200FDB67A /* HHImageViewController.m */; };
+		3598EC0E28F56FFD00FDB67A /* HHCountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3598EC0C28F56FFD00FDB67A /* HHCountryTableViewController.m */; };
 		35CE930527742616003BD21C /* HHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930327742616003BD21C /* HHMainViewController.m */; };
 		35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930727742670003BD21C /* HHAlertTableViewController.m */; };
 		35CE930C27742684003BD21C /* HHEmptyDataSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CE930B27742683003BD21C /* HHEmptyDataSetTableViewController.m */; };
@@ -45,6 +49,14 @@
 /* Begin PBXFileReference section */
 		3509D45A284DE30100F3B908 /* HHLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLayerViewController.h; sourceTree = "<group>"; };
 		3509D45B284DE30100F3B908 /* HHLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLayerViewController.m; sourceTree = "<group>"; };
+		35695B2028E2A90600892610 /* HHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTestViewController.h; sourceTree = "<group>"; };
+		35695B2128E2A90600892610 /* HHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTestViewController.m; sourceTree = "<group>"; };
+		35695B2328E2C98000892610 /* HHLandscapeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLandscapeViewController.h; sourceTree = "<group>"; };
+		35695B2428E2C98000892610 /* HHLandscapeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLandscapeViewController.m; sourceTree = "<group>"; };
+		3598EC0528F5186200FDB67A /* HHImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHImageViewController.h; sourceTree = "<group>"; };
+		3598EC0628F5186200FDB67A /* HHImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHImageViewController.m; sourceTree = "<group>"; };
+		3598EC0C28F56FFD00FDB67A /* HHCountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCountryTableViewController.m; sourceTree = "<group>"; };
+		3598EC0D28F56FFD00FDB67A /* HHCountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCountryTableViewController.h; sourceTree = "<group>"; };
 		35CE930327742616003BD21C /* HHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMainViewController.m; sourceTree = "<group>"; };
 		35CE930427742616003BD21C /* HHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMainViewController.h; sourceTree = "<group>"; };
 		35CE930727742670003BD21C /* HHAlertTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertTableViewController.m; sourceTree = "<group>"; };
@@ -126,6 +138,14 @@
 				35CE930727742670003BD21C /* HHAlertTableViewController.m */,
 				3509D45A284DE30100F3B908 /* HHLayerViewController.h */,
 				3509D45B284DE30100F3B908 /* HHLayerViewController.m */,
+				35695B2328E2C98000892610 /* HHLandscapeViewController.h */,
+				35695B2428E2C98000892610 /* HHLandscapeViewController.m */,
+				3598EC0528F5186200FDB67A /* HHImageViewController.h */,
+				3598EC0628F5186200FDB67A /* HHImageViewController.m */,
+				3598EC0D28F56FFD00FDB67A /* HHCountryTableViewController.h */,
+				3598EC0C28F56FFD00FDB67A /* HHCountryTableViewController.m */,
+				35695B2028E2A90600892610 /* HHTestViewController.h */,
+				35695B2128E2A90600892610 /* HHTestViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -285,6 +305,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "1325049637@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = CP9QSB7G3D;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -418,12 +441,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35695B2528E2C98000892610 /* HHLandscapeViewController.m in Sources */,
+				3598EC0E28F56FFD00FDB67A /* HHCountryTableViewController.m in Sources */,
 				3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */,
 				35CE930F2774268F003BD21C /* HHProgressHUDViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HHAppDelegate.m in Sources */,
+				3598EC0728F5186200FDB67A /* HHImageViewController.m in Sources */,
 				35CE9313277431C9003BD21C /* HHPopupTableViewController.m in Sources */,
 				35CE930527742616003BD21C /* HHMainViewController.m in Sources */,
 				35CE930C27742684003BD21C /* HHEmptyDataSetTableViewController.m in Sources */,
+				35695B2228E2A90600892610 /* HHTestViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* HHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */,
@@ -554,9 +581,11 @@
 			baseConfigurationReference = 9DBEEBE021BF1789FED4FBCF /* Pods-HHSimpleTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CP9QSB7G3D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HHSimpleTool/HHSimpleTool-Prefix.pch";
 				INFOPLIST_FILE = "HHSimpleTool/HHSimpleTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,9 +599,11 @@
 			baseConfigurationReference = 8F051F010EC93643DBD7B0B6 /* Pods-HHSimpleTool_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CP9QSB7G3D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HHSimpleTool/HHSimpleTool-Prefix.pch";
 				INFOPLIST_FILE = "HHSimpleTool/HHSimpleTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

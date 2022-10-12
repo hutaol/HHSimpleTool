@@ -11,6 +11,8 @@
 #import "HHAlertTableViewController.h"
 #import "HHProgressHUDViewController.h"
 #import "HHPopupTableViewController.h"
+#import "HHLandscapeViewController.h"
+#import "HHImageViewController.h"
 #import <UIWindow+HHHelper.h>
 #import "HHAppDelegate.h"
 
@@ -35,10 +37,21 @@
         @{@"title":@"加载提示框", @"vc":@"HHProgressHUDViewController"},
         @{@"title":@"Popup", @"vc":@"HHPopupTableViewController"},
         @{@"title":@"Layer动画", @"vc":@"HHLayerViewController"},
+        @{@"title":@"图片", @"vc":@"HHImageViewController"},
+        @{@"title":@"国家列表", @"vc":@"HHCountryTableViewController"},
+        @{@"title":@"测试", @"vc":@"HHTestViewController"},
     ];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    kAPPDelegate.orientationMask = UIInterfaceOrientationMaskPortrait;
+    [UIWindow switchOrientationPortrait];
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
 }
 
@@ -55,7 +68,12 @@
         [UIWindow switchOrientationLandscape];
         
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换竖屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
-
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            HHLandscapeViewController *vc = [[HHLandscapeViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        });
+        
     }
 }
 

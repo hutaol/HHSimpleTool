@@ -43,7 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 隐藏 window上
 + (void)hide;
+/// 隐藏 topViewController上
 + (void)hideTop;
+/// 隐藏 view上
 + (void)hide:(nullable UIView *)view;
 
 @end

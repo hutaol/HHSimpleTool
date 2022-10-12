@@ -9,8 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// TODO: 待优化进度流畅
-/// 圆形进度
+/// 圆形进度 Layer
 @interface HHCircleLayer : CAShapeLayer
 
 + (instancetype)layerWithStrokeColor:(UIColor *)strokeColor lineWidth:(CGFloat)lineWidth radius:(CGFloat)radius;

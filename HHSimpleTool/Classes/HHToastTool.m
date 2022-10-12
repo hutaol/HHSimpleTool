@@ -78,11 +78,27 @@
 
 }
 
++ (void)showActivity {
+    [self showActivity:nil];
+}
+
 + (void)showActivity:(UIView *)view {
     if (!view) {
         view = [UIWindow hh_keyWindow];
     }
     [view makeToastActivity:CSToastPositionCenter];
 }
+
++ (void)hideActivity {
+    [self hideActivity];
+}
+
++ (void)hideActivity:(UIView *)view {
+    if (!view) {
+        view = [UIWindow hh_keyWindow];
+    }
+    [view hideToastActivity];
+}
+
 
 @end

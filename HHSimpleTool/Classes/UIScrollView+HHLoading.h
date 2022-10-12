@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^LoadingBlock)(void);
 
+/**
+ 简单封装UIScrollView加载
+ 更多请参考：https://github.com/dzenbot/DZNEmptyDataSet
+ */
 @interface UIScrollView (HHLoading) <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 /// 是否在加载 YES:转菊花 or NO:立即空界面

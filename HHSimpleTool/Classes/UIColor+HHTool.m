@@ -125,12 +125,51 @@
     }
 }
 
++ (UIColor*)hh_gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height {
+    CGSize size = CGSizeMake(1, height);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    
+    NSArray* colors = [NSArray arrayWithObjects:(id)c1.CGColor, (id)c2.CGColor, nil];
+    CGGradientRef gradient = CGGradientCreateWithColors(colorspace, (__bridge CFArrayRef)colors, NULL);
+    CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, size.height), 0);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorspace);
+    UIGraphicsEndImageContext();
+    
+    return [UIColor colorWithPatternImage:image];
+}
+
 + (UIColor *)hh_whiteColor {
     return [self hh_colorWithLightColor:[UIColor whiteColor] darkColor:[UIColor blackColor]];
 }
 
 + (UIColor *)hh_blockColor {
     return [self hh_colorWithLightColor:[UIColor blackColor] darkColor:[UIColor whiteColor]];
+}
+
++ (UIColor *)hh_randomColor {
+    NSInteger aRedValue = arc4random() % 255;
+    NSInteger aGreenValue = arc4random() % 255;
+    NSInteger aBlueValue = arc4random() % 255;
+    UIColor *randColor = [UIColor colorWithRed:aRedValue / 255.0f green:aGreenValue / 255.0f blue:aBlueValue / 255.0f alpha:1.0f];
+    return randColor;
+}
+
+- (NSString *)hh_HEXString {
+    UIColor *color = self;
+    if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
+        const CGFloat *components = CGColorGetComponents(color.CGColor);
+        color = [UIColor colorWithRed:components[0] green:components[0] blue:components[0] alpha:components[1]];
+    }
+    if (CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) != kCGColorSpaceModelRGB) {
+        return [NSString stringWithFormat:@"#FFFFFF"];
+    }
+    return [NSString stringWithFormat:@"#%02X%02X%02X", (int)((CGColorGetComponents(color.CGColor))[0]*255.0), (int)((CGColorGetComponents(color.CGColor))[1]*255.0), (int)((CGColorGetComponents(color.CGColor))[2]*255.0)];
 }
 
 @end
