@@ -98,6 +98,29 @@
     return CGSizeMake(newWidth, newHeight);
 }
 
++ (CGSize)hh_scaleSizeWithSize:(CGSize)size withLength:(CGFloat)imageLength {
+    CGFloat newWidth = 0.0f;
+    CGFloat newHeight = 0.0f;
+    CGFloat width = size.width;
+    CGFloat height = size.height;
+    
+    if (width > imageLength || height > imageLength) {
+        if (width > height) {
+            newWidth = imageLength;
+            newHeight = newWidth * height / width;
+        } else if(height > width) {
+            newHeight = imageLength;
+            newWidth = newHeight * width / height;
+        } else {
+            newWidth = imageLength;
+            newHeight = imageLength;
+        }
+    } else {
+        return CGSizeMake(width, height);
+    }
+    return CGSizeMake(newWidth, newHeight);
+}
+
 + (UIImage *)hh_scaleImage:(UIImage *)image withLength:(CGFloat)imageLength {
     CGSize size = [self hh_scaleSizeWithImage:image withLength:imageLength];
     return [self hh_resizeImage:image withNewSize:size];

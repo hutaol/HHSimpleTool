@@ -21,8 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)hh_isEmpty;
 - (BOOL)hh_isNotEmpty;
 
-/// 去掉前后空格
+/// 去掉首尾空格及换行
 - (NSString *)hh_trim;
+- (NSString *)hh_trimmingWhitespace;
+- (NSString *)hh_trimmingWhitespaceAndNewlines;
 
 /// UUID
 + (NSString *)hh_UUID;
@@ -40,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGSize)hh_textSizeIn:(CGSize)size font:(UIFont *)font;
 - (CGSize)hh_textSizeIn:(CGSize)size font:(UIFont *)font breakMode:(NSLineBreakMode)abreakMode align:(NSTextAlignment)alignment;
+
++ (CGSize)hh_textSizeIn:(CGSize)size font:(UIFont *)font string:(NSString *)string;
++ (CGSize)hh_textSizeInWidth:(CGFloat)width font:(UIFont *)font string:(NSString *)string;
 
 + (CGSize)hh_textSizeIn:(CGSize)size attrString:(NSAttributedString *)attrString;
 + (CGSize)hh_textSizeInWidth:(CGFloat)width attrString:(NSAttributedString *)attrString;

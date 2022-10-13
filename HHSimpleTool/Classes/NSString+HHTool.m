@@ -56,6 +56,14 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (NSString *)hh_trimmingWhitespace {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
+- (NSString *)hh_trimmingWhitespaceAndNewlines {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 + (NSString *)hh_UUID {
     return [[NSUUID UUID] UUIDString];
 }
@@ -98,6 +106,14 @@
     // 上面用的小 width（height） 来计算了，这里要 +1
     resultSize = CGSizeMake(floor(resultSize.width + 1), floor(resultSize.height + 1));
     return resultSize;
+}
+
++ (CGSize)hh_textSizeIn:(CGSize)size font:(UIFont *)font string:(NSString *)string {
+    return [string hh_textSizeIn:size font:font];
+}
+
++ (CGSize)hh_textSizeInWidth:(CGFloat)width font:(UIFont *)font string:(NSString *)string {
+    return [string hh_textSizeInWidth:width font:font];
 }
 
 + (CGSize)hh_textSizeIn:(CGSize)size attrString:(NSAttributedString *)attrString {

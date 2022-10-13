@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - image: 图片
 ///   - imageLength: 最长边
 + (CGSize)hh_scaleSizeWithImage:(UIImage *)image withLength:(CGFloat)imageLength;
++ (CGSize)hh_scaleSizeWithSize:(CGSize)size withLength:(CGFloat)imageLength;
 + (UIImage *)hh_scaleImage:(UIImage *)image withLength:(CGFloat)imageLength;
 
 @end
