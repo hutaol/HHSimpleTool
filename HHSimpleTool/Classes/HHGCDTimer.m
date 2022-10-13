@@ -58,12 +58,18 @@ dispatch_semaphore_t _hgt_semaphore;
 
     dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, start * NSEC_PER_SEC), interval * NSEC_PER_SEC, 0);
 
+    BOOL isExist = NO;
+    if (aTarget) {
+        isExist = YES;
+    }
     // 使用weak，避免循环引用
     __weak typeof(aTarget) weakTarget = aTarget;
     dispatch_source_set_event_handler(timer, ^{
-        if (!weakTarget) {
-            [self cancelTimer:timerName];
-            return;
+        if (isExist) {
+            if (!weakTarget) {
+                [self cancelTimer:timerName];
+                return;
+            }
         }
         
         // 定时任务

@@ -18,6 +18,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// 根据颜色生成一张带圆角的图片
 + (UIImage *)hh_imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
 
+/// 渐变色生成渐变图片
++ (UIImage *)hh_gradientWithColors:(NSArray<UIColor *> *)colors size:(CGSize)size start:(CGPoint)start end:(CGPoint)end;
+/// - Parameter axis 方向
++ (UIImage *)hh_gradientWithColors:(NSArray<UIColor *> *)colors size:(CGSize)size axis:(UILayoutConstraintAxis)axis;
+/// 从左到右
++ (UIImage *)hh_gradientWithColors:(NSArray<UIColor *> *)colors width:(CGFloat)width;
+/// 从上到下
++ (UIImage *)hh_gradientWithColors:(NSArray<UIColor *> *)colors height:(CGFloat)height;
+/// 2点
++ (UIImage *)hh_gradientFromColor:(UIColor *)c1 toColor:(UIColor *)c2 width:(CGFloat)width;
++ (UIImage *)hh_gradientFromColor:(UIColor *)c1 toColor:(UIColor *)c2 height:(CGFloat)height;
+
 /// 给图片切割圆角
 + (UIImage *)hh_setCornerWithImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius;
 

@@ -7,13 +7,13 @@
 //
 
 #import "HHMainViewController.h"
+#import <HHSimpleTool/HHTool.h>
 #import "HHEmptyDataSetTableViewController.h"
 #import "HHAlertTableViewController.h"
 #import "HHProgressHUDViewController.h"
 #import "HHPopupTableViewController.h"
 #import "HHLandscapeViewController.h"
 #import "HHImageViewController.h"
-#import <UIWindow+HHHelper.h>
 #import "HHAppDelegate.h"
 
 #define kAPPDelegate ((HHAppDelegate*)[[UIApplication sharedApplication] delegate])
@@ -30,7 +30,7 @@
     [super viewDidLoad];
 
     self.title = @"例子";
-    
+        
     self.dataArray = @[
         @{@"title":@"EmptyDataSet", @"vc":@"HHEmptyDataSetTableViewController"},
         @{@"title":@"Alert", @"vc":@"HHAlertTableViewController"},

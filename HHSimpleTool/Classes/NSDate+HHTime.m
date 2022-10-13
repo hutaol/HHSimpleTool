@@ -16,7 +16,7 @@
 }
 
 - (NSString *)hh_toStringWithFormat:(NSString *)format {
-    if (format || format.length == 0) {
+    if (format.length == 0) {
         format = @"yyyy-MM-dd HH:mm";
     }
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -45,7 +45,7 @@
     if (!date) {
         return @"";
     }
-    if (format || format.length == 0) {
+    if (format.length == 0) {
         format = @"yyyy-MM-dd HH:mm";
     }
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -96,7 +96,7 @@
     return [self hh_dateForString:string format:nil];
 }
 
-+ (NSString *)timestampForString:(NSString *)string format:(NSString *)format {
++ (NSString *)hh_timestampForString:(NSString *)string format:(NSString *)format {
     NSDate *date = [self hh_dateForString:string format:format];
     return [self hh_timestamp:date];
 }
