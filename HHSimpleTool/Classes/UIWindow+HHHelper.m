@@ -88,7 +88,12 @@
 }
 
 + (void)switchOrientationLandscape {
-    [self switchOrientation:UIInterfaceOrientationLandscapeRight];
+    UIInterfaceOrientation orientation = [self interfaceOrientation];
+    if (orientation == UIInterfaceOrientationUnknown || orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        orientation = UIInterfaceOrientationLandscapeRight;
+    }
+    [self switchOrientation:orientation];
 }
 
 + (void)_interfaceOrientation:(UIInterfaceOrientation)orientation {
