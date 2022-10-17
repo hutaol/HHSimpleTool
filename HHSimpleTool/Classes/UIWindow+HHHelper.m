@@ -67,7 +67,12 @@
 
 
 + (void)switchOrientation:(UIInterfaceOrientation)orientation {
+    // 改变设备方向
+    [self _interfaceOrientation:UIInterfaceOrientationUnknown];
+    [self _interfaceOrientation:orientation];
+    
     if (@available(iOS 16.0, *)) {
+        // 改变界面方向
         UIViewController *viewController = [self topViewController];
         [viewController setNeedsUpdateOfSupportedInterfaceOrientations];
         NSArray *array = [[[UIApplication sharedApplication] connectedScenes] allObjects];
@@ -77,9 +82,6 @@
         [scene requestGeometryUpdateWithPreferences:geometryPreferencesIOS errorHandler:^(NSError * _Nonnull error) {
             NSLog(@"switch orientation error: %@", error);
         }];
-    } else {
-        [self _interfaceOrientation:UIInterfaceOrientationUnknown];
-        [self _interfaceOrientation:orientation];
     }
 }
 

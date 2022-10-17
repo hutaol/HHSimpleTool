@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIViewController *)topViewController;
 
 
-/// 切换方向
+/// 切换方向 (界面和设备)
 /// 实现``UIApplicationDelegate``的``application:supportedInterfaceOrientationsForWindow:``方法 配合使用
 /// !!!: iOS16 push页面不会马上生效（延迟0.1后push | `-viewDidLayoutSubviews`布局 | 自动布局）
 + (void)switchOrientation:(UIInterfaceOrientation)orientation;
