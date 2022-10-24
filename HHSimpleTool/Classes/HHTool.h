@@ -35,5 +35,6 @@
 
 #import "HHGCDTimer.h"
 #import "HHCircleLayer.h"
+#import "HHCircularView.h"
 
 #endif /* HHTool_h */
