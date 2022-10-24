@@ -15,6 +15,7 @@
 #import "HHAlertTool.h"
 #import "HHAlertView.h"
 #import "HHCircleLayer.h"
+#import "HHCircularView.h"
 #import "HHConfiguration.h"
 #import "HHCountryTool.h"
 #import "HHDefine.h"

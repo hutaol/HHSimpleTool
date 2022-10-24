@@ -39,6 +39,7 @@
         @{@"title":@"Layer动画", @"vc":@"HHLayerViewController"},
         @{@"title":@"图片", @"vc":@"HHImageViewController"},
         @{@"title":@"国家列表", @"vc":@"HHCountryTableViewController"},
+        @{@"title":@"切角+阴影", @"vc":@"HHCircularViewController"},
         @{@"title":@"测试", @"vc":@"HHTestViewController"},
     ];
     

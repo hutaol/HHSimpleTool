@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3509D45B284DE30100F3B908 /* HHLayerViewController.m */; };
+		3549200129063FE8005461DB /* HHCircularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549200029063FE8005461DB /* HHCircularViewController.m */; };
 		35695B2228E2A90600892610 /* HHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2128E2A90600892610 /* HHTestViewController.m */; };
 		35695B2528E2C98000892610 /* HHLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2428E2C98000892610 /* HHLandscapeViewController.m */; };
 		3598EC0728F5186200FDB67A /* HHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3598EC0628F5186200FDB67A /* HHImageViewController.m */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		3509D45A284DE30100F3B908 /* HHLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLayerViewController.h; sourceTree = "<group>"; };
 		3509D45B284DE30100F3B908 /* HHLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLayerViewController.m; sourceTree = "<group>"; };
+		35491FFF29063FE8005461DB /* HHCircularViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCircularViewController.h; sourceTree = "<group>"; };
+		3549200029063FE8005461DB /* HHCircularViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCircularViewController.m; sourceTree = "<group>"; };
 		35695B2028E2A90600892610 /* HHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTestViewController.h; sourceTree = "<group>"; };
 		35695B2128E2A90600892610 /* HHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTestViewController.m; sourceTree = "<group>"; };
 		35695B2328E2C98000892610 /* HHLandscapeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLandscapeViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				3598EC0C28F56FFD00FDB67A /* HHCountryTableViewController.m */,
 				35695B2028E2A90600892610 /* HHTestViewController.h */,
 				35695B2128E2A90600892610 /* HHTestViewController.m */,
+				35491FFF29063FE8005461DB /* HHCircularViewController.h */,
+				3549200029063FE8005461DB /* HHCircularViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				6003F5A7195388D20070C39A /* HHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */,
+				3549200129063FE8005461DB /* HHCircularViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
