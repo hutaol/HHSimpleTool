@@ -11,6 +11,14 @@
 
 @implementation UIButton (HHTool)
 
+- (NSString *)hh_tag {
+    return objc_getAssociatedObject(self, @selector(hh_tag));
+}
+
+- (void)setHh_tag:(NSString *)hh_tag {
+    objc_setAssociatedObject(self, @selector(hh_tag), hh_tag, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (UIEdgeInsets)hh_touchAreaInsets {
     return [objc_getAssociatedObject(self, @selector(hh_touchAreaInsets)) UIEdgeInsetsValue];
 }

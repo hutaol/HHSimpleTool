@@ -48,6 +48,25 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGSize)hh_scaleSizeWithSize:(CGSize)size withLength:(CGFloat)imageLength;
 + (UIImage *)hh_scaleImage:(UIImage *)image withLength:(CGFloat)imageLength;
 
+/// 压缩图片大小
+/// - Parameters:
+///   - image: 图片
+///   - dataSize: 压缩后最大字节大小
+///   - imageLength: 最长边 >0才有效
++ (NSData *)hh_compressImage:(UIImage *)image dataSize:(NSInteger)dataSize withLength:(CGFloat)imageLength;
++ (NSData *)hh_compressImage:(UIImage *)image dataSize:(NSInteger)dataSize;
+
++ (UIImage *)hh_compressImageWithImage:(UIImage *)image dataSize:(NSInteger)dataSize withLength:(CGFloat)imageLength;
++ (UIImage *)hh_compressImageWithImage:(UIImage *)image dataSize:(NSInteger)dataSize;
+
+
+/// 获取视频图片
+/// - Parameters:
+///   - videoURL: 视频URL
+///   - time: 秒
+///   - completion: 回调
++ (void)imageWithVideoURL:(nullable NSURL *)videoURL time:(NSTimeInterval)time completion:(void(^)(UIImage * _Nullable image))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

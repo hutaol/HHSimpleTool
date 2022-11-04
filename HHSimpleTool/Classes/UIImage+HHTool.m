@@ -6,6 +6,7 @@
 //
 
 #import "UIImage+HHTool.h"
+#import <AVKit/AVKit.h>
 
 @implementation UIImage (HHTool)
 
@@ -188,6 +189,72 @@
 + (UIImage *)hh_scaleImage:(UIImage *)image withLength:(CGFloat)imageLength {
     CGSize size = [self hh_scaleSizeWithImage:image withLength:imageLength];
     return [self hh_resizeImage:image withNewSize:size];
+}
+
++ (NSData *)hh_compressImage:(UIImage *)image dataSize:(NSInteger)dataSize withLength:(CGFloat)imageLength {
+    NSAssert(dataSize > 0, @"图片的大小必须大于 0");
+    UIImage *newImage = nil;
+    if (imageLength > 0) {
+        newImage = [self hh_scaleImage:image withLength:imageLength];
+    } else {
+        newImage = image;
+    }
+    
+    CGFloat compress = 0.9f;
+    NSData *data = UIImageJPEGRepresentation(newImage, compress);
+    while (data.length > dataSize && compress > 0.01) {
+        compress -= 0.02f;
+        data = UIImageJPEGRepresentation(newImage, compress);
+    }
+    return data;
+}
+
++ (NSData *)hh_compressImage:(UIImage *)image dataSize:(NSInteger)dataSize {
+    return [self hh_compressImage:image dataSize:dataSize withLength:0];
+}
+
++ (UIImage *)hh_compressImageWithImage:(UIImage *)image dataSize:(NSInteger)dataSize withLength:(CGFloat)imageLength {
+    NSData *data = [self hh_compressImage:image dataSize:dataSize withLength:imageLength];
+    return [UIImage imageWithData:data];
+}
+
++ (UIImage *)hh_compressImageWithImage:(UIImage *)image dataSize:(NSInteger)dataSize {
+    return [self hh_compressImageWithImage:image dataSize:dataSize withLength:0];
+}
+
++ (void)imageWithVideoURL:(NSURL *)videoURL time:(NSTimeInterval)time completion:(void (^)(UIImage * _Nullable))completion {
+    if (!videoURL) {
+        if (completion) completion(nil);
+        return;
+    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
+        NSParameterAssert(asset);
+        
+        AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+        generator.appliesPreferredTrackTransform = YES;
+        generator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+        CMTime cTime = CMTimeMakeWithSeconds(time, 60);
+
+        [generator generateCGImagesAsynchronouslyForTimes:@[[NSValue valueWithCMTime:cTime]] completionHandler:^(CMTime requestedTime, CGImageRef  _Nullable image, CMTime actualTime, AVAssetImageGeneratorResult result, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"%@", error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (completion) completion(nil);
+                });
+                return;
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion) {
+                    UIImage *finalImage = [UIImage imageWithCGImage:image];
+                    completion(finalImage);
+                }
+                
+            });
+        }];
+
+    });
 }
 
 @end

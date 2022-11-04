@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (HHTool)
 
+/// 字符串标记
+@property (nonatomic, copy) NSString *hh_tag;
+
 /// 设置按钮额外热区
 @property (nonatomic, assign) UIEdgeInsets hh_touchAreaInsets;
 
