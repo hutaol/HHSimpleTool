@@ -16,7 +16,6 @@
 #import "HHPopupTool.h"
 #import "HHAlertPop.h"
 #import "HHPathTool.h"
-#import "HHCountryTool.h"
 
 #import "HHUtilities.h"
 
@@ -36,5 +35,9 @@
 #import "HHGCDTimer.h"
 #import "HHCircleLayer.h"
 #import "HHCircularView.h"
+
+#if !TARGET_OS_WATCH
+    #import "HHReachabilityManager.h"
+#endif
 
 #endif /* HHTool_h */

@@ -15,10 +15,7 @@ typedef NS_ENUM(NSInteger, HHToastToolPosition) {
     HHToastToolPositionTop,
 };
 
-/**
- 简单的封装Toast
- 更多请参考：https://github.com/scalessec/Toast
- */
+/// 简单的封装Toast `UIView+Toast.h`
 @interface HHToastTool : NSObject
 
 /// 显示提示视图, 默认显示在屏幕中间，2s后自动消失

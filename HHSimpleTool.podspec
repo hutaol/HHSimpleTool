@@ -9,32 +9,37 @@
 Pod::Spec.new do |s|
   s.name             = 'HHSimpleTool'
   s.version          = '1.3.1'
-  s.summary          = 'A short description of HHSimpleTool.'
+  s.summary          = '简单的工具类'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  简单的工具类
                        DESC
 
   s.homepage         = 'https://github.com/hutaol/HHSimpleTool'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Henry' => '1325049637@qq.com' }
   s.source           = { :git => 'https://github.com/hutaol/HHSimpleTool.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
-  s.source_files = 'HHSimpleTool/Classes/**/*'
-  s.resources   = 'HHSimpleTool/Assets/*'
+  
+  s.default_subspec = 'Default'
+  
+  s.subspec 'Default' do |de|
+    de.resources    = 'HHSimpleTool/Assets/*'
+    de.source_files = 'HHSimpleTool/Classes/*.{h,m}', 'HHSimpleTool/Classes/Alert/*.{h,m}', 'HHSimpleTool/Classes/Toast/*.{h,m}', 'HHSimpleTool/Classes/Vender/*.{h,m}'
+  end
+  
+  s.subspec 'Country' do |c|
+    c.resources     = 'HHSimpleTool/Country/*.json'
+    c.source_files  = 'HHSimpleTool/Country/*.{h,m}'
+  end
 
   # s.resource_bundles = {
   #   'HHSimpleTool' => ['HHSimpleTool/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   
-  s.dependency 'Toast', '~> 4.0.0'
   s.dependency 'SPAlertController', '~> 4.0.0'
   s.dependency 'MBProgressHUD', '~> 1.2.0'
   s.dependency 'DZNEmptyDataSet', '~> 1.8.1'

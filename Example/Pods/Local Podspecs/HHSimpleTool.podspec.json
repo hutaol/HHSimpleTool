@@ -1,8 +1,8 @@
 {
   "name": "HHSimpleTool",
-  "version": "1.2.5",
-  "summary": "A short description of HHSimpleTool.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.3.1",
+  "summary": "简单的工具类",
+  "description": "简单的工具类",
   "homepage": "https://github.com/hutaol/HHSimpleTool",
   "license": {
     "type": "MIT",
@@ -13,17 +13,13 @@
   },
   "source": {
     "git": "https://github.com/hutaol/HHSimpleTool.git",
-    "tag": "1.2.5"
+    "tag": "1.3.1"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "HHSimpleTool/Classes/**/*",
-  "resources": "HHSimpleTool/Assets/*",
+  "default_subspecs": "Default",
   "dependencies": {
-    "Toast": [
-      "~> 4.0.0"
-    ],
     "SPAlertController": [
       "~> 4.0.0"
     ],
@@ -39,5 +35,22 @@
     "LSTPopView": [
       "~> 0.3.10"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Default",
+      "resources": "HHSimpleTool/Assets/*",
+      "source_files": [
+        "HHSimpleTool/Classes/*.{h,m}",
+        "HHSimpleTool/Classes/Alert/*.{h,m}",
+        "HHSimpleTool/Classes/Toast/*.{h,m}",
+        "HHSimpleTool/Classes/Vender/*.{h,m}"
+      ]
+    },
+    {
+      "name": "Country",
+      "resources": "HHSimpleTool/Country/*.json",
+      "source_files": "HHSimpleTool/Country/*.{h,m}"
+    }
+  ]
 }

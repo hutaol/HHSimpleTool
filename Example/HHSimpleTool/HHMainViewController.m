@@ -46,6 +46,8 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换横屏" style:UIBarButtonItemStylePlain target:self action:@selector(switchOrientation)];
+    
+    [self setupNetwork];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -104,6 +106,16 @@
     UIViewController *vc = [[NSClassFromString(str) alloc] init];
     vc.title = title;
     [self.navigationController pushViewController:vc animated:YES];
+
+}
+
+- (void)setupNetwork {
+    [[HHReachabilityManager sharedManager] startMonitoring];
+    HHReachabilityStatus status = [HHReachabilityManager sharedManager].networkReachabilityStatus;
+    NSLog(@"网络状态: %ld", status);
+    [[HHReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(HHReachabilityStatus status) {
+        NSLog(@"网络状态改变: %ld", status);
+    }];
 
 }
 

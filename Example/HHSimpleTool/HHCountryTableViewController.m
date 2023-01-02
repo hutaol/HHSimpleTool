@@ -7,7 +7,7 @@
 //
 
 #import "HHCountryTableViewController.h"
-#import <HHSimpleTool/HHTool.h>
+#import <HHSimpleTool/HHCountryTool.h>
 
 @interface HHCountryTableViewController () <UISearchBarDelegate>
 
@@ -31,10 +31,9 @@
 
     self.tableView.tableHeaderView = self.searchBar;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
-
-    [HHConfiguration languageType:HHLanguageChineseSimplified];
-    
-    [[HHCountryTool sharedInstance] getCountrySection:NO compelete:^(NSArray<HHCountry *> * _Nonnull dataArray, NSArray<HHCountry *> * _Nonnull sectionArray, NSArray<NSString *> * _Nonnull sectionTitlesArray) {
+       
+    [[HHCountryTool sharedInstance] getCountrySectionWithLang:HHLangZHCN compelete:^(NSArray<HHCountry *> * _Nonnull dataArray, NSArray<HHCountry *> * _Nonnull sectionArray, NSArray<NSString *> * _Nonnull sectionTitlesArray) {
+        
         self.dataArray = dataArray.mutableCopy;
         self.sectionArray = sectionArray.mutableCopy;
         self.sectionTitlesArray = sectionTitlesArray.mutableCopy;
@@ -44,13 +43,13 @@
         
         NSMutableArray *operrationModels = [[NSMutableArray alloc] init];
         [operrationModels addObject:localeCountry];
-        if (![localeCountry.countryCode isEqualToString:chinaCountry.countryCode] ) {
+        if (![localeCountry.countryCode isEqualToString:chinaCountry.countryCode]) {
             [operrationModels addObject:chinaCountry];
         }
 
         [self.sectionArray insertObject:operrationModels atIndex:0];
         [self.sectionTitlesArray insertObject:@"" atIndex:0];
-        
+
         [self.tableView reloadData];
     }];
 }
@@ -74,8 +73,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    HHCountry *country = self.sectionArray[indexPath.section][indexPath.row];
-    cell.textLabel.text = country.countryName;
+    if (self.isSearch) {
+        HHCountry *country = self.searchResults[indexPath.row];
+        cell.textLabel.text = country.countryName;
+    } else {
+        HHCountry *country = self.sectionArray[indexPath.section][indexPath.row];
+        cell.textLabel.text = country.countryName;
+    }
     return cell;
 }
 
@@ -112,6 +116,7 @@
     searchBar.text = @"";
     self.isSearch = NO;
     [self.searchResults removeAllObjects];
+    [self.tableView reloadData];
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -132,7 +137,7 @@
 
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 50)];
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
         _searchBar.placeholder = @"搜索";
         _searchBar.delegate = self;
     }

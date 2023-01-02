@@ -7,7 +7,7 @@
 
 #import "HHToastTool.h"
 #import "UIWindow+HHHelper.h"
-#import <Toast/Toast.h>
+#import "UIView+Toast.h"
 
 @implementation HHToastTool
 
@@ -99,6 +99,5 @@
     }
     [view hideToastActivity];
 }
-
 
 @end
