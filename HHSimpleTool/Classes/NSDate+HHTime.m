@@ -80,7 +80,7 @@
             format = @"yyyy-MM-dd";
         } else if (string.length == 16) {
             format = @"yyyy-MM-dd HH:mm";
-        } else if (string.length == 18) {
+        } else if (string.length == 19) {
             format = @"yyyy-MM-dd HH:mm:ss";
         } else {
             format = @"yyyy-MM-dd HH:mm";
@@ -88,7 +88,7 @@
     }
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
-    NSDate *destDate = [dateFormatter dateFromString:format];
+    NSDate *destDate = [dateFormatter dateFromString:string];
     return destDate;
 }
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHSimpleTool'
-  s.version          = '1.4.0'
+  s.version          = '1.5.0'
   s.summary          = '简单的工具类'
 
   s.description      = <<-DESC

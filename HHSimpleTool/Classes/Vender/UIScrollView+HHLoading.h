@@ -24,26 +24,31 @@ typedef void (^LoadingBlock)(void);
 @property (nonatomic, assign) BOOL loading;
 
 /// 加载图片数组
-@property (nonatomic, strong) NSArray<UIImage *> *loadingImages;
+@property (nonatomic, strong, nullable) NSArray<UIImage *> *loadingImages;
 
 /// 不加载状态下的图片(loading = NO)
 /// PS:空状态下显示图片
-@property (nonatomic, strong) UIImage *loadedImage;
-@property (nonatomic, copy) NSString *loadedImageName;
+@property (nonatomic, strong, nullable) UIImage *loadedImage;
+@property (nonatomic, copy, nullable) NSString *loadedImageName;
 
 /// 空状态下的文字
-@property (nonatomic, copy) NSString *descriptionTitle;
-@property (nonatomic, strong) UIFont *descriptionTitleFont;
-@property (nonatomic, strong) UIColor *descriptionTitleColor;
-@property (nonatomic, copy) NSString *descriptionText;
-@property (nonatomic, strong) UIFont *descriptionTextFont;
-@property (nonatomic, strong) UIColor *descriptionTextColor;
+@property (nonatomic, copy, nullable) NSString *descriptionTitle;
+/// 默认 系统17
+@property (nonatomic, strong, nullable) UIFont *descriptionTitleFont;
+/// 默认 grayColor
+@property (nonatomic, strong, nullable) UIColor *descriptionTitleColor;
+/// 默认 暂无数据
+@property (nonatomic, copy, nullable) NSString *descriptionText;
+/// 默认 系统15
+@property (nonatomic, strong, nullable) UIFont *descriptionTextFont;
+/// 默认 lightGrayColor
+@property (nonatomic, strong, nullable) UIColor *descriptionTextColor;
 
 /// 空状态 刷新按钮
-@property (nonatomic, copy) NSString *buttonText;
-@property (nonatomic, strong) UIFont *buttonTextFont;
-@property (nonatomic, strong) UIColor *buttonNormalColor;
-@property (nonatomic, strong) UIColor *buttonHighlightColor;
+@property (nonatomic, copy, nullable) NSString *buttonText;
+@property (nonatomic, strong, nullable) UIFont *buttonTextFont;
+@property (nonatomic, strong, nullable) UIColor *buttonNormalColor;
+@property (nonatomic, strong, nullable) UIColor *buttonHighlightColor;
 
 /// 视图的垂直位置
 /// PS:tableView中心点为基准点,(基准点＝0)
@@ -53,7 +58,7 @@ typedef void (^LoadingBlock)(void);
 @property (nonatomic, assign) CGFloat dataSpaceHeight;
 
 /// 点击回调block的属性
-@property (nonatomic,copy) LoadingBlock loadingClick;
+@property (nonatomic, copy) LoadingBlock loadingClick;
 
 - (void)onLoading:(LoadingBlock)block;
 

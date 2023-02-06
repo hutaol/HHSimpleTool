@@ -394,7 +394,7 @@
 		0A3C7A824B98772373EF1D756281EB8F /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
 		0A541BDA10CD9DBF2BCEF12FB50E213F /* UIButton+HHTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+HHTool.h"; path = "HHSimpleTool/Classes/UIButton+HHTool.h"; sourceTree = "<group>"; };
 		0B2265C51643BE6BA0C8DAE06896524C /* HHPopupListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHPopupListView.m; path = HHSimpleTool/Classes/HHPopupListView.m; sourceTree = "<group>"; };
-		0B5042C81AC039AA93CEB925D2CBE3FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0B5042C81AC039AA93CEB925D2CBE3FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0BA9D74512E5DF920722D8916713FB07 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		0BF380A6892A53B2E6FC84F7C12E9E1B /* HHCircularView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHCircularView.m; path = HHSimpleTool/Classes/HHCircularView.m; sourceTree = "<group>"; };
 		0E42AFAC9FD4654A8FFF7EB6A1E0DD71 /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 		31F702EC5A10A87FD969503F55B3ABB4 /* LSTPopView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSTPopView-dummy.m"; sourceTree = "<group>"; };
 		327B1A537D3ED2BD53088AEF99467B1D /* HHReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHReachabilityManager.h; path = HHSimpleTool/Classes/HHReachabilityManager.h; sourceTree = "<group>"; };
 		3308D5C5615573ED65850804E47E1871 /* SDImageIOAnimatedCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOAnimatedCoder.m; path = SDWebImage/Core/SDImageIOAnimatedCoder.m; sourceTree = "<group>"; };
-		3385045B2C9B8CFEBF8AE60BF96F21BF /* englishcountry.json */ = {isa = PBXFileReference; includeInIndex = 1; name = englishcountry.json; path = HHSimpleTool/Country/englishcountry.json; sourceTree = "<group>"; };
+		3385045B2C9B8CFEBF8AE60BF96F21BF /* englishcountry.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = englishcountry.json; path = HHSimpleTool/Country/englishcountry.json; sourceTree = "<group>"; };
 		33DEAF268CC415C4F977BD42E6744AD5 /* LSTPopView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSTPopView.m; path = LSTPopView/Classes/Code/LSTPopView.m; sourceTree = "<group>"; };
 		349D0A49990F1D2834D596FE05DF85C7 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3540899BE37501AF75C892E811C54E28 /* SDImageAssetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAssetManager.m; path = SDWebImage/Private/SDImageAssetManager.m; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 		68C3D2492EC7E658189791CA731FC1AF /* UIView+LSTPV.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+LSTPV.m"; path = "LSTPopView/Classes/Code/UIView+LSTPV.m"; sourceTree = "<group>"; };
 		6A3DC9CF1FE1309F250A5DD0272C81AB /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/Core/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
 		6AF8983DAA3C2102500B15A344864544 /* SDFileAttributeHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDFileAttributeHelper.m; path = SDWebImage/Private/SDFileAttributeHelper.m; sourceTree = "<group>"; };
-		6B11BC8880FC0519DD6A5845F9ADE865 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6B11BC8880FC0519DD6A5845F9ADE865 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6DF963E882B015D913F4A90A8571EF7E /* LSTPopView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LSTPopView-Info.plist"; sourceTree = "<group>"; };
 		6E67F9FFC2300B740A966A517C46D5D9 /* SPAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPAlertController.modulemap; sourceTree = "<group>"; };
 		6E9B6DC278EE7A49191EF17970A06916 /* SPAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPAlertController.h; path = SPAlertController/SPAlertController.h; sourceTree = "<group>"; };
@@ -531,7 +531,7 @@
 		7F65A80F594F59100C290098405F2793 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/Core/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		815F07DE3CC1A1B2E56EE2ECAE648DC6 /* Pods-HHSimpleTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HHSimpleTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		81D8B0002D70A4411A26C53652D25662 /* LSTTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSTTimer.release.xcconfig; sourceTree = "<group>"; };
-		81F23A4AF0FAB42E1E09D68138C5265B /* chinesecountry.json */ = {isa = PBXFileReference; includeInIndex = 1; name = chinesecountry.json; path = HHSimpleTool/Country/chinesecountry.json; sourceTree = "<group>"; };
+		81F23A4AF0FAB42E1E09D68138C5265B /* chinesecountry.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = chinesecountry.json; path = HHSimpleTool/Country/chinesecountry.json; sourceTree = "<group>"; };
 		8213193DB5F7AAA2933423A60E201E21 /* Pods-HHSimpleTool_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HHSimpleTool_Tests-dummy.m"; sourceTree = "<group>"; };
 		82854886EEFED25A5B185F77B53F76E7 /* LSTPopView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LSTPopView.modulemap; sourceTree = "<group>"; };
 		83F7D96DDA3722E0923A84AFCB694434 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
@@ -572,7 +572,7 @@
 		9BBC5D9EE407F6F4CE114506AC3A24C3 /* HHCountryTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HHCountryTool.h; path = HHSimpleTool/Country/HHCountryTool.h; sourceTree = "<group>"; };
 		9C0B9765633D85AD394B250F0F7771AA /* UIWindow+HHHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+HHHelper.m"; path = "HHSimpleTool/Classes/UIWindow+HHHelper.m"; sourceTree = "<group>"; };
 		9D741A23C6866DBCA6BC84A679906D32 /* Pods-HHSimpleTool_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HHSimpleTool_Tests"; path = Pods_HHSimpleTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9509B8DD007BBAEE6A0147207D6814 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/Core/UIView+WebCache.h"; sourceTree = "<group>"; };
 		9E6CE146E1BE392BB2952831AB01DF08 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		9E8588570DE013C5E5D42F623B2F83AA /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/Core/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
@@ -587,7 +587,7 @@
 		A437C4247F2AE03871F57FC15DD65F9D /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
 		A608721816297E94BA5B497DA363D2D5 /* HHGCDTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HHGCDTimer.m; path = HHSimpleTool/Classes/HHGCDTimer.m; sourceTree = "<group>"; };
 		A733938507203AC7540BD1A5F5804977 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/Core/UIImage+GIF.h"; sourceTree = "<group>"; };
-		A9465A86894B96963C2EB1FA148320E4 /* HHSimpleTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HHSimpleTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9465A86894B96963C2EB1FA148320E4 /* HHSimpleTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HHSimpleTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA1CE6AB3FA6676D1F6C6526E19440C8 /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/Core/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		AA1D7895266B7F0CCD4A9FF97A0AF905 /* SDWebImageDownloaderDecryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderDecryptor.h; path = SDWebImage/Core/SDWebImageDownloaderDecryptor.h; sourceTree = "<group>"; };
 		AA7C3BE246BA7C7611D9C2224BC525E3 /* HHAlertTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HHAlertTool.m; sourceTree = "<group>"; };
@@ -818,7 +818,6 @@
 				ACE8CDF765087523B2CF1B3D39094B22 /* SPAlertController.m */,
 				8900A5EE1BD420AC9D230A942C1C31C8 /* Support Files */,
 			);
-			name = SPAlertController;
 			path = SPAlertController;
 			sourceTree = "<group>";
 		};
@@ -841,7 +840,6 @@
 				BD6973D7DC63159A3909146154168AB3 /* LSTTimer.m */,
 				96FF6A3DD85927EF59D704BECBF70212 /* Support Files */,
 			);
-			name = LSTTimer;
 			path = LSTTimer;
 			sourceTree = "<group>";
 		};
@@ -903,7 +901,6 @@
 				6591F65BB2CEDDDB9722B94FC1A4688C /* Code */,
 				A722F21AC3C70300671F72A816B2A80E /* Support Files */,
 			);
-			name = LSTPopView;
 			path = LSTPopView;
 			sourceTree = "<group>";
 		};
@@ -943,7 +940,6 @@
 				7125F66819C2C32E39F9A795553CFBD7 /* UIScrollView+EmptyDataSet.m */,
 				8A5BA92D0570A9ADCF36727FCD48488C /* Support Files */,
 			);
-			name = DZNEmptyDataSet;
 			path = DZNEmptyDataSet;
 			sourceTree = "<group>";
 		};
@@ -954,7 +950,6 @@
 				349D0A49990F1D2834D596FE05DF85C7 /* MBProgressHUD.m */,
 				F2DD0EBCEF3F3D89ABF81C587ACFD0A7 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1117,7 +1112,6 @@
 				C915B2771E244C6539A10810E9F23E4F /* Core */,
 				6E39A6A86F795D95A595A586F8167A79 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1385,7 +1379,6 @@
 				73353F9338F27BD75B2FDCBE503AE597 /* YBRectConst.m */,
 				00EB2DC9DB3D661B21B07B92CB36ABCA /* Support Files */,
 			);
-			name = YBPopupMenu;
 			path = YBPopupMenu;
 			sourceTree = "<group>";
 		};
@@ -2830,8 +2823,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

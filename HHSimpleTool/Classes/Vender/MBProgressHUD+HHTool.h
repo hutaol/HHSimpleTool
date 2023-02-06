@@ -16,37 +16,37 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MBProgressHUD (HHTool)
 
 /// 加载
-+ (void)show;
-+ (void)show:(NSString *)message;
-+ (void)show:(NSString *)message view:(nullable UIView *)view;
++ (void)hh_show;
++ (void)hh_show:(NSString *)message;
++ (void)hh_show:(NSString *)message view:(nullable UIView *)view;
 
 /// 成功
-+ (void)showSuccess:(NSString *)success;
-+ (void)showSuccess:(NSString *)success view:(nullable UIView *)view;
-+ (void)showSuccess:(NSString *)success duration:(NSUInteger)time;
-+ (void)showSuccess:(NSString *)success duration:(NSUInteger)time view:(nullable UIView *)view;
++ (void)hh_showSuccess:(NSString *)success;
++ (void)hh_showSuccess:(NSString *)success view:(nullable UIView *)view;
++ (void)hh_showSuccess:(NSString *)success duration:(NSUInteger)time;
++ (void)hh_showSuccess:(NSString *)success duration:(NSUInteger)time view:(nullable UIView *)view;
 
 /// 错误
-+ (void)showError:(NSString *)error;
-+ (void)showError:(NSString *)error view:(nullable UIView *)view;
-+ (void)showError:(NSString *)error duration:(NSUInteger)time;
-+ (void)showError:(NSString *)error duration:(NSUInteger)time view:(nullable UIView *)view;
++ (void)hh_showError:(NSString *)error;
++ (void)hh_showError:(NSString *)error view:(nullable UIView *)view;
++ (void)hh_showError:(NSString *)error duration:(NSUInteger)time;
++ (void)hh_showError:(NSString *)error duration:(NSUInteger)time view:(nullable UIView *)view;
 
 /// 信息
-+ (void)showInfo:(NSString *)info;
-+ (void)showInfo:(NSString *)info view:(nullable UIView *)view;
-+ (void)showInfo:(NSString *)info duration:(NSUInteger)time;
-+ (void)showInfo:(NSString *)info duration:(NSUInteger)time view:(nullable UIView *)view;
++ (void)hh_showInfo:(NSString *)info;
++ (void)hh_showInfo:(NSString *)info view:(nullable UIView *)view;
++ (void)hh_showInfo:(NSString *)info duration:(NSUInteger)time;
++ (void)hh_showInfo:(NSString *)info duration:(NSUInteger)time view:(nullable UIView *)view;
 
 /// 自定义提示
-+ (void)showCustomIcon:(UIImage *)icon message:(NSString *)message duration:(NSUInteger)time view:(nullable UIView *)view;
++ (void)hh_showCustomIcon:(UIImage *)icon message:(NSString *)message duration:(NSUInteger)time view:(nullable UIView *)view;
 
 /// 隐藏 window上
-+ (void)hide;
++ (void)hh_hide;
 /// 隐藏 topViewController上
-+ (void)hideTop;
++ (void)hh_hideTop;
 /// 隐藏 view上
-+ (void)hide:(nullable UIView *)view;
++ (void)hh_hide:(nullable UIView *)view;
 
 @end
 
