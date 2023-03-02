@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3509D45B284DE30100F3B908 /* HHLayerViewController.m */; };
 		3549200129063FE8005461DB /* HHCircularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549200029063FE8005461DB /* HHCircularViewController.m */; };
+		3564BF3C29B0EB3600A636C5 /* HHTitlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564BF3B29B0EB3600A636C5 /* HHTitlePageViewController.m */; };
+		3564BF3F29B0F65B00A636C5 /* HHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564BF3E29B0F65B00A636C5 /* HHListViewController.m */; };
 		35695B2228E2A90600892610 /* HHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2128E2A90600892610 /* HHTestViewController.m */; };
 		35695B2528E2C98000892610 /* HHLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35695B2428E2C98000892610 /* HHLandscapeViewController.m */; };
 		3598EC0728F5186200FDB67A /* HHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3598EC0628F5186200FDB67A /* HHImageViewController.m */; };
@@ -52,6 +54,10 @@
 		3509D45B284DE30100F3B908 /* HHLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLayerViewController.m; sourceTree = "<group>"; };
 		35491FFF29063FE8005461DB /* HHCircularViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCircularViewController.h; sourceTree = "<group>"; };
 		3549200029063FE8005461DB /* HHCircularViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCircularViewController.m; sourceTree = "<group>"; };
+		3564BF3A29B0EB3600A636C5 /* HHTitlePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTitlePageViewController.h; sourceTree = "<group>"; };
+		3564BF3B29B0EB3600A636C5 /* HHTitlePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTitlePageViewController.m; sourceTree = "<group>"; };
+		3564BF3D29B0F65B00A636C5 /* HHListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHListViewController.h; sourceTree = "<group>"; };
+		3564BF3E29B0F65B00A636C5 /* HHListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHListViewController.m; sourceTree = "<group>"; };
 		35695B2028E2A90600892610 /* HHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTestViewController.h; sourceTree = "<group>"; };
 		35695B2128E2A90600892610 /* HHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTestViewController.m; sourceTree = "<group>"; };
 		35695B2328E2C98000892610 /* HHLandscapeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLandscapeViewController.h; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				35695B2128E2A90600892610 /* HHTestViewController.m */,
 				35491FFF29063FE8005461DB /* HHCircularViewController.h */,
 				3549200029063FE8005461DB /* HHCircularViewController.m */,
+				3564BF3A29B0EB3600A636C5 /* HHTitlePageViewController.h */,
+				3564BF3B29B0EB3600A636C5 /* HHTitlePageViewController.m */,
+				3564BF3D29B0F65B00A636C5 /* HHListViewController.h */,
+				3564BF3E29B0F65B00A636C5 /* HHListViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -370,9 +380,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-HHSimpleTool_Example/Pods-HHSimpleTool_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/HHSimpleTool/HHSimpleTool.framework",
+				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
+				"${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTPopView/LSTPopView.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTTimer/LSTTimer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SPAlertController/SPAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/YBPopupMenu/YBPopupMenu.framework",
@@ -381,9 +394,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HHSimpleTool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPagingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTPopView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTTimer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBPopupMenu.framework",
@@ -455,6 +471,8 @@
 				35CE930C27742684003BD21C /* HHEmptyDataSetTableViewController.m in Sources */,
 				35695B2228E2A90600892610 /* HHTestViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* HHViewController.m in Sources */,
+				3564BF3C29B0EB3600A636C5 /* HHTitlePageViewController.m in Sources */,
+				3564BF3F29B0F65B00A636C5 /* HHListViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */,
 				3549200129063FE8005461DB /* HHCircularViewController.m in Sources */,

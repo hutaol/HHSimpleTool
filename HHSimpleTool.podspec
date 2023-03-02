@@ -33,6 +33,19 @@ Pod::Spec.new do |s|
     c.resources     = 'HHSimpleTool/Country/*.json'
     c.source_files  = 'HHSimpleTool/Country/*.{h,m}'
   end
+  
+  # 分类切换滚动视图
+  s.subspec 'Category' do |p|
+    p.dependency 'JXCategoryView', '~> 1.6.1'
+  end
+  
+  # 多页面嵌套，悬浮
+  s.subspec 'Pager' do |p|
+    p.dependency 'JXCategoryView', '~> 1.6.1'
+    p.dependency 'JXPagingView/Pager', '~> 2.1.2'
+  end
+  
+  
 
   # s.resource_bundles = {
   #   'HHSimpleTool' => ['HHSimpleTool/Assets/*.png']

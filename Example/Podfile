@@ -8,8 +8,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'HHSimpleTool_Example' do
   pod 'HHSimpleTool', :path => '../'
   pod 'HHSimpleTool/Country', :path => '../'
+  pod 'HHSimpleTool/Pager', :path => '../'
 
   pod 'SDWebImage', '~> 5.0'
+  pod 'Masonry', '~> 1.1.0'
 
   target 'HHSimpleTool_Tests' do
     inherit! :search_paths

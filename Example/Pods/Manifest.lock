@@ -1,30 +1,41 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - HHSimpleTool (1.3.1):
+  - HHSimpleTool (1.5.0):
     - DZNEmptyDataSet (~> 1.8.1)
-    - HHSimpleTool/Default (= 1.3.1)
+    - HHSimpleTool/Default (= 1.5.0)
     - LSTPopView (~> 0.3.10)
     - MBProgressHUD (~> 1.2.0)
     - SPAlertController (~> 4.0.0)
     - YBPopupMenu (~> 1.1.9)
-  - HHSimpleTool/Country (1.3.1):
-    - DZNEmptyDataSet (~> 1.8.1)
-    - LSTPopView (~> 0.3.10)
-    - MBProgressHUD (~> 1.2.0)
-    - SPAlertController (~> 4.0.0)
-    - YBPopupMenu (~> 1.1.9)
-  - HHSimpleTool/Default (1.3.1):
+  - HHSimpleTool/Country (1.5.0):
     - DZNEmptyDataSet (~> 1.8.1)
     - LSTPopView (~> 0.3.10)
     - MBProgressHUD (~> 1.2.0)
     - SPAlertController (~> 4.0.0)
     - YBPopupMenu (~> 1.1.9)
+  - HHSimpleTool/Default (1.5.0):
+    - DZNEmptyDataSet (~> 1.8.1)
+    - LSTPopView (~> 0.3.10)
+    - MBProgressHUD (~> 1.2.0)
+    - SPAlertController (~> 4.0.0)
+    - YBPopupMenu (~> 1.1.9)
+  - HHSimpleTool/Pager (1.5.0):
+    - DZNEmptyDataSet (~> 1.8.1)
+    - JXCategoryView (~> 1.6.1)
+    - JXPagingView/Pager (~> 2.1.2)
+    - LSTPopView (~> 0.3.10)
+    - MBProgressHUD (~> 1.2.0)
+    - SPAlertController (~> 4.0.0)
+    - YBPopupMenu (~> 1.1.9)
+  - JXCategoryView (1.6.1)
+  - JXPagingView/Pager (2.1.2)
   - LSTPopView (0.3.10):
     - LSTPopView/Code (= 0.3.10)
     - LSTTimer
   - LSTPopView/Code (0.3.10):
     - LSTTimer
   - LSTTimer (0.2.10)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - SDWebImage (5.13.4):
     - SDWebImage/Core (= 5.13.4)
@@ -35,13 +46,18 @@ PODS:
 DEPENDENCIES:
   - HHSimpleTool (from `../`)
   - HHSimpleTool/Country (from `../`)
+  - HHSimpleTool/Pager (from `../`)
+  - Masonry (~> 1.1.0)
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - DZNEmptyDataSet
+    - JXCategoryView
+    - JXPagingView
     - LSTPopView
     - LSTTimer
+    - Masonry
     - MBProgressHUD
     - SDWebImage
     - SPAlertController
@@ -53,14 +69,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  HHSimpleTool: ca527f7a323cffcb42f670ff9f527842a9170bb0
+  HHSimpleTool: 8e54faffe5f71a1432ef9d65d124db82876d9dc3
+  JXCategoryView: 7b1ee69ede4843c581688afe84d0f047723262f2
+  JXPagingView: 90924b364a2ff7e94db534fad1fa50925ff69ee4
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
   YBPopupMenu: 3a02e89860bb0568ba477aee609bc3f25e5bd339
 
-PODFILE CHECKSUM: 760c70231bbd12b690cf59ae53aa9560bd5ba15a
+PODFILE CHECKSUM: 01a9d7a404eb3aafc23cc4cc32bd6506e49b3879
 
 COCOAPODS: 1.11.3
