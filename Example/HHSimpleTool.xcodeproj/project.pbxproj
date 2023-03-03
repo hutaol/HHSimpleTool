@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00075C0829B1D81E003CD01E /* HHPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00075C0729B1D81E003CD01E /* HHPagerViewController.m */; };
+		00075C0B29B1DB05003CD01E /* HHPagerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00075C0A29B1DB05003CD01E /* HHPagerListViewController.m */; };
 		3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3509D45B284DE30100F3B908 /* HHLayerViewController.m */; };
 		3549200129063FE8005461DB /* HHCircularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549200029063FE8005461DB /* HHCircularViewController.m */; };
 		3564BF3C29B0EB3600A636C5 /* HHTitlePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564BF3B29B0EB3600A636C5 /* HHTitlePageViewController.m */; };
@@ -50,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00075C0629B1D81E003CD01E /* HHPagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHPagerViewController.h; sourceTree = "<group>"; };
+		00075C0729B1D81E003CD01E /* HHPagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHPagerViewController.m; sourceTree = "<group>"; };
+		00075C0929B1DB05003CD01E /* HHPagerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHPagerListViewController.h; sourceTree = "<group>"; };
+		00075C0A29B1DB05003CD01E /* HHPagerListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHPagerListViewController.m; sourceTree = "<group>"; };
 		3509D45A284DE30100F3B908 /* HHLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLayerViewController.h; sourceTree = "<group>"; };
 		3509D45B284DE30100F3B908 /* HHLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLayerViewController.m; sourceTree = "<group>"; };
 		35491FFF29063FE8005461DB /* HHCircularViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCircularViewController.h; sourceTree = "<group>"; };
@@ -161,6 +167,10 @@
 				3564BF3B29B0EB3600A636C5 /* HHTitlePageViewController.m */,
 				3564BF3D29B0F65B00A636C5 /* HHListViewController.h */,
 				3564BF3E29B0F65B00A636C5 /* HHListViewController.m */,
+				00075C0629B1D81E003CD01E /* HHPagerViewController.h */,
+				00075C0729B1D81E003CD01E /* HHPagerViewController.m */,
+				00075C0929B1DB05003CD01E /* HHPagerListViewController.h */,
+				00075C0A29B1DB05003CD01E /* HHPagerListViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -462,6 +472,7 @@
 			files = (
 				35695B2528E2C98000892610 /* HHLandscapeViewController.m in Sources */,
 				3598EC0E28F56FFD00FDB67A /* HHCountryTableViewController.m in Sources */,
+				00075C0829B1D81E003CD01E /* HHPagerViewController.m in Sources */,
 				3509D45C284DE30100F3B908 /* HHLayerViewController.m in Sources */,
 				35CE930F2774268F003BD21C /* HHProgressHUDViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HHAppDelegate.m in Sources */,
@@ -475,6 +486,7 @@
 				3564BF3F29B0F65B00A636C5 /* HHListViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				35CE930927742670003BD21C /* HHAlertTableViewController.m in Sources */,
+				00075C0B29B1DB05003CD01E /* HHPagerListViewController.m in Sources */,
 				3549200129063FE8005461DB /* HHCircularViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

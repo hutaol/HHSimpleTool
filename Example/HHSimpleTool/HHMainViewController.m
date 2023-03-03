@@ -41,6 +41,8 @@
         @{@"title":@"国家列表", @"vc":@"HHCountryTableViewController"},
         @{@"title":@"切角+阴影", @"vc":@"HHCircularViewController"},
         @{@"title":@"测试", @"vc":@"HHTestViewController"},
+        @{@"title":@"分页", @"vc":@"HHTitlePageViewController"},
+        @{@"title":@"主页分页", @"vc":@"HHPagerViewController"},
     ];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];

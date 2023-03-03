@@ -47,16 +47,16 @@
     NSString *title = self.dataArray[indexPath.row];
     switch (indexPath.row) {
         case 0:
-            [MBProgressHUD showSuccess:title view:self.view];
+            [MBProgressHUD hh_showSuccess:title view:self.view];
             break;
         case 1:
-            [MBProgressHUD showError:title view:self.view];
+            [MBProgressHUD hh_showError:title view:self.view];
             break;
         case 2:
-            [MBProgressHUD showInfo:title view:self.view];
+            [MBProgressHUD hh_showInfo:title view:self.view];
             break;
         case 3:
-            [MBProgressHUD show:title view:self.view];
+            [MBProgressHUD hh_show:title view:self.view];
             break;
             
         default:

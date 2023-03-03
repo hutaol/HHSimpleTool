@@ -8,6 +8,7 @@
 
 #import "HHTitlePageViewController.h"
 #import <Masonry/Masonry.h>
+#import "HHListViewController.h"
 
 @interface HHTitlePageViewController ()
 
@@ -50,6 +51,17 @@
             make.bottom.equalTo(self.view);
         }
     }];
+    
+    self.titles = @[@"1", @"2"].mutableCopy;
+    HHListViewController *vc = [HHListViewController new];
+    vc.view.backgroundColor = [UIColor redColor];
+    HHListViewController *vc2 = [HHListViewController new];
+    vc2.view.backgroundColor = [UIColor blueColor];
+
+    self.viewControllers = @[vc, vc2].mutableCopy;
+    
+    [self reloadData];
+    
 }
 
 - (CGFloat)preferredCategoryViewHeight {
@@ -78,7 +90,7 @@
 #pragma mark - JXCategoryListContainerViewDelegate
 
 - (NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView {
-    return self.titles.count;
+    return self.viewControllers.count;
 }
 
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
