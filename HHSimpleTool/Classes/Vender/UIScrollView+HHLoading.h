@@ -6,7 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#if __has_include(<DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>)
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#else
+#import "UIScrollView+EmptyDataSet.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,8 +27,14 @@ typedef void (^LoadingBlock)(void);
 /// PS:在加载数据前设置为YES(必需)，随后根据数据调整为NO(可选)
 @property (nonatomic, assign) BOOL loading;
 
+/// 加载菊花样式
+@property (nonatomic, assign) UIActivityIndicatorViewStyle loadingIndicatorViewStyle;
+
 /// 加载图片数组
 @property (nonatomic, strong, nullable) NSArray<UIImage *> *loadingImages;
+
+/// 不加载状态下自定义UIView
+@property (nonatomic, strong, nullable) UIView *loadedCustomView;
 
 /// 不加载状态下的图片(loading = NO)
 /// PS:空状态下显示图片

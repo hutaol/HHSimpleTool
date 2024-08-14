@@ -108,6 +108,7 @@
         [invocation setArgument:&val atIndex:2];
         [invocation invoke];
     }
+    
 }
 
 + (UIInterfaceOrientationMask)_orientationMask:(UIInterfaceOrientation)orientation {

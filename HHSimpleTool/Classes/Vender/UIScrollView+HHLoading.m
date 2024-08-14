@@ -9,7 +9,9 @@
 #import <objc/runtime.h>
 
 static const BOOL loadingKey;
+static const int loadingIndicatorStyleKey;
 static const BOOL loadingImagesKey;
+static const char loadedCustomViewKey;
 static const char loadedImageKey;
 static const char loadedImageNameKey;
 static const char descriptionTitleKey;
@@ -44,8 +46,16 @@ id (^block)(void);
 
 }
 
+- (void)setLoadingIndicatorViewStyle:(UIActivityIndicatorViewStyle)loadingIndicatorViewStyle {
+    objc_setAssociatedObject(self, &loadingIndicatorViewStyle, @(loadingIndicatorViewStyle), OBJC_ASSOCIATION_ASSIGN);
+}
+
 - (void)setLoadingImages:(NSArray<UIImage *> *)loadingImages {
     objc_setAssociatedObject(self, &loadingImagesKey, loadingImages, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)setLoadedCustomView:(UIView *)loadedCustomView {
+    objc_setAssociatedObject(self, &loadedCustomViewKey, loadedCustomView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setLoadedImage:(UIImage *)loadedImage {
@@ -116,8 +126,18 @@ id (^block)(void);
     return number.unsignedIntegerValue;
 }
 
+- (UIActivityIndicatorViewStyle)loadingIndicatorViewStyle {
+    id tmp = objc_getAssociatedObject(self, &loadingIndicatorStyleKey);
+    NSNumber *number = tmp;
+    return number.unsignedIntegerValue;
+}
+
 - (NSArray<UIImage *> *)loadingImages {
     return objc_getAssociatedObject(self, &loadingImagesKey);
+}
+
+- (UIView *)loadedCustomView {
+    return objc_getAssociatedObject(self, &loadedCustomViewKey);
 }
 
 - (UIImage *)loadedImage {
@@ -205,17 +225,12 @@ id (^block)(void);
             [imageView startAnimating];
             return imageView;
         } else {
-            UIActivityIndicatorView *activityView = nil;
-            if (@available(iOS 13.0, *)) {
-                activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
-            } else {
-                activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-            }
+            UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.loadingIndicatorViewStyle ?: 0];
             [activityView startAnimating];
             return activityView;
         }
     }
-    return nil;
+    return self.loadedCustomView;
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
